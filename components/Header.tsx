@@ -192,9 +192,9 @@ export default function Header() {
         }`}
       >
         <nav className="w-full px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
+          <div className="relative flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-2 group z-10">
               <div className="grid grid-cols-2 gap-0.5">
                 <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
                 <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
@@ -206,7 +206,7 @@ export default function Header() {
               </span>
             </Link>
 
-            {/* Desktop Navigation - Centered Pills */}
+            {/* Desktop Navigation - Perfectly Centered Pills */}
             <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2">
               <div className="flex items-center gap-1 bg-slate-800/80 backdrop-blur-md rounded-full px-2 py-1.5 border border-slate-700/50">
                 {/* Home Link */}
@@ -314,7 +314,7 @@ export default function Header() {
             </div>
 
             {/* Search + CTA - Far Right */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3 z-10">
               {/* Search - Expands on Hover */}
               <div
                 ref={searchContainerRef}
@@ -328,11 +328,13 @@ export default function Header() {
               >
                 <motion.div
                   initial={false}
-                  animate={{ width: isSearchOpen ? 280 : 40 }}
+                  animate={{ width: isSearchOpen ? 170 : 40 }}
                   transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-                  className="relative h-10 bg-slate-800/80 backdrop-blur-md border border-slate-700/50 rounded-full overflow-hidden"
+                  className="relative h-10 bg-slate-800/80 backdrop-blur-md border border-slate-700/50 rounded-full overflow-hidden flex items-center"
                 >
-                  <Search className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 transition-colors ${isSearchOpen ? 'text-slate-400' : 'text-slate-300'}`} />
+                  <div className={`absolute ${isSearchOpen ? 'left-3' : 'left-1/2 -translate-x-1/2'} top-1/2 -translate-y-1/2 z-10 transition-all duration-300`}>
+                    <Search className={`w-4 h-4 transition-colors ${isSearchOpen ? 'text-slate-400' : 'text-slate-300'}`} />
+                  </div>
                   <input
                     ref={searchInputRef}
                     type="text"
@@ -340,7 +342,7 @@ export default function Header() {
                     value={searchQuery}
                     onChange={(e) => handleSearch(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className={`absolute inset-0 pl-10 pr-4 bg-transparent text-white text-sm placeholder:text-slate-400 focus:outline-none transition-opacity ${isSearchOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                    className={`absolute inset-0 pl-10 pr-4 bg-transparent text-white text-sm placeholder:text-slate-400 focus:outline-none transition-opacity z-0 ${isSearchOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                   />
                   {searchQuery && (
                     <button
@@ -349,6 +351,7 @@ export default function Header() {
                         setSearchResults([]);
                       }}
                       className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+                      aria-label="Clear search"
                     >
                       <X className="w-4 h-4" />
                     </button>

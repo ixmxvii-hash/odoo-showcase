@@ -21,6 +21,13 @@ interface CalculationResults {
   implementationCost: number;
 }
 
+const HOURLY_RATE = 38; // Avg admin/operations hourly cost with benefits
+const EFFICIENCY_GAIN = 0.35; // Conservative 35% efficiency improvement
+const ERROR_REDUCTION = 0.008; // 0.8% of revenue saved from fewer errors
+const ERROR_SAVINGS_CAP = 150000;
+const MIN_IMPLEMENTATION = 25000;
+const MAX_IMPLEMENTATION = 150000;
+
 const AnimatedNumber = ({ value }: { value: number }) => {
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
@@ -52,13 +59,19 @@ export default function ROICalculator() {
   });
 
   const [showEmailCapture, setShowEmailCapture] = useState(false);
+  const [showMethodology, setShowMethodology] = useState(false);
   const [email, setEmail] = useState("");
 
-  const calculateROI = (): CalculationResults => {
-    const HOURLY_RATE = 38; // Avg admin/operations hourly cost with benefits
-    const EFFICIENCY_GAIN = 0.35; // Conservative 35% efficiency improvement
-    const ERROR_REDUCTION = 0.008; // 0.8% of revenue saved from fewer errors
+  const researchFiles = [
+    "austin-process-manufacturing-research.json",
+    "austin-distribution-industry-research.json",
+    "austin_energy_services_research.json",
+    "austin-professional-services-research.json",
+    "dfw-process-manufacturing-research.json",
+    "dfw_discrete_manufacturing_research.json",
+  ];
 
+  const calculateROI = (): CalculationResults => {
     // Calculate annual manual labor cost
     const annualManualLaborCost = inputs.hoursPerWeek * 52 * HOURLY_RATE * (inputs.numberOfEmployees / 10);
 
@@ -66,23 +79,23 @@ export default function ROICalculator() {
     const efficiencySavings = annualManualLaborCost * EFFICIENCY_GAIN;
 
     // Calculate error reduction savings (scales with revenue but capped reasonably)
-    const errorSavings = Math.min(inputs.annualRevenue * ERROR_REDUCTION, 150000);
+    const errorSavings = Math.min(inputs.annualRevenue * ERROR_REDUCTION, ERROR_SAVINGS_CAP);
 
     // Total annual savings
     const annualSavings = efficiencySavings + errorSavings;
 
     // Implementation cost based on company size and complexity
     // More realistic: $25K base + scaling factors
-    const baseImplementationCost = 25000;
+    const baseImplementationCost = MIN_IMPLEMENTATION;
     const employeeFactor = inputs.numberOfEmployees * 800; // ~$800 per user
     const systemFactor = inputs.disconnectedSystems * 5000; // $5K per integration
     const revenueFactor = (inputs.annualRevenue / 10000000) * 15000; // Scales with complexity
     const implementationCost = Math.min(
       Math.max(
         baseImplementationCost + employeeFactor + systemFactor + revenueFactor,
-        25000
+        MIN_IMPLEMENTATION
       ),
-      150000
+      MAX_IMPLEMENTATION
     );
 
     // Payback period in months
@@ -118,13 +131,41 @@ export default function ROICalculator() {
     setShowEmailCapture(true);
   };
 
-  const handleSubmitEmail = (e: React.FormEvent) => {
+  const handleSubmitEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle email submission logic here
-    console.log("Email submitted:", email);
-    alert("Thank you! Your custom report will be sent to " + email);
-    setShowEmailCapture(false);
-    setEmail("");
+
+    try {
+      // Submit lead to CRM with ROI calculator data
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          contactName: "",
+          companyName: "",
+          companySize: `${inputs.numberOfEmployees} employees`,
+          currentSystems: [`${inputs.disconnectedSystems} disconnected systems`],
+          biggestChallenge: "ROI Calculator Lead",
+          hearAboutUs: "ROI Calculator",
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+          // Include ROI data in notes
+          message: `ROI Calculator Submission:\n- Annual Revenue: $${inputs.annualRevenue.toLocaleString()}\n- Employees: ${inputs.numberOfEmployees}\n- Hours/week on manual entry: ${inputs.hoursPerWeek}\n- Disconnected systems: ${inputs.disconnectedSystems}\n\nEstimated Results:\n- Annual Savings: $${Math.round(results.annualSavings).toLocaleString()}\n- Payback Period: ${Math.round(results.paybackMonths)} months\n- 3-Year ROI: ${Math.round(results.threeYearROI)}%\n- Implementation Cost: $${Math.round(results.implementationCost).toLocaleString()}`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      alert("Thank you! Your custom report will be sent to " + email);
+      setShowEmailCapture(false);
+      setEmail("");
+    } catch (error) {
+      console.error("Error submitting ROI lead:", error);
+      alert("Something went wrong. Please try again or contact us directly.");
+    }
   };
 
   return (
@@ -153,6 +194,12 @@ export default function ROICalculator() {
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             See how much time and money you could save with Odoo ERP
           </p>
+          <button
+            onClick={() => setShowMethodology(true)}
+            className="mt-4 text-sm font-semibold text-orange-200 hover:text-white underline"
+          >
+            View methodology & assumptions
+          </button>
         </motion.div>
 
         {/* Calculator Card */}
@@ -401,6 +448,68 @@ export default function ROICalculator() {
                     </Button>
                   </div>
                 </form>
+              </motion.div>
+            </motion.div>
+          )}
+
+          {/* Methodology Overlay */}
+          {showMethodology && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-30"
+              onClick={() => setShowMethodology(false)}
+            >
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white rounded-2xl p-6 max-w-2xl w-full shadow-2xl"
+              >
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div>
+                    <h4 className="text-2xl font-bold text-slate-900">ROI Methodology</h4>
+                    <p className="text-sm text-slate-600">Assumptions and sources for the calculator.</p>
+                  </div>
+                  <button
+                    onClick={() => setShowMethodology(false)}
+                    className="text-slate-500 hover:text-slate-700 text-sm font-semibold"
+                    aria-label="Close methodology modal"
+                  >
+                    Close
+                  </button>
+                </div>
+
+                <div className="space-y-3 text-sm text-slate-700">
+                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                    <h5 className="text-sm font-semibold text-slate-900 mb-1">Key Assumptions</h5>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>Hourly rate: ${HOURLY_RATE.toFixed(0)} fully loaded admin/operations labor.</li>
+                      <li>Efficiency gain: {(EFFICIENCY_GAIN * 100).toFixed(0)}% of manual time automated.</li>
+                      <li>Error reduction: {(ERROR_REDUCTION * 100).toFixed(1)}% of revenue protected from rework; capped at $150K.</li>
+                      <li>Implementation cost scales with headcount, integrations, and revenue complexity; floor $25K, ceiling $150K.</li>
+                      <li>Payback months = implementation cost / annual savings * 12.</li>
+                    </ul>
+                  </div>
+
+                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                    <h5 className="text-sm font-semibold text-slate-900 mb-1">Data Sources (repo)</h5>
+                    <p className="text-slate-600 mb-2">
+                      Figures are grounded in the research JSON files bundled with this project. Review the files for citations and detailed stats.
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      {researchFiles.map((file) => (
+                        <li key={file} className="text-slate-700">
+                          {file}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <p className="text-xs text-slate-500">
+                    These estimates are directional. For validated ROI, replace assumptions with your own rates, integration counts, and baseline error costs.
+                  </p>
+                </div>
               </motion.div>
             </motion.div>
           )}

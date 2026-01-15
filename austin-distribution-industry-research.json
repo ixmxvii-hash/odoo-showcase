@@ -1,0 +1,692 @@
+{
+  "research_metadata": {
+    "city": "Austin, Texas",
+    "metro_area": "Austin-Round Rock-Georgetown MSA",
+    "research_date": "2026-01-11",
+    "data_sources": "Multiple industry reports, real estate analytics, government statistics",
+    "purpose": "Odoo ERP Implementation - Distribution & Wholesale Industry Analysis"
+  },
+
+  "market_overview": {
+    "total_industrial_inventory": {
+      "square_feet": 121900000,
+      "date": "Q3 2025",
+      "growth_trend": "Expanded from 103.3M sq ft in Q2 2024 to 121.9M sq ft",
+      "sources": [
+        "https://partnersrealestate.com/research/austin-industrial-q3-2025-quarterly-market-report/",
+        "https://www.connectcre.com/stories/austin-industrial-market-favoring-tenants/"
+      ]
+    },
+
+    "construction_pipeline": {
+      "under_construction_sf": 17100000,
+      "date": "Q3 2025",
+      "previous_peak": 19000000,
+      "warehouse_distribution_percentage": 64,
+      "preleased_percentage": 50,
+      "market_expansion_percentage": 9,
+      "sources": [
+        "https://partnersrealestate.com/research/https-partnersrealestate-com-wp-content-uploads-2025-01-q4_2024_austin_industrial_quarterlyreport-1-pdf-2/"
+      ]
+    },
+
+    "absorption_metrics": {
+      "q4_2024_net_absorption_sf": 1300000,
+      "warehouse_distribution_absorption_sf": 1200000,
+      "q2_2024_warehouse_absorption_sf": 3984601,
+      "q3_2025_absorption_sf": 352000,
+      "ytd_2025_absorption_sf": 3300000,
+      "sources": [
+        "https://partnersrealestate.com/research/https-partnersrealestate-com-wp-content-uploads-2025-01-q4_2024_austin_industrial_quarterlyreport-1-pdf-2/",
+        "https://partnersrealestate.com/research/austin-industrial-q2-2024-quarterly-market-report/"
+      ]
+    },
+
+    "leasing_activity": {
+      "q4_2024_leasing_sf": 2400000,
+      "quarter_over_quarter_increase_percentage": 30,
+      "historical_average_sf": 2300000,
+      "time_period": "10-year average",
+      "sources": [
+        "https://partnersrealestate.com/research/https-partnersrealestate-com-wp-content-uploads-2025-01-q4_2024_austin_industrial_quarterlyreport-1-pdf-2/"
+      ]
+    },
+
+    "vacancy_rates": {
+      "overall_q4_2024": 11.7,
+      "overall_q1_2025": 12.4,
+      "overall_q2_2025": 14.1,
+      "overall_q3_2025": 13.9,
+      "cushman_wakefield_q3_2025": 20.4,
+      "warehouse_distribution_q4_2024": 14.3,
+      "historical_comparison": {
+        "2022": 4.2,
+        "current": 13.9
+      },
+      "trend": "Rising due to construction outpacing absorption",
+      "sources": [
+        "https://warecre.com/cre-insights/market-property-insights/austin-warehouse-market-report-2025/",
+        "https://partnersrealestate.com/research/austin-industrial-q3-2025-quarterly-market-report/",
+        "https://www.cushmanwakefield.com/en/united-states/insights/us-marketbeats/austin-marketbeats"
+      ]
+    },
+
+    "availability_rates": {
+      "direct_vacancy_q1_2025": 11.6,
+      "total_availability_q1_2025": 17.7,
+      "total_availability_q2_2025": 17.1,
+      "direct_vacancy_q3_2025": 13.0,
+      "total_availability_q3_2025": 18.1,
+      "sources": [
+        "https://partnersrealestate.com/research/https-partnersrealestate-com-wp-content-uploads-2025-05-q1-2025-austin-industrial-quarterly-report-pdf/",
+        "https://partnersrealestate.com/research/austin-industrial-quarterly-report-q2-2025/"
+      ]
+    },
+
+    "employment": {
+      "logistics_warehouse_jobs_available": 551,
+      "linkedin_logistics_positions": 2000,
+      "transportation_logistics_jobs": 430,
+      "job_market_trend": "Trade, transportation and utilities declined by 952 jobs in Q2 2024, but strong hiring continues",
+      "major_employers": [
+        "Amazon (1,000+ jobs per facility)",
+        "Prologis (145 customers)",
+        "Multiple 3PL providers"
+      ],
+      "sources": [
+        "https://www.indeed.com/q-warehouse-l-austin,-tx-jobs.html",
+        "https://www.linkedin.com/jobs/logistics-jobs-austin-texas-metropolitan-area",
+        "https://partnersrealestate.com/research/austin-industrial-q2-2024-quarterly-market-report/"
+      ]
+    },
+
+    "i35_corridor_importance": {
+      "description": "Primary NAFTA/USMCA corridor connecting Mexico to Midwest",
+      "annual_trade_volume_usd": 1200000000000,
+      "texas_nafta_trade_percentage": 48,
+      "national_ranking_congestion": 4,
+      "truck_traffic_ranking": 3,
+      "laredo_border_trucks_2015": 2000000,
+      "truck_traffic_percentage": 30,
+      "freight_growth_by_2045_percentage": 45,
+      "strategic_position": "Only Interstate connecting Mexico and Canada through US heartland",
+      "sources": [
+        "https://www.bfinstitute.org/south-texas-triangle-op-ed/2-why-the-i-35-corridor-is-the-unsung-hero-of-the-american-household",
+        "https://www.cbre.com/insights/briefs/emerging-industrial-market-texas-i35-corridor",
+        "https://ftp.txdot.gov/pub/txdot/my35/planning/corridor-plan.pdf"
+      ]
+    }
+  },
+
+  "ecommerce_fulfillment": {
+    "amazon_facilities": {
+      "pflugerville_fulfillment_center": {
+        "square_feet": 4800000,
+        "floors": 5,
+        "land_acres": 90,
+        "employees": 1000,
+        "facility_type": "Robotic fulfillment center",
+        "investment_usd": 250000000,
+        "code": "UTX9",
+        "sources": [
+          "https://quiddity.com/projects/amazon-fulfillment-center-project-charm-pflugerville/",
+          "https://www.kxan.com/news/business/pflugerville-amazon-announce-820k-square-foot-fulfillment-center-to-open-in-2021/"
+        ]
+      },
+      "san_marcos_facility": {
+        "square_feet": 855000,
+        "employees": 2200,
+        "distance_from_austin_miles": 30,
+        "sources": [
+          "https://www.nbcdfw.com/news/local/amazon-fulfillment-site-near-austin-texas-busy-with-demand/248758/"
+        ]
+      }
+    },
+
+    "major_retailers": {
+      "target": {
+        "local_presence": "Sortation center operations",
+        "regional_centers": "Two 1.2M+ sq ft facilities under construction in Houston",
+        "note": "No major distribution center directly in Austin metro",
+        "sources": [
+          "https://www.ziprecruiter.com/Jobs/Target-Distribution-Center/-in-Austin,TX",
+          "https://powersbrown.com/news/target-supersizing-houston-footprint-with-two-massive-distribution-centers-under-construction"
+        ]
+      },
+      "walmart": {
+        "local_presence": "Distribution center building in Austin near Lake Virnau",
+        "regional_centers": "Major DC at 3162 FM 3538, Sealy, TX (Houston area)",
+        "retail_stores": "Multiple Supercenters throughout Austin metro",
+        "sources": [
+          "https://mapcarta.com/W56239835",
+          "https://www.walmart.com/store-directory/tx/austin"
+        ]
+      }
+    },
+
+    "last_mile_delivery": {
+      "providers": [
+        {
+          "name": "Hot Shot Final Mile",
+          "service": "Same-day, 24/7 delivery",
+          "coverage": "Austin metro area",
+          "sources": ["https://hotshotfinalmile.com/austin/"]
+        },
+        {
+          "name": "GoShare",
+          "service": "Same-day last-mile delivery",
+          "network": "Local delivery professionals",
+          "sources": ["https://goshare.co/texas/austin-last-mile-delivery-service/"]
+        },
+        {
+          "name": "Uber Direct",
+          "service": "Express delivery (30 minutes to 2 hours)",
+          "sources": ["https://www.uber.com/us/en/b/courier-services/austin-tx-us/"]
+        },
+        {
+          "name": "Austin Moving Forward",
+          "service": "Final mile delivery, e-commerce fulfillment",
+          "facility": "State-of-the-art fulfillment center",
+          "sources": ["https://www.austinmovingforward.com/services/final-mile-delivery-e-commerce-fulfillment/"]
+        },
+        {
+          "name": "GoBolt",
+          "services": ["Last mile delivery", "Fulfillment", "Returns processing"],
+          "sources": ["https://www.gobolt.com/service-areas/3pl-united-states/3pl-texas/3pl-austin/"]
+        }
+      ]
+    },
+
+    "returns_processing": {
+      "major_facilities": [
+        {
+          "name": "FloorFound",
+          "description": "Largest oversized recommerce network in North America",
+          "total_square_feet": 500000,
+          "number_of_centers": 5,
+          "headquarters": "Austin, TX",
+          "launch_date": "November 2022",
+          "specialty": "Oversized product returns and recommerce",
+          "sources": ["https://floorfound.com/pr-newswire-new-recommerce-processing-centers-specialized-warehouse-teams-and-flexible-fulfillment-provides-a-one-stop-shop-to-process-and-sell-returned-inventory-nationwide/"]
+        }
+      ],
+      "3pl_providers": [
+        {
+          "name": "Victory Lane Solutions",
+          "services": ["Reverse logistics", "Returns processing", "E-commerce fulfillment"],
+          "sources": ["https://victorylanesolutions.com/3pl-solutions-for-e-commerce-fulfillment-reverse-logistics-returns-processing-and-more-in-austin-tx/"]
+        },
+        {
+          "name": "Red Stag Fulfillment",
+          "returns_processing_time": "Next business day after UPS receipt",
+          "refund_processing": "Same-day",
+          "sources": ["https://redstagfulfillment.com/austin-3pl-fulfillment/"]
+        },
+        {
+          "name": "ShipMaestro",
+          "services": ["Automated returns processing", "Restocking"],
+          "sources": ["https://www.shipmaestro.com/fulfillment-centers/austin-texas"]
+        },
+        {
+          "name": "STS Electronic Recycling",
+          "specialty": "IT asset reverse logistics and electronic recycling",
+          "sources": ["https://www.stselectronicrecyclinginc.com/efficient-reverse-logistics-and-it-asset-management-in-austin-tx/areas-of-service/efficient-reverse-logistics-and-it-asset-management-in-austin-tx-sts-electronic-recycling"]
+        }
+      ]
+    }
+  },
+
+  "key_infrastructure": {
+    "austin_bergstrom_airport": {
+      "cargo_statistics_2024": {
+        "total_cargo_lbs": 301898138,
+        "year_over_year_growth_percentage": 6.66,
+        "january_november_cargo_lbs": 277225708,
+        "international_cargo_lbs": 28235562,
+        "international_growth_percentage": 26.64,
+        "mail_lbs": 568165,
+        "belly_freight_lbs": 37998801,
+        "belly_freight_growth_percentage": 15.67
+      },
+      "top_cargo_carriers_jan_nov_2024": [
+        {
+          "carrier": "Air Transport International",
+          "cargo_lbs": 90296984,
+          "growth_percentage": 29.1
+        },
+        {
+          "carrier": "Federal Express",
+          "cargo_lbs": 68161882,
+          "growth_percentage": -6.7
+        },
+        {
+          "carrier": "United Parcel Services",
+          "cargo_lbs": 27231341,
+          "growth_percentage": -8.1
+        },
+        {
+          "carrier": "Atlas Air",
+          "cargo_lbs": 22343261,
+          "growth_percentage": -12.9
+        },
+        {
+          "carrier": "Sun Country Airlines",
+          "cargo_lbs": 18035672,
+          "growth_percentage": 84.8
+        }
+      ],
+      "sources": [
+        "https://www.austintexas.gov/news/november-2024-passenger-cargo-traffic-austin-bergstrom-international-airport",
+        "https://www.austintexas.gov/sites/default/files/files/Airport/december-2024_report-combined.pdf"
+      ]
+    },
+
+    "cross_dock_transload": {
+      "facilities": [
+        {
+          "name": "CrossDock Connect",
+          "location": "Austin, TX",
+          "capabilities": ["Ambient", "Temperature-controlled", "Cold storage"],
+          "services": ["Cross-docking", "Freight transfer", "Logistics optimization"],
+          "sources": ["https://crossdockconnect.com/austin-tx/"]
+        },
+        {
+          "name": "OLIMP Warehousing",
+          "location": "Austin, TX",
+          "services": ["Transloading", "Drayage", "Distribution"],
+          "modes": ["Rail", "Sea", "Road transport"],
+          "technology": "State-of-the-art",
+          "sources": ["https://olimpwarehousing.com/service-locations/us-texas/austin/transloading-drayage/"]
+        },
+        {
+          "name": "USRL (US Rail and Logistics)",
+          "location": "5 miles from SH 130, 12.5 miles from Round Rock",
+          "specialty": "Rail logistics, transloading facilities management, rail switching",
+          "sources": ["https://usrailandlogistics.com/austin-tx/"]
+        },
+        {
+          "name": "Hot Shot Final Mile",
+          "facilities": ["Austin", "Dallas", "Houston", "San Antonio", "El Paso"],
+          "services": ["Cross-dock", "Transloading"],
+          "sources": ["https://hotshotfinalmile.com/cross-docking-and-transloading/"]
+        }
+      ]
+    },
+
+    "intermodal_rail": {
+      "note": "Austin is primarily served by Union Pacific Railroad",
+      "proximity_to_major_ports": {
+        "port_of_houston": "165 miles",
+        "laredo_border": "200+ miles via I-35"
+      },
+      "rail_capabilities": "Transloading from rail to truck for last-mile distribution"
+    }
+  },
+
+  "industry_verticals": {
+    "technology_electronics": {
+      "major_players": [
+        {
+          "name": "Dell Technologies",
+          "headquarters": "Round Rock, TX (Austin metro)",
+          "austin_facility_employees": 1753,
+          "facility_address": "701 E. Parmer Lane, Austin, TX",
+          "historical_operations": "Mort Topfer Manufacturing Center (closed 2008)",
+          "innovation": "Configure-to-order manufacturing, global command centers",
+          "command_center_location": "Austin, TX",
+          "specialty": "Database engine of customers, distribution expertise",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Dell",
+            "https://services.austintexas.gov/edims/document.cfm?id=324996"
+          ]
+        },
+        {
+          "name": "Tesla",
+          "facility": "Gigafactory Texas",
+          "square_feet": 10000000,
+          "products": ["Model Y", "Cybertruck"],
+          "sources": ["https://www.avisonyoung.us/web/austin/industrial-market-report"]
+        },
+        {
+          "name": "Samsung",
+          "facility": "Semiconductor plant (under construction)",
+          "square_feet": 6000000,
+          "direct_jobs": 2000,
+          "sources": ["https://www.avisonyoung.us/web/austin/industrial-market-report"]
+        },
+        {
+          "name": "Texas Instruments",
+          "presence": "Major manufacturing operations",
+          "sources": ["https://www.avisonyoung.us/web/austin/industrial-market-report"]
+        }
+      ],
+
+      "specialized_logistics_providers": [
+        {
+          "name": "Dimerco",
+          "location": "Austin, TX",
+          "security": "CCTV, ISO certified, CTPAT certified",
+          "specialties": [
+            "EV production",
+            "Semiconductor products",
+            "Consumer electronics",
+            "Aviation electronics"
+          ],
+          "sources": ["https://dimerco.com/austin-texas-warehouse/"]
+        },
+        {
+          "name": "AIT Worldwide",
+          "security": ["24-hour monitoring", "Closed-circuit cameras", "Keypad access", "Driver check-in and escort"],
+          "services": ["High-value cargo insurance", "Supply chain visibility technology"],
+          "sources": ["https://www.aitworldwide.com/locations/austin-texas/"]
+        },
+        {
+          "name": "Omni Logistics",
+          "facility_security": "CCTV throughout, key card access only",
+          "specialty": "Delicate, high-value technology transportation",
+          "sources": ["https://omnilogistics.com/locations/austin-texas/", "https://omnilogistics.com/high-tech-logistics/"]
+        },
+        {
+          "name": "RK Logistics Group",
+          "expertise": "High value density, zero fault tolerance, regulatorily intensive products",
+          "specialties": ["Semiconductors", "Automotive", "Lithium-ion batteries"],
+          "expansion": "Opened second facility in Austin",
+          "sources": ["https://rklogisticsgroup.com/rk-logistics-group-opens-second-facility-in-austin/"]
+        },
+        {
+          "name": "Three Way Logistics",
+          "expertise": "Complex, high-value, and sensitive products",
+          "sources": ["https://threeway.com/austin-warehouses/"]
+        }
+      ]
+    },
+
+    "food_distribution": {
+      "major_distributors": [
+        {
+          "name": "Sysco Central Texas",
+          "historical_austin_facility_sf": 270000,
+          "consolidation": "Closed Austin warehouse March 2012",
+          "current_facility": {
+            "location": "Schertz, TX",
+            "square_feet": 600000,
+            "employees_relocated": 250,
+            "service_area": "Central Texas including Austin"
+          },
+          "company_scale": {
+            "global_rank": "World's largest broadline food distributor",
+            "customer_locations": 730000,
+            "employees": 76000,
+            "as_of": "June 2024"
+          },
+          "sources": [
+            "https://www.restaurantbusinessonline.com/sysco-consolidates-central-texas-distribution-centers",
+            "https://centraltexas.sysco.com/"
+          ]
+        },
+        {
+          "name": "US Foods",
+          "presence": "National distributor with Texas operations",
+          "distribution_centers_nationwide": 168,
+          "restaurant_partners": 300000,
+          "retail_brand": "Chef'Store (14 states including Texas)",
+          "sources": ["https://businessabc.net/wiki/us-foods"]
+        }
+      ]
+    },
+
+    "building_materials": {
+      "major_suppliers": [
+        {
+          "name": "84 Lumber",
+          "austin_facility": {
+            "location": "610 Blue Springs Blvd., Georgetown, TX",
+            "square_feet": 85000,
+            "opened": "November 5, 2025",
+            "investment_usd": 250000000,
+            "service_area": "Greater Austin metro and surrounding counties",
+            "products": ["Masonite interior doors", "Therma-Tru exterior doors"],
+            "target_market": ["Single-family home builders", "Multifamily construction"]
+          },
+          "company_scale": {
+            "facilities_nationwide": 320,
+            "states": 34,
+            "facility_types": ["Stores", "Component manufacturing plants", "Custom door shops", "Engineered wood product centers"]
+          },
+          "sources": [
+            "https://whatnow.com/austin/local-news/major-retail-chain-opens-massive-85000-sq-ft-facility-near-austin/",
+            "https://84lumbercomv3.84-iase-v3.p.azurewebsites.net/about/press-room/84-press-releases/84-lumber-opens-new-state-of-the-art-door-shop-servicing-the-austin-market/"
+          ]
+        },
+        {
+          "name": "Builders FirstSource",
+          "austin_location": "4501 Burleson Road, Austin, TX",
+          "description": "Nation's largest building materials supplier",
+          "service_area": "Austin and surrounding Central TX Area",
+          "sources": ["https://www.bldr.com/location/austin-tx-lumber-yard/AUSTTXYD"]
+        },
+        {
+          "name": "Austin Builders Supply",
+          "lumber_facility_sf": 23000,
+          "feature": "Indoor lumber storage",
+          "sources": ["https://austinbuilderssupply.com/department/building-materials/"]
+        },
+        {
+          "name": "McCoy's Building Supply",
+          "location": "Austin (South)",
+          "feature": "Covered yard for board protection",
+          "sources": ["https://www.mccoys.com/stores/austin-s-tx"]
+        }
+      ]
+    },
+
+    "pharmaceutical_temperature_controlled": {
+      "general_requirements": {
+        "temperature_ranges": [
+          "Controlled Room Temperature (CRT): 15-25°C",
+          "Refrigerated: 2-8°C"
+        ],
+        "compliance": "Good Distribution Practices (GDP)",
+        "technology": ["Automated storage systems", "Robotic palletizers", "Smart sensors", "Real-time temperature tracking", "Blockchain verification"]
+      },
+
+      "providers": [
+        {
+          "name": "PHSE Group",
+          "description": "World's leading temperature-controlled and time-critical pharmaceutical logistics",
+          "focus": ["Hospital channel", "Home channel", "Lab channel"],
+          "sources": ["https://phse.com/en/"]
+        },
+        {
+          "name": "World Courier",
+          "pharmaceutical_depots": 22,
+          "compliance": "GxP-compliant",
+          "specialty": "Climate-controlled supply chain for clinical trials and commercial distribution",
+          "sources": ["https://www.worldcourier.com/expertise/temperature-control-solutions"]
+        }
+      ],
+
+      "note": "No specific Austin-based pharmaceutical distribution centers identified in research; most major pharma distribution serves Austin from Dallas/Houston hubs"
+    }
+  },
+
+  "real_estate_costs": {
+    "lease_rates": {
+      "warehouse_distribution": {
+        "monthly_per_sf_q2_2024": 1.13,
+        "annual_per_sf_q2_2024": 13.56,
+        "monthly_per_sf_q4_2024": 1.23,
+        "annual_per_sf_q4_2024": 14.72,
+        "southeast_austin_annual": 12.63,
+        "flex_space_monthly": 1.47,
+        "manufacturing_monthly": 0.94,
+        "nnn_operating_expenses_monthly": 0.35,
+        "nnn_operating_expenses_annual": 4.20,
+        "trend": "Rates dipped 2.4% in Q2 2024 but up 10% year-over-year; Q4 showed slight decrease of 1.9% from record highs but up 2% YoY",
+        "sources": [
+          "https://partnersrealestate.com/research/austin-industrial-q2-2024-quarterly-market-report/",
+          "https://aquilacommercial.com/learning-center/cost-to-lease-industrial-space-austin-texas/"
+        ]
+      }
+    },
+
+    "construction_costs": {
+      "warehouse_per_sf": {
+        "light_industrial": 209,
+        "general_range": "100-120",
+        "note": "Austin typically at top end due to higher land prices, premium tenant expectations, and sustainability designs",
+        "sources": [
+          "https://www.maxxbuilders.com/cost-per-square-foot-build-warehouse-texas/"
+        ]
+      }
+    },
+
+    "market_comparison": {
+      "austin": {
+        "construction_cost_tier": "Highest",
+        "drivers": ["Higher land prices", "Premium finishes", "Tech-driven expectations", "Sustainability requirements"],
+        "best_for": ["Engineering-heavy operations", "Advanced manufacturing", "R&D"]
+      },
+      "dallas_fort_worth": {
+        "lease_rate_annual_per_sf": "6-8",
+        "construction_cost_tier": "Competitive",
+        "drivers": ["Strong subcontractor market"],
+        "best_for": ["Regional/national distribution", "3PLs", "E-commerce", "Light manufacturing"],
+        "advantages": ["Largest industrial inventory in Texas", "Strong intermodal/air cargo access"]
+      },
+      "houston": {
+        "construction_cost_tier": "Higher",
+        "drivers": ["Windstorm requirements", "Floodplain requirements"],
+        "best_for": ["Port-driven distribution", "Energy/chemical industries"],
+        "advantages": ["Ports of Houston/Freeport access"]
+      },
+      "san_antonio": {
+        "cost_advantage": "Lowest cost for pure distribution operations",
+        "location": "Between Austin and Houston"
+      },
+      "sources": [
+        "https://www.ciptexas.com/dallas-vs-austin-vs-san-antonio-vs-houston",
+        "https://www.maxxbuilders.com/cost-per-square-foot-build-warehouse-texas/"
+      ]
+    },
+
+    "new_development_projects": {
+      "pipeline": {
+        "under_construction_sf": 13000000,
+        "decrease_from_2024_percentage": -29.2,
+        "market_expansion_percentage": 9,
+        "market_drivers": ["Logistics", "Manufacturing", "Warehouse users"],
+        "sources": [
+          "https://www.commercialsearch.com/blog/national-industrial-construction-report/",
+          "https://www.avisonyoung.us/web/austin/industrial-market-report"
+        ]
+      },
+
+      "major_projects": [
+        {
+          "developer": "Prologis",
+          "planned_sf": 1300000,
+          "existing_portfolio_sf": 8000000,
+          "properties": 70,
+          "customers": 145,
+          "sources": ["https://www.prologis.com/industrial-properties/united-states/austin-industrial-logistics-and-warehouses"]
+        }
+      ]
+    }
+  },
+
+  "odoo_erp_implementation_considerations": {
+    "inventory_management": {
+      "multi_warehouse_support": "Critical - Austin market has diverse submarkets (Northwest, North, Northeast, Georgetown, Round Rock)",
+      "barcode_scanning": "Essential for tech/electronics high-value goods tracking",
+      "lot_serial_tracking": "Required for pharmaceutical and electronics distribution",
+      "temperature_monitoring_integration": "Needed for food and pharmaceutical verticals"
+    },
+
+    "warehouse_operations": {
+      "cross_dock_flows": "Multiple providers operate cross-dock facilities requiring specialized workflows",
+      "returns_processing": "Growing reverse logistics sector requires robust RMA and returns modules",
+      "multi_step_routes": "Complex supply chain from I-35 corridor, rail, and ABIA cargo",
+      "quality_control": "Zero-defect requirements for semiconductor and high-tech distribution"
+    },
+
+    "transportation_management": {
+      "carrier_integration": [
+        "FedEx",
+        "UPS",
+        "Air Transport International",
+        "Atlas Air",
+        "Last-mile providers (GoShare, Hot Shot, Uber Direct)"
+      ],
+      "routing_optimization": "Critical for last-mile delivery in congested Austin metro",
+      "freight_cost_tracking": "I-35 corridor congestion impacts costs"
+    },
+
+    "compliance_tracking": {
+      "certifications_required": [
+        "ISO (multiple providers)",
+        "CTPAT (customs-trade partnership)",
+        "GDP (Good Distribution Practices for pharma)",
+        "GxP (pharmaceutical quality)",
+        "TAPA (high-value goods security)"
+      ]
+    },
+
+    "integration_priorities": {
+      "e_commerce_platforms": "Critical given Amazon and major e-commerce presence",
+      "EDI_capabilities": "Required for major retailer and manufacturer relationships",
+      "API_connections": [
+        "Amazon MWS/SP-API",
+        "Walmart",
+        "Target",
+        "Shopify/WooCommerce for mid-market"
+      ]
+    },
+
+    "market_specific_features": {
+      "high_value_tracking": "Security features for electronics and semiconductors",
+      "temperature_logging": "Automated for food and pharmaceutical compliance",
+      "serial_number_management": "Critical for Dell, tech manufacturers",
+      "project_based_inventory": "For building materials and construction supply",
+      "batch_expiry_tracking": "Food and pharmaceutical distribution"
+    },
+
+    "scalability_requirements": {
+      "growth_projections": "I-35 freight volume expected to increase 45% by 2045",
+      "seasonal_peaks": "E-commerce seasonal variations require flex capacity",
+      "multi_facility": "Companies expanding regionally (Houston, Dallas, San Antonio connections)"
+    }
+  },
+
+  "key_statistics_summary": {
+    "total_industrial_inventory_sf": 121900000,
+    "vacancy_rate_percentage": 13.9,
+    "average_lease_rate_annual_nnn": 14.72,
+    "construction_pipeline_sf": 17100000,
+    "amazon_fulfillment_sf": 5655000,
+    "largest_single_facility_sf": 4800000,
+    "airport_cargo_lbs_2024": 301898138,
+    "i35_annual_trade_usd": 1200000000000,
+    "employment_logistics_jobs": "2000+",
+    "major_manufacturers": ["Tesla (10M sf)", "Samsung (6M sf)", "Dell", "Texas Instruments"],
+    "market_trend": "Tenant-favorable conditions, rising vacancy, strong absorption in warehouse/distribution segment"
+  },
+
+  "data_quality_notes": {
+    "confidence_level": "High - Data sourced from multiple authoritative real estate firms, government statistics, and industry reports",
+    "data_recency": "Q3-Q4 2025 for most metrics",
+    "gaps_identified": [
+      "Specific pharmaceutical distribution center locations (likely served from Dallas/Houston)",
+      "Exact Target/Walmart distribution center Austin addresses (operate via regional hubs)",
+      "Detailed intermodal rail statistics (primarily Union Pacific, specific volumes not available)",
+      "Precise consumer goods wholesale numbers (beyond Amazon and major retailers)"
+    ],
+    "recommendations": "For Odoo implementation, conduct additional primary research with:",
+    "primary_research_targets": [
+      "Austin Chamber of Commerce Economic Development",
+      "Greater Austin-San Antonio Corridor Council",
+      "Specific 3PL providers for operational workflows",
+      "Industry associations (IWLA, CSCMP local chapters)"
+    ]
+  }
+}

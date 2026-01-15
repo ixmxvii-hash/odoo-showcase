@@ -1,4 +1,6 @@
 // City configuration
+import { ResearchData } from "./researchData";
+
 export interface CityConfig {
   abbr: string;        // "HTX", "ATX", "DFW"
   name: string;        // "Houston", "Austin", "Dallas-Fort Worth"
@@ -69,6 +71,7 @@ export interface IndustryConfig {
     value: string;
     description: string;
   }[];
+  research?: ResearchData | null;
 }
 
 export const industries: Record<string, IndustryConfig> = {
@@ -157,20 +160,7 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Sales", icon: "TrendingUp", useCase: "Quote-to-order with customer portal" },
       { name: "Accounting", icon: "Calculator", useCase: "Job costing integration and financials" },
     ],
-    testimonials: [
-      {
-        quote: "We went from Excel chaos to knowing exactly where every job is and what it costs. Game changer.",
-        author: "Mike R.",
-        role: "Operations Manager",
-        company: "Houston Precision Machining",
-      },
-      {
-        quote: "ICIT had us live in 10 weeks. Their team actually understands job shops.",
-        author: "Tom S.",
-        role: "Owner",
-        company: "Northwest Fabricators",
-      },
-    ],
+    testimonials: [],
     stats: [
       { label: "Faster Quoting", value: "50%", description: "Average improvement in quote turnaround" },
       { label: "Inventory Accuracy", value: "99%", description: "With barcode scanning implementation" },
@@ -263,20 +253,7 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Purchase", icon: "ShoppingCart", useCase: "Vendor qualification and raw material tracking" },
       { name: "Accounting", icon: "Calculator", useCase: "Batch costing and margin analysis" },
     ],
-    testimonials: [
-      {
-        quote: "Our last FDA audit was the smoothest ever. Everything was in Odoo, ready to show.",
-        author: "Sarah K.",
-        role: "Quality Manager",
-        company: "Gulf Coast Chemicals",
-      },
-      {
-        quote: "Lot traceability used to take hours. Now it's 30 seconds. That's not an exaggeration.",
-        author: "James P.",
-        role: "Plant Manager",
-        company: "Port Houston Processing",
-      },
-    ],
+    testimonials: [],
     stats: [
       { label: "Trace Time", value: "30s", description: "Full lot genealogy lookup" },
       { label: "Audit Prep", value: "80%", description: "Reduction in compliance prep time" },
@@ -370,18 +347,6 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Accounting", icon: "Calculator", useCase: "Project billing" },
     ],
     testimonials: [
-      {
-        quote: "We cut our billing cycle from 3 weeks to 3 days. Cash flow transformed overnight.",
-        author: "David M.",
-        role: "CFO",
-        company: "Energy Corridor Services",
-      },
-      {
-        quote: "Finally, one system for timesheets, projects, and inventory. No more spreadsheet hell.",
-        author: "Lisa T.",
-        role: "Operations Director",
-        company: "West Houston Equipment",
-      },
     ],
     stats: [
       { label: "Billing Cycle", value: "3 days", description: "From 3 weeks average" },
@@ -475,20 +440,7 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Purchase", icon: "ShoppingCart", useCase: "Vendor management" },
       { name: "Accounting", icon: "Calculator", useCase: "Product costing" },
     ],
-    testimonials: [
-      {
-        quote: "We passed our SQF audit with flying colors. Odoo made compliance documentation automatic.",
-        author: "Maria G.",
-        role: "Quality Assurance Manager",
-        company: "Sugar Land Foods",
-      },
-      {
-        quote: "Managing retail, wholesale, and online orders from one system saved us two FTEs.",
-        author: "Robert C.",
-        role: "Owner",
-        company: "Fort Bend Beverages",
-      },
-    ],
+    testimonials: [],
     stats: [
       { label: "Recall Trace", value: "<1 hour", description: "Full forward/backward tracing" },
       { label: "FIFO Compliance", value: "100%", description: "System-enforced rotation" },
@@ -581,20 +533,7 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Accounting", icon: "Calculator", useCase: "AR/AP automation" },
       { name: "Website", icon: "Globe", useCase: "Customer portal" },
     ],
-    testimonials: [
-      {
-        quote: "We cut order processing time by 70%. Customers now place orders themselves through the portal.",
-        author: "Carlos M.",
-        role: "Operations Manager",
-        company: "Houston Industrial Supply",
-      },
-      {
-        quote: "Real-time inventory across 3 warehouses finally. No more surprise stockouts.",
-        author: "Jennifer H.",
-        role: "Warehouse Director",
-        company: "Gulf Coast Distributors",
-      },
-    ],
+    testimonials: [],
     stats: [
       { label: "Order Processing", value: "70%", description: "Faster with automation" },
       { label: "Inventory Accuracy", value: "99%", description: "Across all warehouses" },
@@ -686,20 +625,7 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Sales", icon: "TrendingUp", useCase: "CRM and customer management" },
       { name: "Accounting", icon: "Calculator", useCase: "Automated reconciliation" },
     ],
-    testimonials: [
-      {
-        quote: "Finally, one system for our 3 stores and website. Inventory is always accurate now.",
-        author: "Amanda T.",
-        role: "Owner",
-        company: "Houston Home Goods",
-      },
-      {
-        quote: "Our loyalty program runs itself. Customers love it and we see them more often.",
-        author: "Marcus J.",
-        role: "Store Manager",
-        company: "Galleria Fashion Boutique",
-      },
-    ],
+    testimonials: [],
     stats: [
       { label: "Inventory Accuracy", value: "99%", description: "Across all channels" },
       { label: "Checkout Speed", value: "40%", description: "Faster transactions" },
@@ -791,20 +717,7 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Expenses", icon: "Receipt", useCase: "Expense capture and reimbursement" },
       { name: "Accounting", icon: "Calculator", useCase: "Project billing and revenue recognition" },
     ],
-    testimonials: [
-      {
-        quote: "Our utilization went from 65% to 82% in six months. The visibility changed everything.",
-        author: "Kevin L.",
-        role: "Managing Partner",
-        company: "Houston Engineering Consultants",
-      },
-      {
-        quote: "Proposal turnaround dropped from 2 days to 2 hours. We're winning more work faster.",
-        author: "Rachel S.",
-        role: "Business Development Director",
-        company: "Energy Corridor Advisory",
-      },
-    ],
+    testimonials: [],
     stats: [
       { label: "Utilization Increase", value: "17%", description: "Average improvement" },
       { label: "Billing Cycle", value: "3 days", description: "From 2+ weeks" },
@@ -897,20 +810,7 @@ export const industries: Record<string, IndustryConfig> = {
       { name: "Purchase", icon: "ShoppingCart", useCase: "Vendor management and auto-reordering" },
       { name: "Accounting", icon: "Calculator", useCase: "Job costing and full financials" },
     ],
-    testimonials: [
-      {
-        quote: "We finally have one source of truth. Production, sales, and accounting all looking at the same data.",
-        author: "James M.",
-        role: "COO",
-        company: "Gulf Coast Manufacturing",
-      },
-      {
-        quote: "ICIT understood our manufacturing challenges. They configured Odoo to match how we actually work.",
-        author: "David H.",
-        role: "Operations Director",
-        company: "Houston Industrial Products",
-      },
-    ],
+    testimonials: [],
     stats: [
       { label: "Faster Implementation", value: "90 Days", description: "Typical go-live timeline" },
       { label: "Inventory Accuracy", value: "99%+", description: "With barcode scanning" },

@@ -90,6 +90,12 @@ export default function IndustryHero({ industryKey, city }: IndustryHeroProps) {
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
               {industry.heroDescription}
             </p>
+            {industry.research && (
+              <p className="text-sm text-slate-400 max-w-3xl mx-auto">
+                Research: {industry.research.fileName}
+                {industry.research.researchDate ? ` • ${industry.research.researchDate}` : ""}
+              </p>
+            )}
           </motion.div>
 
           {/* Stats Bar - Prominent Position */}

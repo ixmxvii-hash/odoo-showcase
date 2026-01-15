@@ -11,7 +11,6 @@ import {
   Building2,
   CalendarCheck
 } from "lucide-react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
@@ -32,8 +31,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans selection:bg-orange-100 selection:text-orange-900">
-      <Header />
-
       <main>
         {/* HERO SECTION */}
         <section className="relative overflow-hidden pt-32 pb-24 md:pt-48 md:pb-40 bg-white border-b-4 border-slate-100">

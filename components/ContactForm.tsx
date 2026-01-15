@@ -4,8 +4,7 @@ import { useState, FormEvent, ChangeEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "./ui/Button";
-import { db } from "@/lib/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { trackEvent } from "@/lib/analytics";
 
 interface FormData {
   companyName: string;
@@ -155,13 +154,32 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Add document to Firebase Firestore
-      await addDoc(collection(db, "leads"), {
+      const payload = {
         ...formData,
-        timestamp: serverTimestamp(),
         sourceUrl: typeof window !== "undefined" ? window.location.href : "",
-        status: "new",
+      };
+
+      console.log("Submitting form:", payload);
+
+      // Submit to ICIT CRM via local API route
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
+
+      console.log("Response status:", response.status);
+
+      const data = await response.json();
+      console.log("Response data:", data);
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit form");
+      }
+
+      trackEvent("lead_submit", { form: "contact" });
 
       // Success state
       setIsSuccess(true);
@@ -177,6 +195,7 @@ export default function ContactForm() {
       });
     } catch (error) {
       console.error("Error submitting form:", error);
+      trackEvent("lead_submit_error", { form: "contact" });
       setSubmitError(
         "Something went wrong. Please try again or contact us directly."
       );
@@ -230,6 +249,9 @@ export default function ContactForm() {
           Tell us about your business and we'll show you how Odoo can transform
           your operations.
         </p>
+        <p className="text-sm text-gray-500 mt-3">
+          We keep your details private and use them only to respond to your request.
+        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -249,6 +271,7 @@ export default function ContactForm() {
               value={formData.companyName}
               onChange={handleInputChange}
               aria-required="true"
+              autoComplete="organization"
               className={`w-full px-4 py-3 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 ${
                 errors.companyName
                   ? "border-red-500 focus:ring-red-500"
@@ -284,6 +307,7 @@ export default function ContactForm() {
               value={formData.contactName}
               onChange={handleInputChange}
               aria-required="true"
+              autoComplete="name"
               className={`w-full px-4 py-3 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 ${
                 errors.contactName
                   ? "border-red-500 focus:ring-red-500"
@@ -322,6 +346,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleInputChange}
               aria-required="true"
+              autoComplete="email"
               className={`w-full px-4 py-3 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 ${
                 errors.email
                   ? "border-red-500 focus:ring-red-500"
@@ -357,6 +382,7 @@ export default function ContactForm() {
               value={formData.phone}
               onChange={handleInputChange}
               aria-required="true"
+              autoComplete="tel"
               className={`w-full px-4 py-3 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 ${
                 errors.phone
                   ? "border-red-500 focus:ring-red-500"

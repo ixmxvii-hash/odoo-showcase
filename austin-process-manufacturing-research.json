@@ -1,0 +1,845 @@
+{
+  "research_metadata": {
+    "title": "Austin, Texas Process Manufacturing Industry Research",
+    "research_date": "2026-01-11",
+    "focus_areas": [
+      "Semiconductor Manufacturing",
+      "Pharmaceutical & Biotech",
+      "Chemical Processing",
+      "Food Ingredient Manufacturing"
+    ],
+    "use_case": "Odoo ERP Implementation - Process Manufacturing"
+  },
+
+  "executive_summary": {
+    "overview": "Austin, Texas is a major hub for semiconductor manufacturing, known as 'Silicon Hills,' with over 35 semiconductor companies. The region has seen massive capital investments exceeding $37 billion in recent years, led by Samsung's $17B+ Taylor facility expansion. While pharmaceuticals and chemical processing have a smaller footprint compared to semiconductors, Austin maintains specialized biotech and food manufacturing operations.",
+    "key_statistics": {
+      "semiconductor_jobs": "43,000+ statewide (87% concentrated in Dallas-Fort Worth and Austin metro areas)",
+      "manufacturing_employment_austin": "~70,000 total manufacturing jobs (as of 2025)",
+      "samsung_economic_impact_2024": "$19.8 billion into Central Texas economy",
+      "total_jobs_supported_samsung": "38,000+ direct and indirect jobs",
+      "average_semiconductor_wages": "$141,000 (2017 data, more than double metro average of $59,700)"
+    }
+  },
+
+  "market_overview": {
+    "semiconductor_fabrication": {
+      "description": "Austin area is the heart of Texas semiconductor manufacturing with world-class fabs",
+      "major_facilities": [
+        {
+          "company": "Samsung Austin Semiconductor",
+          "location": "Austin, TX",
+          "established": "1996",
+          "employees": "4,907 direct jobs (2024)",
+          "economic_impact": "$19.8 billion (2024)",
+          "production": "Billions of chips annually",
+          "notes": "First Samsung fab outside Korea, second fab added 2006",
+          "source": "https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-pump-19b-into-central-texas-economy-in-2024/"
+        },
+        {
+          "company": "Samsung Electronics - Taylor Facility",
+          "location": "Taylor, TX (25km from Austin)",
+          "investment": "$17+ billion",
+          "facility_size": "5+ million square meters (6 million sq ft)",
+          "site_area": "1,200 acres",
+          "production_capacity": "20,000 wafers per month (target by mid-2026)",
+          "initial_capacity": "10,000 wafers per month",
+          "technology_node": "3nm advanced process",
+          "construction_start": "2022",
+          "production_start": "2026 (delayed from 2024)",
+          "jobs_created": "18,636 direct and indirect construction jobs",
+          "federal_funding": "$4.745 billion (CHIPS Act)",
+          "future_investment": "$37+ billion planned in coming years",
+          "total_jobs_impact": "15,000+ jobs expected",
+          "source": "https://gov.texas.gov/news/post/governor-abbott-announces-new-17-billion-samsung-manufacturing-facility-in-taylor"
+        },
+        {
+          "company": "NXP Semiconductors",
+          "location": "Austin, TX (Oak Hill and ATMC facilities)",
+          "employees": "~4,000 in Austin area",
+          "facilities": "2 wafer fabrication facilities (opposite ends of city)",
+          "expansion": "$2.6 billion planned expansion (4-story fab)",
+          "potential_jobs": "Up to 800 new jobs",
+          "headquarters": "US headquarters in Southwest Austin",
+          "source": "https://www.nxp.com/docs/en/fact-sheet/OAKHILL_FAST_FACTS.pdf"
+        },
+        {
+          "company": "Infineon Technologies (Fab 25)",
+          "location": "Austin, TX",
+          "status": "Sold to SkyWater Technology (June 2025)",
+          "employees": "960-1,000",
+          "production": "1 billion chips per year",
+          "wafer_capacity": "~400,000 wafer starts per year",
+          "wafer_size": "200mm",
+          "technology_nodes": "130nm to 65nm",
+          "clean_room": "114,000 sq ft Class 1 clean room + 30,000 sq ft Class 1000 for testing",
+          "original_investment": "$1.5 billion (1990s)",
+          "source": "https://www.kvue.com/article/money/economy/boomtown-2040/manufacturing/austin-semiconductors-infineon-look-inside-fab-25/269-3eefedc4-5b45-439f-a86e-ea50518339e1"
+        },
+        {
+          "company": "Applied Materials",
+          "location": "Austin, TX",
+          "established": "1992",
+          "role": "World's leading semiconductor equipment provider",
+          "notes": "Major employer with industry partnerships",
+          "source": "https://austinio.com/semiconductor-b2b-austin.php"
+        },
+        {
+          "company": "Texas Instruments",
+          "facilities": "Multiple Texas locations (Sherman, Richardson)",
+          "austin_presence": "Research and operations",
+          "employees": "10,000+ company-wide",
+          "notes": "Major presence in Texas semiconductor ecosystem",
+          "source": "https://www.ti.com/about-ti/company/ti-at-a-glance.html"
+        }
+      ],
+      "industry_concentration": {
+        "computer_manufacturing_location_quotient": 3.6,
+        "description": "Austin has nearly 4x the concentration of computer manufacturing vs US average",
+        "source": "https://www.dallasfed.org/research/heart/austin"
+      }
+    },
+
+    "pharmaceutical_biotech": {
+      "description": "Smaller but specialized pharmaceutical and biotech sector focused on contract manufacturing and innovative technologies",
+      "market_size": "82 pharmaceutical and medicine manufacturing companies in Austin",
+      "major_facilities": [
+        {
+          "company": "AustinPx",
+          "type": "Contract Development and Manufacturing Organization (CDMO)",
+          "specialization": "KinetiSol™ Technology for amorphous solid dispersions (ASD)",
+          "certification": "Pharmaceutical development services",
+          "source": "https://www.austinpx.com/"
+        },
+        {
+          "company": "Thermo Fisher Scientific",
+          "presence": "Pharmaceutical and biotechnology operations",
+          "type": "Large pharma/biotech provider"
+        },
+        {
+          "company": "Eli Lilly",
+          "presence": "Austin operations",
+          "type": "Major pharmaceutical company"
+        },
+        {
+          "company": "Pfizer",
+          "presence": "Austin operations",
+          "type": "Major pharmaceutical company"
+        },
+        {
+          "company": "Natera, Inc.",
+          "type": "Biotech diagnostics"
+        },
+        {
+          "company": "Asuragen, Inc.",
+          "type": "Molecular diagnostics"
+        },
+        {
+          "company": "Shattuck Labs, Inc.",
+          "type": "Biotechnology"
+        },
+        {
+          "company": "Formation Biologics Corp.",
+          "type": "Biologics manufacturing"
+        },
+        {
+          "company": "Curtana Pharmaceuticals, Inc.",
+          "type": "Pharmaceutical development"
+        },
+        {
+          "company": "Hyalose LLC",
+          "specialization": "Recombinant Hyaluronic Acid technology"
+        },
+        {
+          "company": "Emerald Cloud Lab (ECL)",
+          "type": "Digital lab platform for remote experimentation",
+          "notes": "State-of-the-art industrial lab facilities"
+        }
+      ],
+      "source": "https://www.dnb.com/business-directory/company-information.pharmaceutical_and_medicine_manufacturing.us.texas.austin.html"
+    },
+
+    "chemical_processing": {
+      "description": "Limited dedicated chemical processing compared to Houston; primarily specialty chemicals supporting semiconductor industry",
+      "market_size": "231 chemical manufacturing companies (broad definition), 35 basic chemical manufacturing companies",
+      "major_facilities": [
+        {
+          "company": "SACHEM, Inc.",
+          "established": "1950",
+          "employees": "~242",
+          "headquarters": "Austin, TX",
+          "type": "Private chemical manufacturer",
+          "specialization": "High-purity chemicals for semiconductors and energy industries",
+          "source": "https://www.builtinaustin.com/companies/type/chemical-companies"
+        },
+        {
+          "company": "Austin Chemical, Inc.",
+          "specialization": "Life Sciences and Fine Chemicals",
+          "source": "https://austinchemical.com/"
+        },
+        {
+          "company": "Capitol Scientific, Inc.",
+          "type": "Chemical manufacturing and distribution"
+        },
+        {
+          "company": "Ashland Global",
+          "presence": "Austin operations",
+          "type": "Specialty chemicals"
+        },
+        {
+          "company": "Eastman Chemical Company",
+          "presence": "Austin operations",
+          "type": "Advanced materials and specialty chemicals"
+        },
+        {
+          "company": "Dow Chemical",
+          "presence": "Austin operations",
+          "type": "Materials science company"
+        }
+      ],
+      "notes": "Houston is Texas's primary chemical manufacturing hub; Austin focuses on specialty chemicals for high-tech industries",
+      "source": "https://www.dnb.com/business-directory/company-information.chemical_manufacturing.us.texas.austin.html"
+    },
+
+    "food_ingredient_manufacturing": {
+      "description": "Growing specialty food manufacturing sector with SQF-certified facilities",
+      "market_size": "95+ food manufacturing companies in Austin",
+      "major_facilities": [
+        {
+          "company": "ATX Specialty Foods",
+          "certification": "SQF certified",
+          "offerings": "Retail branded, foodservice, private label",
+          "growth": "One of fastest growing food manufacturing facilities in Texas",
+          "source": "https://www.atxspecialtyfoods.com/"
+        },
+        {
+          "company": "Plantstrong Foods",
+          "employees": "11-50",
+          "location": "550 Bowie Street, Austin",
+          "ranking": "Top employer for food manufacturing in Austin"
+        },
+        {
+          "company": "Aspire Food Group USA Inc.",
+          "type": "Food ingredient manufacturing"
+        },
+        {
+          "company": "Coffee Traders Inc.",
+          "type": "Coffee processing"
+        },
+        {
+          "company": "Sanderson Specialty Foods Inc.",
+          "type": "Specialty food manufacturing"
+        }
+      ],
+      "source": "https://www.dnb.com/business-directory/company-information.other_food_manufacturing.us.texas.austin.html"
+    }
+  },
+
+  "capital_investment": {
+    "recent_major_investments": [
+      {
+        "company": "Samsung Electronics",
+        "project": "Taylor Semiconductor Fab",
+        "amount": "$17 billion",
+        "year": "2021-2026",
+        "future_commitment": "$37+ billion in coming years",
+        "federal_support": "$4.745 billion (CHIPS Act)",
+        "breakdown": {
+          "buildings_property": "$6 billion",
+          "machinery_equipment": "$11 billion"
+        },
+        "source": "https://news.samsung.com/us/samsung-new-advanced-semiconductor-fab-site-taylor-texas/"
+      },
+      {
+        "company": "NXP Semiconductors",
+        "project": "Austin Fab Expansion",
+        "amount": "$2.6 billion",
+        "description": "Additional 4-story fab facility",
+        "source": "https://realinternational.com/nxp-considers-austin-for-more-semiconductor-manufacturing-up-to-800-new-jobs/"
+      },
+      {
+        "company": "Infineon Technologies",
+        "project": "Fab 25 Improvements",
+        "amount": "$83 million",
+        "year": "Recent",
+        "notes": "Factory improvements before sale to SkyWater",
+        "source": "https://www.connectcre.com/stories/austin-chipmaker-spending-83m-on-factory-improvements/"
+      },
+      {
+        "company": "University of Texas - Texas Institute for Electronics",
+        "project": "DOD Microelectronics Manufacturing Center",
+        "amount": "$840 million (DARPA) + $552 million (Texas Legislature)",
+        "total": "$1.392 billion",
+        "facility": "84,000 sq ft state-of-the-art clean room",
+        "purpose": "Research and workforce development",
+        "source": "https://cockrell.utexas.edu/news/ut-awarded-840m-to-build-microelectronics-manufacturing-center-advance-u-s-semiconductor-industry/"
+      }
+    ],
+
+    "clean_room_capacity": {
+      "description": "World-class clean room infrastructure supporting advanced semiconductor manufacturing",
+      "facilities": [
+        {
+          "facility": "Infineon Fab 25",
+          "clean_room_area": "144,000 sq ft total",
+          "breakdown": {
+            "class_1_manufacturing": "114,000 sq ft",
+            "class_1000_testing": "30,000 sq ft"
+          },
+          "source": "https://www.kvue.com/article/money/economy/boomtown-2040/manufacturing/austin-semiconductors-infineon-look-inside-fab-25/269-3eefedc4-5b45-439f-a86e-ea50518339e1"
+        },
+        {
+          "facility": "UT Texas Institute for Electronics",
+          "clean_room_area": "84,000 sq ft",
+          "classification": "State-of-the-art",
+          "purpose": "Research and collaboration",
+          "source": "https://news.utexas.edu/2024/07/18/uts-texas-institute-for-electronics-awarded-840m-to-build-a-dod-microelectronics-manufacturing-center-advance-u-s-semiconductor-industry/"
+        },
+        {
+          "facility": "Samsung Taylor (planned)",
+          "estimated_clean_room": "100,000-600,000 sq ft",
+          "notes": "Typical range for major semiconductor fabs",
+          "source": "https://cleanroomtechnology.com/a-look-at-the-biggest-challenges-with-semiconductor"
+        }
+      ],
+      "industry_standards": "Semiconductor fabs typically require 100,000 to 600,000 sq ft of clean room space"
+    },
+
+    "utility_infrastructure_requirements": {
+      "water_consumption": {
+        "typical_fab": "5+ million gallons per day",
+        "industry_total": "264 billion gallons per year (US semiconductor industry)",
+        "samsung_austin": {
+          "water_source": "Lower Colorado River via Austin municipal treatment plants",
+          "recycling_rate": "~60% of ultrapure water from reclaim",
+          "taylor_facility": "Water reclamation facility for on-site reuse",
+          "recognition": "Austin Water Pretreatment Award recipient (multiple years)"
+        },
+        "source": "https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductor-facilities-director-talks-water-sustainability-efforts/"
+      },
+      "energy_consumption": {
+        "industry_total": "149 billion kWh in 2021",
+        "equivalency": "Enough to power a metropolis of 25+ million people for a year",
+        "notes": "Close water-energy relationship in ultrapure water production",
+        "source": "https://www.azonano.com/article.aspx?ArticleID=6658"
+      },
+      "infrastructure_partnerships": {
+        "samsung_taylor": {
+          "partner": "EPCOR Utilities Inc.",
+          "project": "Water pipeline from Alcoa to Taylor facility",
+          "source": "https://www.blackridgeresearch.com/project-profiles/taylor-semiconductor-manufacturing-fabrication-fab-plant-united-states-us"
+        }
+      }
+    }
+  },
+
+  "regulatory_compliance": {
+    "environmental_epa_tceq": {
+      "description": "Texas Commission on Environmental Quality (TCEQ) regulates environmental compliance with EPA oversight",
+      "tceq_overview": {
+        "role": "State environmental agency for Texas",
+        "headquarters": "12100 Park 35 Circle, Austin, TX",
+        "employees": "~2,780",
+        "regional_offices": 16,
+        "ranking": "4th largest environmental agency in US",
+        "authority": "Implements most environmental programs; EPA retains oversight",
+        "source": "https://en.wikipedia.org/wiki/Texas_Commission_on_Environmental_Quality"
+      },
+      "semiconductor_specific": {
+        "regulation": "Air PBR 106.225: Semiconductor Manufacturing",
+        "reference": "30 TAC Section 106.225",
+        "permit_type": "Permit by Rule (PBR)",
+        "registration_required": false,
+        "fee_required": false,
+        "record_keeping": "Must identify rules and demonstrate compliance",
+        "source": "https://www.tceq.texas.gov/permitting/air/permitbyrule/subchapter-i/semi_manufacturing.html"
+      },
+      "general_manufacturing_requirements": {
+        "air_emissions": "Virtually all manufacturing air emissions must be authorized",
+        "permit_types": [
+          "Permits By Rule (PBR) - Most common",
+          "New Source Review (NSR) Air Permit - High emissions",
+          "Title V permit - Major sources"
+        ],
+        "source": "https://bes-corp.com/common-texas-environmental-compliance-requirements/"
+      }
+    },
+
+    "fda_pharmaceutical": {
+      "description": "Current Good Manufacturing Practice (CGMP) regulations for pharmaceutical manufacturing",
+      "primary_regulations": [
+        "21 CFR Part 210: CGMP in Manufacturing, Processing, Packing, or Holding of Drugs",
+        "21 CFR Part 211: CGMP for Finished Pharmaceuticals"
+      ],
+      "key_requirements": {
+        "quality_management": "Strong quality management systems",
+        "raw_materials": "Appropriate quality raw materials",
+        "operating_procedures": "Robust operating procedures",
+        "deviation_investigation": "Detection and investigation of quality deviations",
+        "testing_laboratories": "Reliable testing laboratories",
+        "process_validation": "Scientifically sound design and testing procedures"
+      },
+      "compliance_approach": "Flexible framework allowing manufacturers to implement controls using scientifically sound methods",
+      "source": "https://www.fda.gov/drugs/pharmaceutical-quality-resources/current-good-manufacturing-practice-cgmp-regulations"
+    },
+
+    "osha_process_safety": {
+      "description": "Process Safety Management (PSM) of Highly Hazardous Chemicals",
+      "regulation": "29 CFR 1910.119",
+      "applicability": "Facilities with regulated substances at or above threshold quantity (TQ)",
+      "covered_chemicals": "130+ toxic and reactive chemicals (Appendix A)",
+      "relevant_industries": "Chemical manufacturing, fabricated metal products, transportation equipment, semiconductor manufacturing",
+      "14_elements": [
+        {
+          "element": "Employee Participation",
+          "description": "Involve employees in PSM development"
+        },
+        {
+          "element": "Process Safety Information",
+          "description": "Written documentation of hazardous chemicals, technology, equipment"
+        },
+        {
+          "element": "Process Hazard Analysis (PHA)",
+          "description": "Systematic evaluation of process hazards"
+        },
+        {
+          "element": "Operating Procedures",
+          "description": "Written procedures for safe operations"
+        },
+        {
+          "element": "Training",
+          "description": "Employee training on processes and procedures"
+        },
+        {
+          "element": "Contractors",
+          "description": "Contractor safety requirements"
+        },
+        {
+          "element": "Pre-Startup Safety Review",
+          "description": "Verification before new/modified processes start"
+        },
+        {
+          "element": "Mechanical Integrity",
+          "description": "Equipment design, installation, operation standards"
+        },
+        {
+          "element": "Hot Work Permit",
+          "description": "Documentation for hot work operations"
+        },
+        {
+          "element": "Management of Change",
+          "description": "System for managing chemical, technology, equipment changes"
+        },
+        {
+          "element": "Incident Investigation",
+          "description": "Investigation and documentation of incidents"
+        },
+        {
+          "element": "Emergency Planning and Response",
+          "description": "Emergency action plan and training"
+        },
+        {
+          "element": "Compliance Audits",
+          "description": "PSM audit at least every 3 years"
+        },
+        {
+          "element": "Trade Secrets",
+          "description": "Protection of proprietary information"
+        }
+      ],
+      "source": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.119"
+    },
+
+    "industry_standards": {
+      "semiconductor": [
+        "SEMI standards for equipment and materials",
+        "ISO 14644 for clean room classification",
+        "ISO 9001 for quality management"
+      ],
+      "pharmaceutical": [
+        "FDA CGMP regulations",
+        "ICH Q7A for API manufacturing",
+        "ISO 13485 for medical devices"
+      ]
+    }
+  },
+
+  "workforce_development": {
+    "training_programs": {
+      "austin_community_college": {
+        "description": "Leading semiconductor technician training in partnership with industry",
+        "programs": [
+          {
+            "name": "STARS (Semiconductor Technician Advanced Rapid Start)",
+            "duration": "4 weeks full-time",
+            "format": "Condensed theoretical and hands-on training",
+            "launch_date": "Fall 2023",
+            "industry_partners": [
+              "Samsung Austin Semiconductor",
+              "NXP",
+              "Tokyo Electron",
+              "Infineon",
+              "Applied Materials",
+              "Austin Regional Manufacturing Association"
+            ],
+            "funding": [
+              {
+                "source": "Initial grant",
+                "amount": "$364,548"
+              },
+              {
+                "source": "Department of Defense",
+                "amount": "$7.5 million",
+                "date": "March 2025"
+              }
+            ],
+            "source": "https://sites.austincc.edu/semiconductor-manufacturing/"
+          }
+        ],
+        "degree_pathways": {
+          "description": "Stackable credentials building toward degrees",
+          "levels": [
+            "Certificate programs",
+            "Associate Degree in Applied Technology",
+            "Bachelor of Applied Technology in Manufacturing Technology"
+          ]
+        },
+        "graduate_salaries": {
+          "semiconductor_technicians": "$30-35 per hour average in Austin area (experience-dependent)",
+          "source": "https://sites.austincc.edu/semiconductor-manufacturing/"
+        }
+      },
+
+      "ut_austin_programs": {
+        "description": "University-level semiconductor engineering education",
+        "programs": [
+          {
+            "name": "Master of Science in Semiconductor Science and Engineering",
+            "duration": "18 months",
+            "collaboration": "Cockrell School of Engineering + College of Natural Sciences",
+            "first_cohort": "Fall 2025",
+            "industry_sponsors": [
+              "Apple",
+              "Cadence",
+              "NXP",
+              "Silicon Labs",
+              "Samsung",
+              "Tokyo Electron",
+              "Infineon",
+              "Applied Materials",
+              "Emerson"
+            ],
+            "student_benefits": [
+              "Industry-sponsored projects with faculty",
+              "Summer internship opportunities",
+              "Regular seminar series with industry experts",
+              "Access to UT alumni network in semiconductor industry"
+            ],
+            "source": "https://cockrell.utexas.edu/academics/graduate-education/programs/semiconductor-science-and-engineering/"
+          }
+        ],
+        "research_facilities": {
+          "texas_institute_for_electronics": {
+            "clean_room_space": "84,000 sq ft state-of-the-art",
+            "funding": "$840M DARPA + $552M Texas Legislature",
+            "purpose": "Collaboration with companies, national labs, academic institutions"
+          }
+        },
+        "partnerships": {
+          "samsung_ut_partnership": {
+            "combined_contributions": "$3.7 million",
+            "focus": "Nurturing new generation of semiconductor talent"
+          },
+          "emerson_partnership": {
+            "support": "First 3 cohorts of semiconductor master's program",
+            "launch": "Fall 2025"
+          }
+        }
+      },
+
+      "joint_initiatives": {
+        "semiconductor_training_center": {
+          "partners": [
+            "University of Texas Austin",
+            "Austin Community College",
+            "Texas Institute for Electronics"
+          ],
+          "goal": "Premier hub for comprehensive workforce development",
+          "approach": "One-stop shop for semiconductor industry skills",
+          "pathway": "Seamless education from equipment technician to semiconductor engineer",
+          "announcement": "March 2024",
+          "source": "https://news.utexas.edu/2024/03/28/ut-acc-texas-institute-for-electronics-to-launch-semiconductor-training-center-to-meet-industry-workforce-needs/"
+        }
+      }
+    },
+
+    "industry_talent_requirements": {
+      "process_engineers": {
+        "education": "BS/MS in Chemical Engineering, Materials Science, Electrical Engineering",
+        "skills": [
+          "Process development and optimization",
+          "Statistical process control",
+          "Failure analysis",
+          "Equipment troubleshooting",
+          "Cleanroom protocols"
+        ],
+        "average_salary": "$141,000 (semiconductor manufacturing, 2017)"
+      },
+      "technicians": {
+        "education": "Certificate or Associate Degree",
+        "skills": [
+          "Equipment operation and maintenance",
+          "Cleanroom procedures",
+          "Quality control",
+          "Safety protocols",
+          "Basic troubleshooting"
+        ],
+        "average_salary": "$30-35 per hour ($62,400-72,800 annually)"
+      },
+      "quality_assurance": {
+        "education": "BS in related field",
+        "certifications": "ASQ CQE, Six Sigma",
+        "skills": [
+          "GMP/CGMP compliance",
+          "Documentation and validation",
+          "Statistical analysis",
+          "Audit preparation"
+        ]
+      }
+    }
+  },
+
+  "economic_impact": {
+    "employment_data": {
+      "total_manufacturing_austin": {
+        "current_employment": "~70,000 jobs (2025)",
+        "recent_trend": "Declining -1.4% year-over-year (June 2025)",
+        "job_losses": "-1,000 jobs (June 2025), -1,200 jobs (April 2025)",
+        "historical_growth": "+5.5% or +3,800 jobs (April 2023)",
+        "source": "https://opportunityaustin.com/austin-job-growth-unemployment-update-june-2025/"
+      },
+      "semiconductor_industry": {
+        "texas_total": "43,000+ jobs",
+        "geographic_concentration": "87% in Dallas-Fort Worth and Austin metro areas",
+        "travis_county_concentration": "6x national average",
+        "source": "https://comptroller.texas.gov/economy/economic-data/supply-chain/2021/semiconductors.php"
+      },
+      "samsung_austin": {
+        "direct_jobs_austin": "4,907 (2024)",
+        "indirect_jobs_austin": "11,291 (2024)",
+        "construction_jobs_taylor": "18,636 (2024)",
+        "total_jobs_supported": "38,000+ (2024)",
+        "future_jobs_projection": "15,000+ when Taylor facility fully operational",
+        "source": "https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-pump-19b-into-central-texas-economy-in-2024/"
+      },
+      "nxp_semiconductors": {
+        "current_employees": "~4,000",
+        "expansion_jobs": "Up to 800 additional jobs",
+        "source": "https://www.nxp.com/docs/en/fact-sheet/OAKHILL_FAST_FACTS.pdf"
+      },
+      "infineon_fab25": {
+        "employees": "960-1,000",
+        "status": "Transferred to SkyWater (June 2025)",
+        "source": "https://www.infineon.com/press-release/2025/INFXX202506-120"
+      }
+    },
+
+    "wages_compensation": {
+      "semiconductor_manufacturing": {
+        "average_earnings": "$141,000 (2017)",
+        "comparison_metro_average": "$59,700 (2017)",
+        "multiplier": "2.4x metro average",
+        "source": "https://www.dallasfed.org/research/heart/austin"
+      },
+      "technicians": {
+        "hourly_range": "$30-35 per hour",
+        "annual_range": "$62,400-72,800",
+        "source": "https://sites.austincc.edu/semiconductor-manufacturing/"
+      }
+    },
+
+    "samsung_economic_impact": {
+      "2024_total_impact": "$19.8 billion into Central Texas economy",
+      "2023_total_impact": "$26.8 billion into Central Texas economy",
+      "workforce_investment_2024": "$5.65 million in 5-Star workforce development",
+      "charitable_contributions_2024": {
+        "corporate": "$2 million to community organizations",
+        "employee_donations": "$474,067",
+        "company_match": "$136,209"
+      },
+      "source": "https://download.semiconductor.samsung.com/resources/others/Samsung_Austin_Semiconductor_2024_Economic_Impact_Report_10149411000944.pdf"
+    },
+
+    "supply_chain_multiplier": {
+      "description": "Semiconductor industry has extensive supply chain affecting 169 industries",
+      "complexity": "One of most complex, multifaceted supply chains in any industry",
+      "geographic_specialization": "Expertise across Asia, North America, Europe",
+      "local_impact": "Sophisticated manufacturing facilities require billions in investment, years to build",
+      "disruption_effects": "Chip shortages affect entire automotive industry and 169+ other industries",
+      "source": "https://www.semiconductors.org/emerging-resilience-in-the-semiconductor-supply-chain/"
+    },
+
+    "infrastructure_investment": {
+      "water_energy": {
+        "typical_fab_water": "5+ million gallons per day",
+        "typical_fab_energy": "Significant portion of 149 billion kWh industry total",
+        "infrastructure_requirements": [
+          "Municipal water treatment capacity",
+          "Electrical grid upgrades",
+          "Natural gas supply",
+          "Wastewater treatment",
+          "Transportation logistics"
+        ]
+      }
+    }
+  },
+
+  "odoo_erp_considerations": {
+    "process_manufacturing_requirements": {
+      "batch_tracking": {
+        "importance": "Critical for semiconductor wafer lots, pharmaceutical batches, chemical runs",
+        "compliance": "Required for FDA CGMP, ISO certifications",
+        "traceability": "Full genealogy from raw materials through finished goods"
+      },
+      "quality_management": {
+        "in_process_testing": "Real-time monitoring and statistical process control",
+        "certificate_of_analysis": "COA generation for each batch/lot",
+        "deviation_management": "Investigation and CAPA workflows",
+        "audit_trails": "Complete electronic records for regulatory compliance"
+      },
+      "formulation_management": {
+        "bill_of_materials": "Multi-level BOMs with by-products and co-products",
+        "recipe_versioning": "Change control for process improvements",
+        "scaling": "Recipe scaling for different batch sizes",
+        "yield_management": "Planned vs actual yield tracking"
+      },
+      "regulatory_compliance": {
+        "electronic_batch_records": "21 CFR Part 11 compliant for pharma",
+        "environmental_reporting": "TCEQ and EPA reporting requirements",
+        "safety_documentation": "OSHA PSM compliance documentation",
+        "audit_readiness": "Inspection-ready documentation and reporting"
+      },
+      "equipment_maintenance": {
+        "preventive_maintenance": "Scheduled maintenance for critical equipment",
+        "calibration_management": "Instrument calibration tracking",
+        "qualification_validation": "IQ/OQ/PQ documentation",
+        "mechanical_integrity": "OSHA PSM mechanical integrity program"
+      }
+    },
+
+    "industry_specific_modules": {
+      "semiconductor": [
+        "Wafer lot tracking",
+        "Fab equipment integration",
+        "Clean room material management",
+        "Yield analysis",
+        "Test data management"
+      ],
+      "pharmaceutical": [
+        "GMP compliance workflows",
+        "Electronic batch records",
+        "Stability testing",
+        "Validation documentation",
+        "Serialization and aggregation"
+      ],
+      "chemical": [
+        "Formula management",
+        "Hazardous material tracking",
+        "Safety data sheet management",
+        "Environmental compliance",
+        "Tank and vessel management"
+      ],
+      "food": [
+        "Allergen management",
+        "Nutritional labeling",
+        "Food safety (HACCP)",
+        "Shelf life management",
+        "SQF/BRC compliance"
+      ]
+    },
+
+    "integration_points": {
+      "equipment_systems": [
+        "SCADA/DCS integration",
+        "Laboratory Information Management Systems (LIMS)",
+        "Manufacturing Execution Systems (MES)",
+        "Automated material handling",
+        "Environmental monitoring"
+      ],
+      "business_systems": [
+        "Supply chain management",
+        "Customer relationship management",
+        "Document management",
+        "Training management",
+        "Supplier quality management"
+      ]
+    }
+  },
+
+  "sources": {
+    "primary_sources": [
+      {
+        "title": "Samsung Austin Semiconductor 2024 Economic Impact Report",
+        "url": "https://download.semiconductor.samsung.com/resources/others/Samsung_Austin_Semiconductor_2024_Economic_Impact_Report_10149411000944.pdf",
+        "type": "Industry Report"
+      },
+      {
+        "title": "Texas Governor - Samsung $17B Taylor Facility Announcement",
+        "url": "https://gov.texas.gov/news/post/governor-abbott-announces-new-17-billion-samsung-manufacturing-facility-in-taylor",
+        "type": "Government Press Release"
+      },
+      {
+        "title": "Austin Community College - Semiconductor Manufacturing Programs",
+        "url": "https://sites.austincc.edu/semiconductor-manufacturing/",
+        "type": "Educational Institution"
+      },
+      {
+        "title": "UT Austin - Master's in Semiconductor Science and Engineering",
+        "url": "https://cockrell.utexas.edu/academics/graduate-education/programs/semiconductor-science-and-engineering/",
+        "type": "Educational Institution"
+      },
+      {
+        "title": "TCEQ - Semiconductor Manufacturing Air Permit by Rule",
+        "url": "https://www.tceq.texas.gov/permitting/air/permitbyrule/subchapter-i/semi_manufacturing.html",
+        "type": "Regulatory Agency"
+      },
+      {
+        "title": "FDA - Current Good Manufacturing Practice Regulations",
+        "url": "https://www.fda.gov/drugs/pharmaceutical-quality-resources/current-good-manufacturing-practice-cgmp-regulations",
+        "type": "Regulatory Agency"
+      },
+      {
+        "title": "OSHA - Process Safety Management Standard",
+        "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.119",
+        "type": "Regulatory Agency"
+      },
+      {
+        "title": "Dallas Federal Reserve - Austin Economic Analysis",
+        "url": "https://www.dallasfed.org/research/heart/austin",
+        "type": "Economic Research"
+      },
+      {
+        "title": "Texas Comptroller - Semiconductor Supply Chain",
+        "url": "https://comptroller.texas.gov/economy/economic-data/supply-chain/2021/semiconductors.php",
+        "type": "State Government"
+      },
+      {
+        "title": "Infineon Fab 25 - KVUE Inside Look",
+        "url": "https://www.kvue.com/article/money/economy/boomtown-2040/manufacturing/austin-semiconductors-infineon-look-inside-fab-25/269-3eefedc4-5b45-439f-a86e-ea50518339e1",
+        "type": "News Report"
+      }
+    ],
+
+    "data_collection_notes": {
+      "methodology": "Multi-source web research using official company reports, government data, academic institutions, and industry publications",
+      "date_range": "2017-2025 (with most data from 2023-2025)",
+      "limitations": [
+        "Some proprietary facility data not publicly available",
+        "Employment numbers represent point-in-time snapshots",
+        "Economic impact calculations vary by methodology",
+        "Some salary data from 2017 may not reflect current wages"
+      ],
+      "data_quality": "High - primarily from official sources including company reports, government agencies, and academic institutions"
+    }
+  }
+}

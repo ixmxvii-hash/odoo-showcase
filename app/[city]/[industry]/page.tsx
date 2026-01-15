@@ -8,6 +8,7 @@ import {
   IndustrySolutions,
   IndustryModules,
   IndustryTestimonials,
+  OdooResults,
 } from "@/components/industry";
 import WhyLocal from "@/components/WhyLocal";
 import Comparison from "@/components/Comparison";
@@ -47,10 +48,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const cityData = cities[normalizedCity];
   const industryData = getCityIndustry(normalizedCity, industryKey);
+  const description = industryData.research?.summary || industryData.heroDescription;
 
   return {
     title: `Odoo ERP for ${cityData.name} ${industryData.name} | ICIT Solutions`,
-    description: industryData.heroDescription,
+    description,
     keywords: [
       `Odoo ${industryData.name} ${cityData.name}`,
       `ERP ${cityData.name} ${industryData.name}`,
@@ -60,7 +62,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ],
     openGraph: {
       title: `Odoo ERP for ${cityData.name} ${industryData.name} | ICIT Solutions`,
-      description: industryData.heroDescription,
+      description,
       url: `https://icitsolutions.com/${city}/${industry}`,
       siteName: "ICIT Solutions",
       locale: "en_US",
@@ -86,16 +88,36 @@ export default async function CityIndustryPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen">
+      {/* 1. Hook with value proposition */}
       <IndustryHero industryKey={industryKey as keyof typeof industries} city={normalizedCity} />
+
+      {/* 2. Identify with their problems */}
       <IndustryPainPoints industryKey={industryKey as keyof typeof industries} />
+
+      {/* 3. Show how Odoo solves problems */}
       <IndustrySolutions industryKey={industryKey as keyof typeof industries} />
-      <IndustryModules industryKey={industryKey as keyof typeof industries} />
-      <WhyLocal city={normalizedCity} />
+
+      {/* 4. Show what modules they get */}
+      <IndustryModules industryKey={industryKey as keyof typeof industries} city={normalizedCity} />
+
+      {/* 5. Proof those modules deliver results */}
+      <OdooResults industryKey={industryKey as keyof typeof industries} city={normalizedCity} />
+
+      {/* 6. Social proof from similar businesses */}
+      <IndustryTestimonials industryKey={industryKey as keyof typeof industries} city={normalizedCity} />
+
+      {/* 7. How Odoo beats competitors */}
       <Comparison />
+
+      {/* 8. Why choose ICIT specifically */}
+      <WhyLocal city={normalizedCity} />
+
+      {/* 9. Calculate their savings (conversion) */}
       <section id="roi-calculator">
         <ROICalculator />
       </section>
-      <IndustryTestimonials industryKey={industryKey as keyof typeof industries} city={normalizedCity} />
+
+      {/* 10. Final CTAs */}
       <Footer />
     </main>
   );

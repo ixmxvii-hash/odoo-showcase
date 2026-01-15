@@ -1,0 +1,989 @@
+{
+  "research_metadata": {
+    "region": "Dallas-Fort Worth (DFW) Metroplex, Texas",
+    "focus": "Discrete Manufacturing - Machine Shops, Aerospace, Precision Fabrication",
+    "research_date": "2026-01-11",
+    "purpose": "Odoo ERP implementation market analysis"
+  },
+
+  "market_overview": {
+    "total_manufacturers": {
+      "value": 6247,
+      "description": "Total manufacturers and suppliers in DFW area",
+      "source": "https://www.mni.net/info/dallas-fort-worth-area"
+    },
+    "employment": {
+      "metroplex_total": {
+        "value": 302000,
+        "year": 2019,
+        "description": "Total manufacturing jobs in DFW Metroplex",
+        "percentage_of_total_employment": 8,
+        "source": "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php"
+      },
+      "dallas_county": {
+        "value": 183634,
+        "description": "Industrial jobs in Dallas County",
+        "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+      },
+      "fort_worth": {
+        "value": 68754,
+        "description": "Industrial jobs in Fort Worth",
+        "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+      },
+      "dallas_city": {
+        "value": 53001,
+        "description": "Industrial jobs in Dallas",
+        "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+      },
+      "average_wage": {
+        "value": 81759,
+        "currency": "USD",
+        "year": 2019,
+        "description": "Average annual wage for manufacturing jobs",
+        "comparison_all_jobs": 63428,
+        "source": "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php"
+      }
+    },
+    "economic_output": {
+      "manufacturing_gdp": {
+        "value": 65500000000,
+        "currency": "USD",
+        "year": 2019,
+        "percentage_of_regional_gdp": 12.1,
+        "total_regional_gdp": 541300000000,
+        "source": "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php"
+      },
+      "total_wages_paid": {
+        "value": 24700000000,
+        "currency": "USD",
+        "year": 2019,
+        "percentage_of_regional_wages": 10,
+        "source": "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php"
+      },
+      "growth_2009_2019": {
+        "jobs_added": 26300,
+        "percentage_increase": 9.5,
+        "gdp_growth_inflation_adjusted": 43.1,
+        "average_annual_gdp_growth": 3.6,
+        "source": "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php"
+      }
+    },
+    "texas_state_context": {
+      "manufacturing_output": {
+        "value": 264000000000,
+        "currency": "USD",
+        "national_rank": 2,
+        "description": "Texas is the nation's second-largest manufacturing output state",
+        "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+      },
+      "workforce": {
+        "value": 1200000,
+        "percentage_of_us_manufacturing": 13,
+        "national_rank": 2,
+        "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+      }
+    }
+  },
+
+  "industry_focus_areas": {
+    "aerospace_defense": {
+      "overview": {
+        "description": "DFW has the state's largest concentration of aerospace manufacturing workers",
+        "employment": {
+          "fort_worth_six_county_region": {
+            "value": 23500,
+            "average_wage": 100000,
+            "companies": 600,
+            "description": "Aerospace and defense-related employment in Fort Worth region",
+            "source": "https://fortworthedp.com/fort-worth-a-hub-of-aerospace-defense-and-mobility-innovation/"
+          },
+          "texas_total": {
+            "value": 150000,
+            "description": "Aviation, aerospace and defense sector employment statewide",
+            "source": "https://businessintexas.com/business-sectors/aerospace-aviation/"
+          }
+        },
+        "texas_rankings": {
+          "aerospace_manufacturing_firms": {
+            "rank": 3,
+            "description": "National ranking for aerospace product and part manufacturing firms",
+            "source": "https://businessintexas.com/business-sectors/aerospace-aviation/"
+          },
+          "exports": {
+            "rank": 3,
+            "value": 11130000000,
+            "currency": "USD",
+            "description": "Aerospace exports value",
+            "source": "https://businessintexas.com/business-sectors/aerospace-aviation/"
+          },
+          "air_transportation_jobs": {
+            "rank": 1,
+            "description": "Texas ranks #1 among all U.S. states in air transportation jobs",
+            "source": "https://businessintexas.com/business-sectors/aerospace-aviation/"
+          }
+        }
+      },
+      "major_companies": {
+        "lockheed_martin_aeronautics": {
+          "location": "Fort Worth, TX",
+          "facility": "Air Force Plant 4",
+          "program": "F-35 Lightning II Manufacturing",
+          "years_in_fort_worth": 75,
+          "supplier_base": 1400,
+          "top_supplier_performance": {
+            "percentage_of_suppliers": 2,
+            "count": 27,
+            "on_time_delivery": 98,
+            "quality_rating": 98
+          },
+          "source": "https://news.lockheedmartin.com/2017-05-03-Recognizing-Supplier-Performance-at-Aeronautics"
+        },
+        "lockheed_martin_missiles_fire_control": {
+          "location": "Grand Prairie, TX (Dallas suburb)",
+          "facility_size": "300-acre headquarters",
+          "source": "https://www.lockheedmartin.com/en-us/who-we-are/business-areas/missiles-and-fire-control/dallas.html"
+        },
+        "bell_textron": {
+          "headquarters": "Fort Worth, TX",
+          "facility": "140,000 sq ft Manufacturing Technology Center",
+          "description": "Global headquarters for Bell, manufactures military and commercial rotorcraft",
+          "recent_expansion": {
+            "investment": 429000000,
+            "facility_size": 447000,
+            "unit": "square feet",
+            "jobs_created": 400,
+            "source": "https://www.manufacturingdive.com/news/bell-textron-fort-worth-texas-429-million-flraa-aircraft-plant-us-army/737222/"
+          },
+          "facilities_in_dfw": 6,
+          "source": "https://business.fortworthchamber.com/list/member/bell-4059"
+        },
+        "gkn_aerospace": {
+          "role": "Key Tier 1 supplier to Lockheed Martin and Bell",
+          "source": "https://businessintexas.com/business-sectors/aerospace-aviation/"
+        },
+        "elbit_systems_america": {
+          "location": "Fort Worth, TX",
+          "role": "Corporate headquarters, defense systems portfolio",
+          "source": "https://businessintexas.com/business-sectors/aerospace-aviation/"
+        },
+        "l3harris_technologies": {
+          "location": "Greenville, TX",
+          "specialization": "Intelligence, Surveillance and Reconnaissance (ISR), aircraft modifications, advanced sensor systems",
+          "source": "https://builtin.com/articles/defense-companies-dallas"
+        }
+      },
+      "f35_supply_chain": {
+        "total_suppliers": {
+          "us_suppliers": 1650,
+          "states_covered": 49,
+          "plus_territories": "Puerto Rico",
+          "us_jobs_supported": 290000,
+          "source": "https://www.f35.com/f35/about/economic-impact.html"
+        },
+        "alternative_count": {
+          "value": 1900,
+          "small_business_count": 1000,
+          "description": "High-tech suppliers including small businesses",
+          "source": "https://aerospaceglobalnews.com/news/where-is-the-lockheed-martin-f-35-built/"
+        },
+        "tier_1_connections": {
+          "value": 3576,
+          "description": "Lockheed Martin Corporation total Tier 1 connections",
+          "source": "https://data.ark.ai/analysis/suppliers/lockheed-martin-supplier-profile-overview"
+        },
+        "local_fort_worth_suppliers": {
+          "count": 17,
+          "jobs_supported": 49000,
+          "type": "Direct and indirect jobs",
+          "source": "https://fortworthreport.org/2025/08/18/small-company-big-impact-mansfield-firm-celebrates-f-35-production-role/"
+        },
+        "economic_impact": {
+          "annual_us_economy_contribution": 72000000000,
+          "currency": "USD",
+          "source": "https://www.f35.com/f35/about/economic-impact.html"
+        },
+        "international_content": {
+          "percentage_manufactured_outside_us": "30-42",
+          "uk_contribution": 15,
+          "description": "Nearly 30-42% manufactured outside U.S. across three continents before final assembly in Texas",
+          "source": "https://www.eurasiantimes.com/how-american-is-f-35-fighter/"
+        }
+      }
+    },
+    "automotive_components": {
+      "overview": {
+        "description": "DFW region serves Toyota and GM supply chains with significant tier supplier presence"
+      },
+      "general_motors_arlington": {
+        "plant": "Arlington Assembly",
+        "location": "Arlington, TX",
+        "products": ["Chevrolet Tahoe", "Chevrolet Suburban", "GMC Yukon", "Cadillac Escalade"],
+        "investment": {
+          "value": 1000000000,
+          "currency": "USD",
+          "year": 2018,
+          "description": "Investment in US operations including supplier park",
+          "source": "https://www.automotivelogistics.media/supply-chain-planning/gm-begins-work-on-supplier-and-logistics-park-in-arlington/198546"
+        },
+        "supplier_park": {
+          "name": "Arlington Automotive Logistics Center",
+          "size_acres": 83,
+          "facility_size_sqft": 1200000,
+          "opened": 2018,
+          "jobs_tier1": 850,
+          "jobs_tier2": 400,
+          "strategy": "Reshoring suppliers for just-in-time delivery and reduced shipping disruption",
+          "source": "https://www.beyondthecontract.com/gm-supplier-jobs-will-shift-from-mexico-to-new-arlington-complex/"
+        },
+        "key_tier1_supplier": {
+          "name": "International Automotive Components Group",
+          "products": ["door panels", "flooring", "instrument panels", "interior components"],
+          "leased_space_sqft": 500000,
+          "source": "https://www.beyondthecontract.com/gm-supplier-jobs-will-shift-from-mexico-to-new-arlington-complex/"
+        }
+      },
+      "toyota_texas": {
+        "plant": "Toyota Motor Manufacturing Texas (TMMTX)",
+        "location": "San Antonio, TX",
+        "opened": 2006,
+        "products": ["Tundra", "Sequoia"],
+        "direct_employment": 3700,
+        "supplier_employment": 5600,
+        "on_site_suppliers": 20,
+        "total_employment": 9300,
+        "source": "https://pressroom.toyota.com/tmmtx-welcomes-new-on-site-suppliers/",
+        "tier1_suppliers_the_five_compadres": {
+          "description": "Unique group of five Hispanic-owned Tier 1 suppliers for Toyota San Antonio",
+          "suppliers": [
+            {
+              "name": "Reyes Automotive Group",
+              "location": "San Antonio, TX",
+              "founded": 2005,
+              "specialization": "Plastic injection and blow molding",
+              "products": "Interior and exterior plastic components",
+              "source": "https://hispanicexecutive.com/toyota-five-compadres/"
+            },
+            {
+              "name": "HERO Assemblers and HERO Logistics",
+              "owner": "Frank Herrera",
+              "products": "Wheels and tires",
+              "source": "https://hispanicexecutive.com/toyota-five-compadres/"
+            },
+            {
+              "name": "Avanzar Interior Technologies",
+              "location": "San Antonio, TX",
+              "founded": 2005,
+              "products": ["seat sets", "door panels"],
+              "source": "https://www.inven.ai/company-lists/top-23-automotive-manufacturing-companies-in-texas"
+            },
+            {
+              "name": "Rosa Santana's company",
+              "started": 2014,
+              "products": "Fully assembled truck beds",
+              "previous_role": "Tier 2 supplier providing human-capital services for 9 years",
+              "source": "https://hispanicexecutive.com/toyota-five-compadres/"
+            }
+          ]
+        },
+        "supplier_complex": {
+          "design_capacity": 18,
+          "description": "Project site designed for 18 Tier 1 suppliers",
+          "toyota_tsusho_project": {
+            "suppliers": 7,
+            "buildings": 5,
+            "building_names": ["Steel Center", "Green Metals Building", "ARC Building", "Tenneco Building", "Office Building"],
+            "source": "https://www.walbridge.com/project/toyota-tier-one-supplier-facilities-san-antonio-tx/"
+          }
+        },
+        "major_supplier_investment": {
+          "company": "Aisin AW",
+          "country": "Japan",
+          "location": "Cibolo, TX (near San Antonio)",
+          "investment": 400000000,
+          "currency": "USD",
+          "jobs": 900,
+          "source": "https://www.inven.ai/company-lists/top-23-automotive-manufacturing-companies-in-texas"
+        },
+        "supply_chain_geography": {
+          "description": "Supply chain includes factories in Mexico along NAFTA superhighway",
+          "key_border_crossing": "Laredo World Trade Bridge connecting Nuevo Laredo and Laredo, TX",
+          "source": "https://en.wikipedia.org/wiki/Toyota_Motor_Manufacturing_Texas"
+        }
+      },
+      "tier_structure_definition": {
+        "tier1": "Supply major parts directly to OEM, typically located near OEM facilities",
+        "tier2": "Supply components (wire, stamped metal) to Tier 1 companies",
+        "tier3": "Supply raw materials (copper, steel) to Tier 2 companies",
+        "source": "https://comptroller.texas.gov/economy/economic-data/supply-chain/2021/auto.php"
+      }
+    },
+    "medical_device_manufacturing": {
+      "overview": {
+        "description": "ISO 13485 certified medical device contract manufacturers operating in DFW area"
+      },
+      "key_companies": [
+        {
+          "name": "PRO-TECH Design & Manufacturing",
+          "locations": ["Dallas, TX", "Arlington, TX"],
+          "certifications": ["FDA-registered", "ISO 13485"],
+          "capabilities": "Full-service contract medical device manufacturing from design to packaging and sterilization",
+          "cleanroom_space": {
+            "size_sqft": 10000,
+            "class": "Class 10,000/ISO 7-rated",
+            "source": "https://protechdesign.com/arlington-medical-device-contract-assembly/"
+          }
+        },
+        {
+          "name": "Knight Electronics, Inc.",
+          "location": "Dallas, TX",
+          "founded": 1979,
+          "specialization": "Electronic components and assemblies for OEMs",
+          "source": "https://www.iqsdirectory.com/medical-device-contract-manufacturing/texas/"
+        },
+        {
+          "name": "Morgan Newton Company",
+          "location": "Plano, TX",
+          "founded": 1975,
+          "certifications": ["MedAccred", "ISO 13485"],
+          "capabilities": ["PCB production assembly", "NPI assembly", "backplane assembly"],
+          "sectors": ["medical devices"],
+          "source": "https://www.inven.ai/company-lists/top-20-contract-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "NCA, Inc. (National Circuit Assembly)",
+          "location": "Garland, TX",
+          "founded": 2007,
+          "certifications": ["ISO 13485"],
+          "source": "https://www.inven.ai/company-lists/top-20-contract-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "East/West Manufacturing Enterprises (EWME)",
+          "location": "Round Rock, TX",
+          "founded": 2001,
+          "certifications": ["ISO 13485:2016"],
+          "source": "https://www.inven.ai/company-lists/top-20-contract-manufacturing-companies-in-texas"
+        }
+      ]
+    },
+    "electronics_manufacturing": {
+      "overview": {
+        "texas_employment_percentage": 9,
+        "description": "Electronic & electrical equipment accounts for 9% of Texas' industrial jobs",
+        "source": "https://www.globalspec.com/local/3460/C_US/TX"
+      },
+      "key_companies": [
+        {
+          "name": "NCA, Inc. (National Circuit Assembly)",
+          "location": "Garland, TX (DFW area)",
+          "founded": 2007,
+          "specialization": "PCB assembly (PCBA) and electro-mechanical assembly",
+          "certifications": ["ISO 13485"],
+          "source": "https://www.inven.ai/company-lists/top-25-electronic-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "Morgan Newton Company",
+          "location": "Plano, TX (DFW area)",
+          "founded": 1975,
+          "specialization": "Electronic manufacturing services",
+          "certifications": ["MedAccred", "ISO 13485"],
+          "source": "https://www.inven.ai/company-lists/top-25-electronic-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "VIRTEX",
+          "location": "Austin, TX",
+          "type": "Electronic Manufacturing Services (EMS) provider",
+          "source": "https://www.virtex.us/"
+        },
+        {
+          "name": "Ember Industries",
+          "location": "Central Texas",
+          "type": "EMS company",
+          "source": "https://www.emberindustries.com/"
+        },
+        {
+          "name": "V-J Electronic Assemblies (GUS Products)",
+          "location": "Stafford, TX",
+          "founded": 1965,
+          "source": "https://www.inven.ai/company-lists/top-25-electronic-manufacturing-companies-in-texas"
+        }
+      ]
+    }
+  },
+
+  "certification_requirements": {
+    "as9100_aerospace": {
+      "standard": "AS9100",
+      "industry": "Aerospace and Defense",
+      "description": "Quality management system for aerospace sector driving continual improvement, defect prevention and reduction of variation and waste",
+      "certification_importance": "Often a contract-prerequisite proving compliance with standard requirements",
+      "source": "https://www.intertek.com/assurance/as9100/",
+      "certified_companies_dfw": [
+        {
+          "name": "Co-Operative Industries Aerospace & Defense",
+          "location": "Fort Worth, TX",
+          "certifications": ["AS9100"],
+          "additional_certifications": ["FAA certified repair station", "EASA certified", "CAAC certified"],
+          "products": ["electrical wiring harnesses", "ignition leads", "flexible metal conduit assemblies"],
+          "markets": ["commercial airline", "defense"],
+          "source": "https://www.thomasnet.com/company/cooperative-industries-aerospace--defense-30080353/profile"
+        },
+        {
+          "name": "Essner Manufacturing",
+          "location": "Fort Worth, TX",
+          "founded": 1939,
+          "sector": "Aerospace manufacturing",
+          "source": "https://www.inven.ai/company-lists/top-19-aerospace-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "CTR Aero",
+          "location": "Carrollton, TX (Dallas area)",
+          "facility_size_sqft": 65000,
+          "certifications": ["ISO 9001", "AS9100D"],
+          "services": ["CNC machining", "complex assembly", "kitting", "engineering support"],
+          "source": "https://www.inven.ai/company-lists/top-19-aerospace-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "Mayday Manufacturing Co",
+          "location": "Denton, TX (DFW area)",
+          "certifications": ["ISO 9001", "AS9100"],
+          "source": "https://www.inven.ai/company-lists/top-19-aerospace-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "InterConnect Wiring",
+          "location": "Texas",
+          "certifications": ["AS9100"],
+          "source": "https://www.intrexcorp.com/aerospace-manufacturers-as9100/"
+        },
+        {
+          "name": "Arrow Science and Technology",
+          "location": "Texas",
+          "certifications": ["AS9100"],
+          "source": "https://www.intrexcorp.com/aerospace-manufacturers-as9100/"
+        }
+      ]
+    },
+    "iatf_16949_automotive": {
+      "standard": "IATF 16949",
+      "industry": "Automotive",
+      "base_standard": "ISO 9001",
+      "description": "Automotive quality management standard providing process requirements for continual improvement, defect prevention and reduction of variation and waste in supply chain",
+      "importance": "Often contract-prerequisite for automotive suppliers",
+      "required_systems": ["PPAP (Production Part Approval Process)", "APQP (Advanced Product Quality Planning)", "Material traceability protocols", "Containment procedures for non-conforming parts"],
+      "source": "https://www.wchservices.com/iatf-16949/iatf-16949-texas",
+      "customer_specific_requirements": {
+        "general_motors": {
+          "requirement": "Customer Specific Requirements for IATF 16949",
+          "effective_date": "2025-10-30",
+          "source": "https://www.iatfglobaloversight.org/oem-requirements/customer-specific-requirements/"
+        },
+        "toyota": {
+          "requirement": "Customer Specific Requirements for IATF 16949",
+          "source": "https://www.iatfglobaloversight.org/oem-requirements/customer-specific-requirements/"
+        }
+      },
+      "certified_companies_texas": [
+        {
+          "name": "Reyes Automotive Group",
+          "location": "San Antonio, TX",
+          "tier": "Tier 1",
+          "specialization": "Plastic blow molding and injection molding",
+          "products": "Interior and exterior plastic components",
+          "customers": ["Toyota Motor Manufacturing Texas"],
+          "source": "https://www.kokoquest.com/companies/manufacturing/iatf-16949-certified-manufacturers"
+        }
+      ]
+    },
+    "iso_13485_medical": {
+      "standard": "ISO 13485",
+      "industry": "Medical Devices",
+      "description": "Quality management system for medical device manufacturing",
+      "certified_companies_dfw": [
+        {
+          "name": "PRO-TECH Design & Manufacturing",
+          "locations": ["Dallas, TX", "Arlington, TX"],
+          "certifications": ["FDA-registered", "ISO 13485"],
+          "source": "https://protechdesign.com/contract-medical-device-manufacturing/"
+        },
+        {
+          "name": "Morgan Newton Company",
+          "location": "Plano, TX",
+          "certifications": ["MedAccred", "ISO 13485"],
+          "source": "https://www.inven.ai/company-lists/top-20-contract-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "NCA, Inc.",
+          "location": "Garland, TX",
+          "certifications": ["ISO 13485"],
+          "source": "https://www.inven.ai/company-lists/top-20-contract-manufacturing-companies-in-texas"
+        },
+        {
+          "name": "East/West Manufacturing Enterprises",
+          "location": "Round Rock, TX",
+          "certifications": ["ISO 13485:2016"],
+          "source": "https://www.inven.ai/company-lists/top-20-contract-manufacturing-companies-in-texas"
+        }
+      ]
+    },
+    "nadcap": {
+      "full_name": "National Aerospace and Defense Contractors Accreditation Program",
+      "accreditation_types": 26,
+      "key_processes": ["Nondestructive Testing", "Heat Treating", "Chemical processes"],
+      "description": "Accreditation for critical aerospace special processes",
+      "source": "https://www.p-r-i.org/nadcap",
+      "certified_companies_dfw": [
+        {
+          "name": "Anodics, Inc.",
+          "location": "Fort Worth, TX",
+          "accreditations": ["Aerospace Quality Systems", "Chemical Processing"],
+          "years_in_business": 40,
+          "markets": ["Aerospace", "Defense"],
+          "source": "https://www.anodics.com/approvals/"
+        },
+        {
+          "name": "WHI",
+          "location": "Fort Worth, TX",
+          "accreditations": ["Heat Treating", "Chemical Processing", "Non Destructive Testing"],
+          "source": "https://www.whiglobal.com/capabilities/nadcap-processes/"
+        },
+        {
+          "name": "Har-Conn Aerospace",
+          "location": "Fort Worth, TX",
+          "accreditations": ["NADCAP"],
+          "specialization": ["anodizing", "passivation", "film treatments"],
+          "source": "https://www.hcaerospace.com/"
+        }
+      ]
+    },
+    "itar": {
+      "full_name": "International Traffic in Arms Regulations",
+      "purpose": "Registration for companies manufacturing or exporting defense articles",
+      "description": "Demonstrates commitment to security and compliance for aerospace parts and defense manufacturing",
+      "registered_companies_dfw": [
+        {
+          "name": "R-O Manufacturing Co.",
+          "location": "Fort Worth, TX",
+          "certifications": ["ITAR", "ISO 9001:2015"],
+          "specialization": ["sheet metal fabrication", "CNC machining", "custom mechanical assemblies"],
+          "source": "https://romfg.com/"
+        },
+        {
+          "name": "Rigid Concepts LLC",
+          "location": "Van Alstyne, TX (DFW area)",
+          "certifications": ["ITAR"],
+          "equipment": {
+            "cnc_machines": 22,
+            "five_axis_centers": 6
+          },
+          "source": "https://www.rigidconcepts.com/aerospace-cnc-machining/"
+        },
+        {
+          "name": "LTTS MACHINE LLC",
+          "location": "Fort Worth, TX",
+          "founded": 2016,
+          "certifications": ["ITAR", "ISO 9001:2015", "AS9100D"],
+          "capabilities": ["CNC Lathe", "CNC Mill", "5-Axis"],
+          "source": "https://www.kokoquest.com/companies/aerospace-defense/itar-registered-manufacturers"
+        },
+        {
+          "name": "EVS Metal",
+          "location": "Pflugerville, TX (serving DFW)",
+          "certifications": ["ITAR"],
+          "authorized_work": "Submit bids and supply finished defense articles for US Government and authorized subcontractors",
+          "source": "https://evsmetal.com/2018/12/evs-metal-fabrication-texas/"
+        }
+      ]
+    }
+  },
+
+  "technology_adoption": {
+    "cnc_machining": {
+      "global_market_size": {
+        "value_2023": 78000000000,
+        "value_2030": 105000000000,
+        "currency": "USD",
+        "growth_rate": "CAGR not specified",
+        "source": "https://www.fsqj-tech.com/is-cnc-in-high-demand-2025-market-trends-industry-insights.html"
+      },
+      "growth_regions": {
+        "strongest": ["Asia (China, Japan)", "North America (U.S., Canada)"],
+        "drivers": ["automotive expansion", "aerospace expansion"],
+        "source": "https://www.fsqj-tech.com/is-cnc-in-high-demand-2025-market-trends-industry-insights.html"
+      },
+      "dfw_companies": [
+        {
+          "name": "Rigid Concepts LLC",
+          "equipment": {
+            "total_cnc_machines": 22,
+            "five_axis_centers": 6
+          },
+          "source": "https://www.rigidconcepts.com/dfw-machine-shop/"
+        },
+        {
+          "name": "FTC Industries",
+          "type": "CNC machine shop",
+          "location": "DFW",
+          "source": "https://ftcindustries.com/"
+        },
+        {
+          "name": "Halsey Manufacturing",
+          "specialization": "High precision CNC Machining",
+          "location": "DFW Dallas/Fort Worth Area",
+          "industries": ["Aerospace", "Aircraft", "Automotive", "Computer", "Electronics", "Medical", "Food Service", "Telecommunication", "Robotics", "Gas and Oil", "Security"],
+          "source": "https://www.halseymfg.com/"
+        }
+      ]
+    },
+    "automation_robotics": {
+      "global_adoption": {
+        "companies_with_automation": {
+          "percentage": 42,
+          "description": "CNC machining companies globally with some level of flexible automation",
+          "strongest_sectors": ["automotive", "consumer electronics"],
+          "source_organization": "International Federation of Robotics (IFR)",
+          "year": 2023,
+          "source": "https://www.gotomorris.com/news/cnc-industry-trends-2024/"
+        }
+      },
+      "industrial_robotics_market": {
+        "value_2022": 16000000000,
+        "value_2027": 30000000000,
+        "currency": "USD",
+        "growth_percentage": 96,
+        "cagr": 14.3,
+        "source": "https://www.automationwithinreach.com/blog/guide-to-cnc-robotics"
+      },
+      "benefits": {
+        "spindle_utilization_increase": {
+          "percentage": 20,
+          "description": "Robotic loading/unloading boosts spindle utilization, enabling lights-out machining",
+          "source": "https://www.automationwithinreach.com/blog/why-add-robotic-automation-to-your-cnc-shop-here-are-the-top-5-reasons"
+        },
+        "uptime_improvement": {
+          "percentage_range": "15-25",
+          "description": "Automated loading/unloading improves spindle uptime by eliminating idle periods from manual handling",
+          "source": "https://www.automationwithinreach.com/blog/why-add-robotic-automation-to-your-cnc-shop-here-are-the-top-5-reasons"
+        },
+        "defect_reduction": {
+          "human_error_percentage": "20-30",
+          "description": "Human error causes 20-30% of manufacturing defects per McKinsey, which automated systems minimize",
+          "source_organization": "McKinsey",
+          "source": "https://www.gotomorris.com/news/cnc-industry-trends-2024/"
+        }
+      }
+    },
+    "industry_4_0": {
+      "description": "Fourth industrial revolution characterized by integration of digital technologies into manufacturing",
+      "key_technologies": ["CNC robotics", "IoT sensors", "AI/ML", "cloud computing", "data analytics"],
+      "adoption_note": "No specific DFW adoption rate data found; information reflects U.S. and global trends",
+      "source": "https://www.automationwithinreach.com/blog/guide-to-cnc-robotics"
+    }
+  },
+
+  "supply_chain_position": {
+    "just_in_time_manufacturing": {
+      "description": "JIT focuses on business side of improving manufacturing by lowering costs and reducing lag times",
+      "origin": "Developed by Toyota in the 1970s",
+      "adoption_sectors": ["automotive", "aerospace", "electronics", "consumer goods"],
+      "key_requirements": ["Well-structured supply chain", "Real-time demand synchronization", "Highly reliable suppliers"],
+      "source": "https://www.tractian.com/en/blog/jit-just-in-time-management",
+      "automotive_adoption": {
+        "major_adopters": ["Toyota", "Ford", "Honda"],
+        "description": "Parts and components arrive at assembly lines just when needed",
+        "source": "https://www.fictiv.com/articles/jit-just-in-time-manufacturing"
+      },
+      "aerospace_considerations": {
+        "challenges": "Long production timelines make JIT impractical without highly reliable suppliers",
+        "applicable_sectors": ["electronics", "consumer goods"],
+        "source": "https://www.fictiv.com/articles/jit-just-in-time-manufacturing"
+      },
+      "gm_arlington_strategy": {
+        "approach": "Reshoring suppliers to area around plant",
+        "benefits": ["Just-in-time delivery", "Reduced shipping disruption risk"],
+        "focus": "Components difficult to ship or susceptible to customer variation (e.g., interiors)",
+        "source": "https://www.beyondthecontract.com/gm-supplier-jobs-will-shift-from-mexico-to-new-arlington-complex/"
+      }
+    },
+    "tier_supplier_landscape": {
+      "definition": {
+        "tier_1": {
+          "description": "Supply major parts directly to OEM",
+          "location_strategy": "Typically located near OEM facilities",
+          "examples_dfw": [
+            "International Automotive Components Group (GM Arlington)",
+            "Reyes Automotive Group (Toyota San Antonio)",
+            "Avanzar Interior Technologies (Toyota San Antonio)",
+            "GKN Aerospace (Lockheed Martin, Bell)"
+          ]
+        },
+        "tier_2": {
+          "description": "Supply components to Tier 1 companies",
+          "products": ["wire", "stamped metal components"],
+          "example": "Rosa Santana's company (provided human-capital services for 9 years before becoming Tier 1)"
+        },
+        "tier_3": {
+          "description": "Supply raw materials to Tier 2 companies",
+          "materials": ["copper", "steel"]
+        },
+        "source": "https://comptroller.texas.gov/economy/economic-data/supply-chain/2021/auto.php"
+      },
+      "lockheed_martin_f35": {
+        "total_tier1_connections": 3576,
+        "us_suppliers": 1650,
+        "total_high_tech_suppliers": 1900,
+        "small_business_count": 1000,
+        "states_covered": 49,
+        "local_fort_worth_suppliers": 17,
+        "top_performers": {
+          "count": 27,
+          "percentage_of_supplier_base": 2,
+          "on_time_delivery": 98,
+          "quality_rating": 98
+        }
+      },
+      "gm_arlington": {
+        "supplier_park_jobs": {
+          "tier_1": 850,
+          "tier_2": 400
+        },
+        "key_tier1_supplier": {
+          "name": "International Automotive Components Group",
+          "space_sqft": 500000,
+          "products": ["door panels", "flooring", "instrument panels"]
+        }
+      },
+      "toyota_san_antonio": {
+        "on_site_suppliers": 20,
+        "supplier_employment": 5600,
+        "designed_capacity": 18,
+        "tier1_suppliers_five_compadres": 5,
+        "toyota_tsusho_suppliers": 7
+      }
+    },
+    "geographic_supply_chain": {
+      "north_american_integration": {
+        "description": "Toyota's San Antonio plant relies on supply chain including factories in Mexico along NAFTA superhighway",
+        "key_crossing": "Laredo World Trade Bridge (Nuevo Laredo-Laredo, TX)",
+        "flow": "Auto parts moving back and forth between suppliers and assembly plants on both sides of border",
+        "source": "https://en.wikipedia.org/wiki/Toyota_Motor_Manufacturing_Texas"
+      },
+      "f35_global_supply_chain": {
+        "international_content": "30-42%",
+        "continents": 3,
+        "final_assembly": "Texas",
+        "uk_contribution": "15% of all F-35 components",
+        "source": "https://www.eurasiantimes.com/how-american-is-f-35-fighter/"
+      },
+      "supplier_proximity": {
+        "gm_strategy": "Locate suppliers at plant-adjacent parks for JIT delivery and flexibility",
+        "toyota_strategy": "On-site and nearby supplier facilities within designed campus",
+        "lockheed_strategy": "Mix of local (17 Fort Worth area) and distributed (1,650 US suppliers across 49 states)"
+      }
+    }
+  },
+
+  "key_machine_shops_precision_manufacturers": {
+    "companies": [
+      {
+        "name": "Rigid Concepts LLC",
+        "location": "Van Alstyne, TX (DFW area)",
+        "certifications": ["ITAR"],
+        "equipment": {
+          "total_cnc_machines": 22,
+          "five_axis_centers": 6
+        },
+        "capabilities": ["CNC machining", "prototyping", "product development"],
+        "source": "https://www.rigidconcepts.com/dfw-machine-shop/"
+      },
+      {
+        "name": "FTC Industries",
+        "location": "Dallas/Fort Worth area",
+        "type": "CNC machine shop",
+        "description": "Leading DFW machine shop",
+        "source": "https://ftcindustries.com/"
+      },
+      {
+        "name": "Halsey Manufacturing",
+        "location": "DFW Dallas/Fort Worth Area",
+        "specialization": "High precision CNC Machining",
+        "industries_served": ["Aerospace", "Aircraft", "Automotive", "Computer", "Electronics", "Medical", "Food Service", "Telecommunication", "Robotics", "Gas and Oil", "Security"],
+        "source": "https://www.halseymfg.com/"
+      },
+      {
+        "name": "R-O Manufacturing Co.",
+        "location": "Fort Worth, TX",
+        "certifications": ["ITAR", "ISO 9001:2015"],
+        "specialization": ["sheet metal fabrication", "CNC machining", "custom mechanical assemblies"],
+        "type": "Precision job shop",
+        "source": "https://romfg.com/"
+      },
+      {
+        "name": "LTTS MACHINE LLC",
+        "location": "Fort Worth, TX",
+        "founded": 2016,
+        "certifications": ["ITAR", "ISO 9001:2015", "AS9100D"],
+        "capabilities": ["CNC Lathe", "CNC Mill", "5-Axis"],
+        "source": "https://www.kokoquest.com/companies/aerospace-defense/itar-registered-manufacturers"
+      },
+      {
+        "name": "Co-Operative Industries Aerospace & Defense",
+        "location": "Fort Worth, TX",
+        "certifications": ["AS9100", "FAA", "EASA", "CAAC"],
+        "specialization": ["electrical wiring harnesses", "ignition leads", "flexible metal conduit assemblies"],
+        "additional": "FAA/EASA/CAAC certified repair station",
+        "source": "https://www.thomasnet.com/company/cooperative-industries-aerospace--defense-30080353/profile"
+      },
+      {
+        "name": "Essner Manufacturing",
+        "location": "Fort Worth, TX",
+        "founded": 1939,
+        "sector": "Aerospace manufacturing",
+        "source": "https://www.inven.ai/company-lists/top-19-aerospace-manufacturing-companies-in-texas"
+      },
+      {
+        "name": "CTR Aero",
+        "location": "Carrollton, TX (Dallas area)",
+        "facility_size_sqft": 65000,
+        "certifications": ["ISO 9001", "AS9100D"],
+        "services": ["CNC machining", "complex assembly", "kitting", "engineering support"],
+        "source": "https://www.inven.ai/company-lists/top-19-aerospace-manufacturing-companies-in-texas"
+      },
+      {
+        "name": "Mayday Manufacturing Co",
+        "location": "Denton, TX (DFW area)",
+        "certifications": ["ISO 9001", "AS9100"],
+        "source": "https://www.inven.ai/company-lists/top-19-aerospace-manufacturing-companies-in-texas"
+      }
+    ]
+  },
+
+  "odoo_erp_implementation_insights": {
+    "target_market_size": {
+      "total_manufacturers": 6247,
+      "employment_base": 302000,
+      "sectors": ["aerospace", "automotive", "medical devices", "electronics", "general precision machining"]
+    },
+    "certification_compliance_needs": {
+      "quality_systems": ["AS9100", "IATF 16949", "ISO 13485", "ISO 9001"],
+      "special_certifications": ["NADCAP", "ITAR"],
+      "regulatory_bodies": ["FAA", "EASA", "CAAC", "FDA"]
+    },
+    "key_erp_requirements": {
+      "supply_chain": [
+        "JIT inventory management",
+        "Tier supplier tracking",
+        "Multi-site coordination",
+        "Cross-border logistics (NAFTA corridor)",
+        "Supplier performance metrics (on-time delivery, quality ratings)"
+      ],
+      "quality_management": [
+        "PPAP (Production Part Approval Process)",
+        "APQP (Advanced Product Quality Planning)",
+        "Material traceability",
+        "Non-conforming parts containment",
+        "First Article Inspection (FAI)",
+        "Certificate of Conformance (C of C)"
+      ],
+      "manufacturing": [
+        "CNC machine integration",
+        "Work order management",
+        "Capacity planning",
+        "Routing and BOM management",
+        "Shop floor control",
+        "Automation/robotics integration"
+      ],
+      "compliance_tracking": [
+        "ITAR controlled item tracking",
+        "AS9100/IATF 16949 documentation",
+        "NADCAP process tracking",
+        "Customer-specific requirements (GM, Toyota, Lockheed Martin, Bell)",
+        "Audit trail maintenance"
+      ],
+      "financial": [
+        "Job costing",
+        "Contract management",
+        "Multi-currency (international supply chain)",
+        "Government contract compliance"
+      ]
+    },
+    "competitive_landscape": {
+      "tier_1_suppliers": {
+        "characteristics": ["Large facilities (100,000+ sqft)", "Multiple certifications", "Direct OEM relationships", "High investment capacity ($100M-$400M)"],
+        "examples": ["International Automotive Components Group", "Reyes Automotive Group", "Aisin AW"]
+      },
+      "tier_2_suppliers": {
+        "characteristics": ["Mid-size operations", "Component manufacturers", "Supply to Tier 1 companies", "Growth trajectory to Tier 1"]
+      },
+      "precision_machine_shops": {
+        "characteristics": ["10-100 employees typical", "AS9100/ITAR certified", "5-axis CNC capabilities", "Prototyping to production", "Mix of aerospace/automotive/medical"],
+        "examples": ["Rigid Concepts", "LTTS Machine", "FTC Industries", "Halsey Manufacturing"]
+      }
+    },
+    "industry_trends_impacting_erp": {
+      "automation": "42% global adoption of flexible automation requires MES integration",
+      "industry_4_0": "Digital transformation driving need for IoT, analytics, cloud capabilities",
+      "reshoring": "GM supplier park model suggests increased local manufacturing proximity",
+      "supply_chain_resilience": "Post-disruption focus on JIT with safety stock balancing",
+      "certification_complexity": "Multiple overlapping standards (AS9100, ITAR, NADCAP, customer-specific)"
+    }
+  },
+
+  "data_quality_notes": {
+    "high_confidence": [
+      "Total manufacturers (6,247)",
+      "Employment figures (302,000 total, 68,754 Fort Worth, 53,001 Dallas)",
+      "Manufacturing GDP ($65.5B)",
+      "F-35 supplier counts (1,650-1,900)",
+      "Major company presence (Lockheed Martin, Bell, GM Arlington, Toyota San Antonio)",
+      "Certification requirements and certified companies"
+    ],
+    "moderate_confidence": [
+      "Technology adoption rates (global/national data applied to DFW)",
+      "Specific tier supplier counts by region",
+      "Electronics manufacturing statistics"
+    ],
+    "data_gaps": [
+      "Precise count of machine shops vs. total manufacturers",
+      "DFW-specific Industry 4.0 adoption rates",
+      "Detailed Bell supplier network (proprietary data)",
+      "Medical device market size specific to DFW",
+      "Exact breakdown of certifications by company size"
+    ],
+    "data_sources_reliability": {
+      "highly_reliable": ["Texas Comptroller", "U.S. BLS", "Company official sites", "Government aerospace reports"],
+      "reliable": ["Industry associations", "Built In", "Thomas Net", "Manufacturing databases"],
+      "general_industry": ["Market research firms", "Industry blogs", "News articles"]
+    }
+  },
+
+  "sources": {
+    "government_official": [
+      "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php",
+      "https://gov.texas.gov/uploads/files/business/texasaerospacereport.pdf",
+      "https://businessintexas.com/business-sectors/aerospace-aviation/",
+      "https://www.bls.gov/regions/southwest/news-release/areaemployment_dallasfortworth.htm"
+    ],
+    "industry_databases": [
+      "https://www.mni.net/info/dallas-fort-worth-area",
+      "https://www.thomasnet.com/",
+      "https://www.kokoquest.com/",
+      "https://www.inven.ai/"
+    ],
+    "company_official": [
+      "https://www.f35.com/f35/about/economic-impact.html",
+      "https://pressroom.toyota.com/",
+      "https://www.gm.com/",
+      "https://www.lockheedmartin.com/"
+    ],
+    "certification_bodies": [
+      "https://www.p-r-i.org/nadcap",
+      "https://www.iatfglobaloversight.org/",
+      "https://www.intertek.com/assurance/as9100/"
+    ],
+    "news_trade_publications": [
+      "https://fortworthedp.com/",
+      "https://fortworthreport.org/",
+      "https://www.manufacturingdive.com/",
+      "https://www.automotivelogistics.media/"
+    ]
+  }
+}

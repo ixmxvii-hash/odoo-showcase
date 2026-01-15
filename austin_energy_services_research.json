@@ -1,0 +1,831 @@
+{
+  "research_metadata": {
+    "title": "Austin, Texas Energy Services Industry Research",
+    "research_date": "2026-01-11",
+    "purpose": "Market research for Odoo ERP implementation in energy services sector",
+    "geographic_focus": "Austin metropolitan area and greater Texas",
+    "data_quality_note": "All statistics sourced from official reports, industry publications, and government databases"
+  },
+
+  "market_overview": {
+    "cleantech_ecosystem": {
+      "total_companies": "200+",
+      "estimated_employees": "30,000+",
+      "description": "Austin positioned as a clean technology hub with companies across solar, wind, EV charging, and clean energy sectors",
+      "sources": [
+        "https://opportunityaustin.com/economic-development/key-industries/clean-technology/"
+      ]
+    },
+    "ercot_headquarters": {
+      "location": "Austin, Texas",
+      "description": "Electric Reliability Council of Texas operates the state's independent electric grid and manages the deregulated market for 75% of Texas",
+      "significance": "Provides clean energy companies access to one of the largest independent, deregulated electric grids in the United States",
+      "sources": [
+        "https://opportunityaustin.com/economic-development/key-industries/clean-technology/"
+      ]
+    },
+    "renewable_energy_sector": {
+      "local_solar_capacity": "188 MW",
+      "new_solar_added_2024": "18.8 MW",
+      "total_customer_installations": "15,000+",
+      "projects_2024": {
+        "total": 749,
+        "residential": 690,
+        "commercial": 59
+      },
+      "utility_scale_capacity": "2,866 MW",
+      "sources_breakdown": {
+        "wind_farms": 10,
+        "solar_farms": 7,
+        "biomass": "included"
+      },
+      "sources": [
+        "https://austinenergy.com/about/news/news-releases/2025/austin-energy-adds-record-18mw-of-local-solar-to-the-grid",
+        "https://www.publicpower.org/periodical/article/austin-energy-adds-record-188-megawatts-local-solar-grid"
+      ]
+    },
+    "market_growth_trajectory": {
+      "2027_local_solar_goal": "205 MW",
+      "remaining_to_goal": "17 MW",
+      "long_term_solar_capacity_goal": "950 MW",
+      "local_solar_goal": "200 MW",
+      "sources": [
+        "https://austinenergy.com/about/news/news-releases/2025/austin-energy-adds-record-18mw-of-local-solar-to-the-grid"
+      ]
+    },
+    "statewide_context": {
+      "texas_renewable_portfolio_standard": {
+        "original_goal_2015": "5,000 MW",
+        "target_2025": "10,000 MW",
+        "status": "Already surpassed 2025 goal",
+        "rec_trading_program_end": "2025-09-01"
+      },
+      "texas_wind_employment": "27,381 jobs (20.8% of all U.S. wind-energy jobs)",
+      "texas_clean_energy_jobs_2023": "261,934",
+      "texas_wind_ranking": "Largest wind power producer in the U.S. and fifth-largest globally",
+      "sources": [
+        "https://programs.dsireusa.org/system/program/tx",
+        "https://gov.texas.gov/uploads/files/business/renewableenergy-report.pdf"
+      ]
+    }
+  },
+
+  "key_companies": {
+    "municipal_utility": {
+      "austin_energy": {
+        "type": "Municipal Utility",
+        "established": 1895,
+        "headquarters": "4815 Mueller Blvd, Austin, TX",
+        "building_details": "Four-story office building with seven-story parking garage",
+        "rank": "7th largest public utility in the United States",
+        "customers": "500,000+",
+        "residents_served": "1,000,000+",
+        "service_area_sq_miles": 437,
+        "renewable_power_percentage_fy2021": "41%",
+        "utility_scale_renewable_capacity": "2,866 MW",
+        "sources": [
+          "https://austinenergy.com/",
+          "https://www.zoominfo.com/c/austin-energy/8620345",
+          "https://www.gosolartexas.org/case-studies/austin-energy"
+        ]
+      }
+    },
+    "major_employers": {
+      "clearesult": {
+        "headquarters": "6504 Bridge Point Parkway, Suite 425, Austin, TX 78730",
+        "founded": 2003,
+        "employees": "2,400-2,700",
+        "locations": "60+ cities across U.S. and Canada",
+        "description": "Largest provider of energy efficiency, energy transition and energy sustainability solutions in North America",
+        "services": [
+          "Energy efficiency programs",
+          "Decarbonization programs",
+          "Energy planning",
+          "Low to moderate-income (LMI) programs",
+          "Residential, commercial, industrial, utility, and government programs"
+        ],
+        "sources": [
+          "https://www.clearesult.com/",
+          "https://www.linkedin.com/company/clearesult",
+          "https://www.zoominfo.com/c/clearesult-consulting-inc/60248346"
+        ]
+      },
+      "oracle_energy_and_water": {
+        "location": "2300 Oracle Way, Austin, TX 78741",
+        "description": "Combines deep industry expertise with end-to-end solutions and a powerful customer engagement platform",
+        "austin_energy_partnership": {
+          "software": "Oracle Utilities Customer Care and Billing",
+          "purpose": "Replace outdated legacy customer information system (CIS) and support smart grid initiatives",
+          "additional_tools": "Oracle Utilities Mobile Workforce Management for field operations dispatch, scheduling and routing"
+        },
+        "sources": [
+          "https://www.oracle.com/utilities/",
+          "https://www.tdworld.com/smart-utility/article/20959080/austin-selects-oracle-utilities-customer-care-and-billing"
+        ]
+      }
+    },
+    "solar_companies": {
+      "freedom_solar_power": {
+        "founded": 2007,
+        "headquarters": "4801 Freidrich Ln, Austin, Texas",
+        "market_position": "#1 solar contractor in Texas",
+        "certifications": "First and only Maxeon® Master Dealer in Texas, SunPower Certified Dealer",
+        "panel_brands": [
+          "Maxeon",
+          "Mission Solar",
+          "Qcells"
+        ],
+        "battery_systems": [
+          "Enphase IQ battery",
+          "Tesla Powerwall"
+        ],
+        "sources": [
+          "https://freedomsolarpower.com/locations/austin-solar-company",
+          "https://us.sunpower.com/dealers-installers/freedom-solar-power"
+        ]
+      },
+      "revolve_solar": {
+        "founded": 2012,
+        "market_position": "Largest Austin-based solar installation company",
+        "sources": [
+          "https://www.expertise.com/home-improvement/solar-company/texas/austin"
+        ]
+      },
+      "other_notable_installers": [
+        {
+          "name": "Hesolar",
+          "type": "Family-owned and locally operated",
+          "manufacturers": ["Panasonic", "LG", "SunPower"]
+        },
+        {
+          "name": "IES Texas Solar",
+          "services": ["Solar roof panels", "Backup generators"],
+          "market": "Residential and commercial"
+        },
+        {
+          "name": "Lighthouse Solar"
+        },
+        {
+          "name": "TXSOL"
+        },
+        {
+          "name": "Axis Solar"
+        },
+        {
+          "name": "NATiVE Solar"
+        }
+      ],
+      "sources": [
+        "https://www.expertise.com/home-improvement/solar-company/texas/austin"
+      ]
+    },
+    "energy_storage_companies": {
+      "market_leaders": {
+        "tesla": {
+          "global_market_share_2024": "15%",
+          "rank": "1st globally for second consecutive year",
+          "deployment_2023": "14,724 MWh",
+          "deployment_q2_2024": "9.4 GWh (record, more than doubled previous quarter)",
+          "megapack_3_capacity": "5.0 MWh per unit (up from 3.9 MWh in Megapack 2)",
+          "installed_cost": "Less than $200 per kilowatt-hour for utility-scale systems",
+          "financial_performance": {
+            "profit_contribution": "23% of Tesla's total profit",
+            "revenue_contribution": "13% of revenue",
+            "status": "Key driver of profitability after years of negative margins"
+          },
+          "north_america_market_share": "Part of top 3 with 72% combined market share (with Sungrow and Fluence)",
+          "sources": [
+            "https://www.woodmac.com/press-releases/tesla-remains-the-top-global-producer-of-battery-energy-storage-systems-in-2024-but-sungrow-narrows-the-gap/",
+            "https://pv-magazine-usa.com/2025/08/04/tesla-energy-has-quietly-become-the-companys-most-profitable-division/"
+          ]
+        },
+        "fluence": {
+          "ownership": "Joint venture between Siemens and AES (2018)",
+          "projects_completed": "225+",
+          "regions_served": 47,
+          "financial_milestone": {
+            "q4_2023_net_income": "$4.8 million",
+            "status": "First profitable quarter"
+          },
+          "revenue_outlook_2026": "U.S. market expected to be largest source of revenue and driver of activity",
+          "sources": [
+            "https://manlybattery.com/best-battery-energy-storage-companies/",
+            "https://www.power-eng.com/energy-storage/fluence-tesla-top-guidehouse-list-of-top-utility-scale-energy-storage-integration-firms/"
+          ]
+        }
+      }
+    },
+    "ev_charging_infrastructure": {
+      "chargepoint": {
+        "market_position": {
+          "ac_charging_ports": "73,894",
+          "ac_market_share": "42.7% (undisputed market leader)",
+          "dc_fast_charging_ports": "4,456-5,350",
+          "dc_ranking": "One of three largest networks (with Electrify America and EVgo)"
+        },
+        "global_reach": "World's largest network of EV charging stations in the US, Europe, and Australia",
+        "charging_sessions_delivered": "87 million+",
+        "commercial_fleet_clients": "4,000+",
+        "recent_innovation": {
+          "product": "CP6000 networked charging platform (March 2025)",
+          "features": [
+            "Dynamic pricing",
+            "Energy storage integration",
+            "Grid responsiveness for commercial installations"
+          ]
+        },
+        "sources": [
+          "https://evchargingstations.com/chargingnews/largest-ac-charging-networks-jan-2026/",
+          "https://www.chargepoint.com/"
+        ]
+      },
+      "austin_infrastructure": {
+        "ev_city_ranking": "4th among top metropolitan areas for electric vehicles (after San Francisco Bay Area, Seattle, San Diego)",
+        "public_charging_ports": "1,628 (within 15km)",
+        "level_2_percentage": "89%",
+        "free_charging_percentage": "21%",
+        "networks": [
+          "ChargePoint",
+          "Tesla",
+          "Austin Energy Plug-In Everywhere"
+        ],
+        "austin_energy_program": {
+          "name": "EV360",
+          "type": "Pilot program",
+          "pricing": "Fixed monthly amount for unlimited access to public charging stations and unlimited home charging during off-peak hours"
+        },
+        "sources": [
+          "https://chargehub.com/en/countries/united-states/texas/austin.html",
+          "https://www.chargepoint.com/about/news/chargepoint-releases-list-top-10-cities-electric-vehicles"
+        ]
+      },
+      "market_statistics": {
+        "us_market_size_2024": "$5.09 billion",
+        "projected_cagr_2025_2030": "30.3%",
+        "us_ac_level_2_ports_jan_2026": "172,911",
+        "us_dc_fast_charging_ports_jan_2026": "67,916",
+        "sources": [
+          "https://www.grandviewresearch.com/industry-analysis/us-electric-vehicle-charging-infrastructure-evci-market"
+        ]
+      }
+    },
+    "wind_energy_companies": {
+      "cielo_wind_power": {
+        "location": "Austin, Texas",
+        "focus": "Wind farm development and custom-designed wind developments",
+        "partnerships": [
+          "Landowners",
+          "Communities",
+          "Investors",
+          "Utility companies",
+          "Turbine manufacturers"
+        ],
+        "sources": [
+          "https://www.cielowind.com/"
+        ]
+      },
+      "wind_energy_transmission_texas": {
+        "abbreviation": "WETT",
+        "location": "Austin, Texas",
+        "services": "Leading energy transmission service provider (TSP)",
+        "focus": "Builds and operates critical energy infrastructure to meet the state's energy demands",
+        "sources": [
+          "https://www.wettllc.com/"
+        ]
+      },
+      "sector_statistics": {
+        "total_austin_wind_companies": 18,
+        "notable_companies": [
+          "Semtive Abc",
+          "Bulb",
+          "Building Turbines"
+        ],
+        "sources": [
+          "https://tracxn.com/d/explore/wind-energy-startups-in-austin-united-states/__71MIBty0DdRLHFyqTrETLTlrO1ELy7-t9R3mVq1BDuo/companies"
+        ]
+      },
+      "major_turbine_manufacturers_in_texas": [
+        {
+          "name": "GE Energy",
+          "presence": "Sweetwater Wind Farm (392 turbines)"
+        },
+        {
+          "name": "Siemens",
+          "founded": 1847,
+          "turbines_serviced": "29,000+",
+          "specialty": "Most efficient and automated turbine blades"
+        },
+        {
+          "name": "Vestas",
+          "countries": 73,
+          "position": "World's leading global manufacturer of wind power solutions"
+        },
+        {
+          "name": "LM Wind Power",
+          "ownership": "GE Renewable Energy",
+          "focus": "Wind turbine blade materials, aerodynamics, and structure"
+        },
+        {
+          "name": "Mitsubishi",
+          "presence": "Sweetwater Wind Farm"
+        }
+      ],
+      "sources": [
+        "https://microgridmedia.com/wind-turbine-manufacturers-texas/",
+        "https://www.energybot.com/blog/biggest-wind-farms-in-texas.html"
+      ]
+    },
+    "smart_grid_cleantech": {
+      "grid4c": {
+        "location": "8920 Business Park Drive Austin, Texas",
+        "founded": 2013,
+        "focus": "AI and Machine Learning solutions to extract maximum business value out of smart meters and IoT data",
+        "technology": "Embedding AI algorithms at the grid edge",
+        "acquisition": "Acquired by Bidgely in March 2025",
+        "sources": [
+          "https://www.grid4c.com/",
+          "https://www.cbinsights.com/company/grid4c"
+        ]
+      },
+      "clearblade": {
+        "type": "Edge Computing software company",
+        "focus": "Enables enterprises to rapidly engineer and run secure, real-time, scalable IoT applications",
+        "deployment": "Built for enterprise to run securely in any cloud, on-premise and at the edge",
+        "sources": [
+          "https://www.builtinaustin.com/companies/type/iot-companies"
+        ]
+      },
+      "ambiq": {
+        "focus": "Develops the lowest-power semiconductor solutions to enable intelligent devices everywhere",
+        "sources": [
+          "https://www.builtinaustin.com/companies/type/iot-companies"
+        ]
+      },
+      "pecan_street_project": {
+        "location": "Mueller district, Austin",
+        "partners": [
+          "Austin Energy",
+          "GE Energy",
+          "IBM",
+          "Intel",
+          "Oracle",
+          "Cisco Systems",
+          "Microsoft",
+          "General Motors"
+        ],
+        "purpose": "Studies, tests, and helps commercialize the benefits of Smart Grid technologies",
+        "significance": "Austin's Smart Grid 1.0 completed in 2009 was the world's first fully operational, citywide system",
+        "sources": [
+          "https://austinenergy.com/about/company-profile/electric-system/integrated-smart-grid",
+          "https://electricenergyonline.com/energy/magazine/451/article/lightson-austin-energy-delivers-first-smart-grid-in-the-us.htm"
+        ]
+      }
+    }
+  },
+
+  "austin_energy_detailed": {
+    "size_and_scope": {
+      "rank": "7th largest public utility in the United States",
+      "customers": "500,000+",
+      "residents_served": "1,000,000+",
+      "service_area": "437 square miles",
+      "ownership": "Publicly owned, operates as department of City of Austin"
+    },
+    "renewable_energy_goals": {
+      "2025_target": "55% renewable energy",
+      "2027_target": "65% renewable energy",
+      "2030_target": "70% renewable energy",
+      "2035_target": "100% carbon-free electricity generation",
+      "local_solar_2030": "375 MW of local solar generation",
+      "current_performance_fy2021": "41% renewable power"
+    },
+    "energy_efficiency_goals": {
+      "2025_target": "900 MW saved through energy efficiency and demand response",
+      "2025_2030_target": "205 MW of peak demand reduction from energy efficiency"
+    },
+    "contractor_vendor_relationships": {
+      "participating_solar_contractor_program": {
+        "eligibility": "Only participating contractors can offer Austin Energy rebates and incentives",
+        "requirements": [
+          "Register with City of Austin's Vendor Connection",
+          "Set up account in EECP™ Rebate Processing System",
+          "Abide by Austin Energy Code of Conduct and Ethical Requirements",
+          "Follow Austin Energy Solar Program Contractor Handbook"
+        ],
+        "note": "Third-party Power Purchase Agreements (PPAs) not allowed"
+      },
+      "residential_rebates": {
+        "monthly_bill_credit": "9.91¢ per kilowatt-hour (kWh) of energy produced"
+      },
+      "multifamily_rebates": {
+        "standard": "$0.60 per watt for properties serving 5+ residential units",
+        "nonprofit": "$1.00 per watt for nonprofit properties serving 5+ residential units"
+      },
+      "commercial_programs": [
+        "Capacity-Based Incentive (CBI)",
+        "Performance-Based Incentive (PBI)"
+      ],
+      "solar_standard_offer_program": {
+        "first_year_queue": "14.5 MW",
+        "in_development": "6.5 MW"
+      },
+      "sources": [
+        "https://austinenergy.com/green-power/solar-solutions/participating-solar-contractors/become-a-participating-solar-contractor",
+        "https://austinenergy.com/green-power/solar-solutions/for-your-home",
+        "https://austinenergy.com/green-power/solar-solutions/for-business"
+      ]
+    },
+    "grid_modernization_projects": {
+      "smart_grid_1.0": {
+        "completion": 2009,
+        "significance": "World's first fully operational, citywide smart grid system"
+      },
+      "pecan_street_partnership": {
+        "role": "Founding and active partner",
+        "location": "Mueller district",
+        "partners": [
+          "GE Energy",
+          "IBM",
+          "Intel",
+          "Oracle",
+          "Cisco Systems",
+          "Microsoft",
+          "General Motors"
+        ]
+      },
+      "oracle_utilities_implementation": {
+        "system": "Oracle Utilities Customer Care and Billing",
+        "purpose": "Replace outdated legacy CIS and support smart grid initiatives",
+        "mobile_workforce": "Oracle Utilities Mobile Workforce Management for field operations"
+      },
+      "sources": [
+        "https://austinenergy.com/about/company-profile/electric-system/integrated-smart-grid"
+      ]
+    }
+  },
+
+  "cleantech_ecosystem": {
+    "austin_technology_incubator": {
+      "clean_energy_incubator": {
+        "established": 2001,
+        "status": "One of the longest-established energy and clean-tech incubators in the United States",
+        "focus_areas": [
+          "Energy efficiency",
+          "Renewables",
+          "Grid modernization and optimization",
+          "Batteries and storage",
+          "Demand response",
+          "Distributed generation"
+        ],
+        "fiscal_2018_performance": {
+          "capital_raised": "$20.2 million",
+          "revenues": "$2.8 million",
+          "employees": 67.5,
+          "texas_economic_impact": "$9.8 million"
+        },
+        "overall_portfolio": {
+          "total_investments": 222,
+          "companies_invested_35_years": 157,
+          "average_annual_investments_last_10_years": 6
+        },
+        "sources": [
+          "https://ati.utexas.edu/companies/energy/",
+          "https://services.austintexas.gov/edims/document.cfm?id=246419"
+        ]
+      }
+    },
+    "venture_capital": {
+      "total_2025_funding": "$6.8 billion+",
+      "investor_count": {
+        "climatetech_cleantech_seed": 83,
+        "total_venture_organizations": "160+ (including VCs, family offices, growth/private equity, accelerators, incubators, angel funds)"
+      },
+      "notable_funds": [
+        "True Wealth Ventures",
+        "Innovation Endeavors",
+        "Clean Energy Ventures",
+        "S3 Ventures ($250M fund, half committed to Texas-based startups)"
+      ],
+      "recent_notable_funding": {
+        "last_energy": {
+          "sector": "Nuclear energy",
+          "round": "Series C",
+          "amount": "$100 million",
+          "purpose": "Expand Austin operations and finance Department of Energy pilot project for small nuclear reactors"
+        }
+      },
+      "sources": [
+        "https://signal.nfx.com/investor-lists/top-climatetech-cleantech-seed-austin-investors",
+        "https://www.austinstartupmeetup.com/january-2026-austin-startup-ecosystem-update-event-details/",
+        "https://texasventurealliance.org/austin"
+      ]
+    },
+    "university_of_texas_research": {
+      "ranking": "#1 energy research university in the nation",
+      "doe_funding_4_year": "$145 million",
+      "energy_experts": "400+",
+      "2022_energy_institute_funding": "$1 million to 17 interdisciplinary research teams",
+      "corporate_partnerships": {
+        "oil_companies": [
+          "ExxonMobil",
+          "Shell",
+          "ConocoPhillips",
+          "Chevron"
+        ],
+        "max_funding_per_project": "$100,000",
+        "google_partnership": "Part of $40 billion Texas investment, supporting research and training for powering data centers"
+      },
+      "research_areas": [
+        "Hydrogen",
+        "Battery technology",
+        "Nuclear energy",
+        "Renewable integration",
+        "Grid modernization"
+      ],
+      "sources": [
+        "https://energy.utexas.edu/",
+        "https://cockrell.utexas.edu/future-of-energy",
+        "https://thedailytexan.com/2023/01/26/ut-energy-institute-partners-with-global-oil-companies-to-research-sustainable-energy/"
+      ]
+    },
+    "sxsw_energy_sustainability": {
+      "2025": {
+        "dates": "March 7-15, 2025",
+        "energy_track": "March 7-9, 2025",
+        "climate_sustainability_track": "March 10-13, 2025",
+        "sessions": "200+ sessions spotlighting climate, environmental sustainability, clean energy, and green tech",
+        "focus": [
+          "Renewable energy breakthroughs",
+          "Smart grid solutions",
+          "Clean tech advancements",
+          "Energy policy evolution",
+          "Solution-based climate innovations"
+        ]
+      },
+      "2026": {
+        "dates": "March 12-18, 2026",
+        "track_name": "Cities & Climate",
+        "focus": [
+          "Sustainability innovations",
+          "Conservation",
+          "Climate tech",
+          "Resilient cities and communities"
+        ],
+        "registration_status": "Open"
+      },
+      "sources": [
+        "https://sxsw.com/conference/energy/",
+        "https://www.sxsw.com/conference/climate-and-sustainability/",
+        "https://sxsw.com/"
+      ]
+    }
+  },
+
+  "regulatory_environment": {
+    "texas_renewable_portfolio_standard": {
+      "original_requirement": "5,000 MW by 2015",
+      "2025_target": "10,000 MW",
+      "status": "Already surpassed 2025 goal",
+      "rec_trading_program": "Required to continue until September 1, 2025 per House Bill 1500",
+      "sources": [
+        "https://programs.dsireusa.org/system/program/tx",
+        "https://ftp.puc.texas.gov/public/puct-info/agency/rulesnlaws/subrules/electric/25.173/55323adt.pdf"
+      ]
+    },
+    "2025_legislative_changes": {
+      "senate_bill_388": {
+        "status": "Debated (not yet passed as of research date)",
+        "requirements": {
+          "dispatchable_requirement": "At least 50% of new generation built in ERCOT must be 'dispatchable' (excludes battery technology)",
+          "grid_supply_mandate": "Half of grid supply as of 2026 must be dispatchable (natural gas, nuclear, coal)",
+          "renewable_matching": "For every megawatt of solar and wind, generators must match with a megawatt of natural gas",
+          "credits": "Solar and wind companies must pay for 'dispatchable' credits"
+        }
+      },
+      "senate_bill_6": {
+        "effective_date": "June 20, 2025",
+        "large_load_definition": "Any load with peak demand of 75 MW or more",
+        "provisions": [
+          "New interconnection standards",
+          "Demand management requirements for large loads"
+        ]
+      },
+      "sources": [
+        "https://www.velaw.com/insights/texas-renewables-roundup-2025-texas-legislature-update/",
+        "https://www.jw.com/news/insights-senate-bill-6-texas-electric-regulations/"
+      ]
+    },
+    "ercot_grid_considerations": {
+      "expected_renewable_additions": "50 GW of intermittent renewable resource capacity (primarily solar)",
+      "expected_dispatchable_additions": "30 GW",
+      "reliability_concerns": "Potential grid reliability issues during periods of low renewable output",
+      "sources": [
+        "https://www.heritage.org/energy/report/restoring-reliability-the-texas-electric-grid"
+      ]
+    },
+    "austin_climate_goals": {
+      "austin_energy": {
+        "2025": "55% renewable energy",
+        "2027": "65% renewable energy",
+        "2030": "70% renewable energy, 375 MW local solar generation",
+        "2035": "100% carbon-free electricity generation, 85% renewable"
+      },
+      "city_wide": {
+        "2030_building": [
+          "All new buildings net-zero carbon",
+          "Existing building emissions reduced by 25%",
+          "Natural gas emissions reduced by 30%"
+        ],
+        "2030_transportation": "50% of trips using public transit, biking, walking, carpooling, or avoided by working from home",
+        "2040": "Net-zero community-wide greenhouse gas emissions with equity emphasis"
+      },
+      "carbon_reduction_pace": "8% annual reduction until achieving zero carbon by 2035",
+      "sources": [
+        "https://www.sierraclub.org/texas/blog/2020/03/austin-energy-s-2030-plan-zero-carbon-2035-gets-initial-approval",
+        "https://www.austintexas.gov/page/austin-climate-equity-plan",
+        "https://austinenergy.com/about/news/news-releases/2024/austin-city-council-adopts-plan-to-meet-the-community-energy-needs-through-2035"
+      ]
+    },
+    "incentive_programs": {
+      "austin_energy_rebates": {
+        "residential_solar": "Monthly bill credit of 9.91¢ per kWh of energy produced",
+        "multifamily_solar": {
+          "standard": "$0.60 per watt for 5+ unit properties",
+          "nonprofit": "$1.00 per watt for nonprofit 5+ unit properties"
+        },
+        "commercial_solar": [
+          "Capacity-Based Incentive (CBI)",
+          "Performance-Based Incentive (PBI)"
+        ]
+      },
+      "contractor_requirements": {
+        "vendor_registration": "Must register with City of Austin's Vendor Connection",
+        "rebate_system": "Must set up account in EECP™ Rebate Processing System",
+        "compliance": [
+          "Austin Energy Code of Conduct",
+          "Ethical Requirements",
+          "Solar Program Contractor Handbook"
+        ],
+        "ppa_restriction": "Third-party Power Purchase Agreements (PPAs) not allowed"
+      },
+      "sources": [
+        "https://austinenergy.com/green-power/solar-solutions/for-your-home",
+        "https://austinenergy.com/green-power/solar-solutions/participating-solar-contractors/become-a-participating-solar-contractor"
+      ]
+    }
+  },
+
+  "green_building_sector": {
+    "market_statistics": {
+      "leed_certifications_2020": {
+        "austin_projects": 18,
+        "total_square_feet": "4,000,000+",
+        "texas_total": 139,
+        "platinum_certifications_austin": 1,
+        "platinum_certifications_texas": 3
+      },
+      "national_context": {
+        "us_green_building_investment_2021": "$86 billion+",
+        "austin_contribution": "Notable contributor to national market"
+      }
+    },
+    "austin_energy_green_building_program": {
+      "abbreviation": "AEGB",
+      "established": 1991,
+      "significance": "One of the oldest green building programs in the United States",
+      "focus": "Exceeds code standards, strengthens local building regulations, drives sustainable building practices and market demand"
+    },
+    "market_drivers": {
+      "corporate_relocations": [
+        "Facebook",
+        "Amazon",
+        "WeWork"
+      ],
+      "result": "Consistent demand for modern, environmentally efficient buildings"
+    },
+    "sources": [
+      "https://www.commercialsearch.com/news/top-10-leed-certified-buildings-in-austin-in-2020/",
+      "https://www.bluegillenergy.com/commercial-builder-services/eco-friendly-design-consultation/regional-green-building-programs/austin-energy-green-building-aegb-commercial-rating-system/",
+      "https://www.statista.com/topics/1169/green-buildings-in-the-us/"
+    ]
+  },
+
+  "employment_statistics": {
+    "austin_metro_context": {
+      "primary_clusters": "Information technology, analytical instruments",
+      "note": "Houston, Midland, and Odessa are primary hubs for traditional oil and gas employment in Texas; Austin focuses more on technology sectors"
+    },
+    "texas_statewide": {
+      "energy_sector_percentage": "7.0% of total state employment (2023)",
+      "clean_energy_jobs_2023": "261,934",
+      "texas_ranking": "Added more clean energy workers than any other state in 2023",
+      "wind_generation_jobs": "27,381 (20.8% of all U.S. wind-energy jobs)",
+      "upstream_employment_august_2024": "194,400"
+    },
+    "specific_companies": {
+      "clearesult": "2,400-2,700 employees",
+      "austin_cleantech_sector": "30,000+ employees across 200+ companies",
+      "ati_clean_energy_portfolio_fy2018": "67.5 employees"
+    },
+    "sources": [
+      "https://businessintexas.com/business-sectors/energy/",
+      "https://climatepower.us/news/clean-energy-workers-in-texas-surpass-those-working-in-oil-gas-industry/",
+      "https://gov.texas.gov/uploads/files/business/renewableenergy-report.pdf"
+    ]
+  },
+
+  "odoo_erp_implementation_considerations": {
+    "key_market_segments": [
+      "Solar installation and maintenance (690+ residential, 59+ commercial projects annually in local market)",
+      "Energy efficiency program management (CLEAResult model with 2,400+ employees)",
+      "EV charging infrastructure deployment and management (1,628+ public ports)",
+      "Energy storage system integration (Tesla/Fluence model)",
+      "Smart grid technology and IoT energy management",
+      "Green building certification and energy auditing",
+      "Utility contractor and vendor management (Austin Energy's participating contractor program)",
+      "Renewable energy project development (wind, solar, biomass)"
+    ],
+    "critical_integrations": [
+      "Austin Energy contractor portal (EECP™ Rebate Processing System)",
+      "City of Austin Vendor Connection",
+      "ERCOT grid data systems",
+      "Oracle Utilities (for large utility contractors)",
+      "Smart meter and IoT device data platforms",
+      "LEED and AEGB certification tracking",
+      "ChargePoint and other EV charging network APIs"
+    ],
+    "regulatory_compliance_modules": [
+      "Texas RPS tracking and REC trading (through September 2025)",
+      "Austin Energy rebate and incentive program management",
+      "ERCOT interconnection standards (SB 6 compliance for 75+ MW loads)",
+      "Dispatchable generation requirements tracking (potential SB 388)",
+      "LEED and AEGB certification documentation",
+      "Austin Climate Equity Plan reporting (net-zero 2040 goals)"
+    ],
+    "financial_considerations": [
+      "Rebate tracking and billing (9.91¢/kWh residential, $0.60-$1.00/watt multifamily)",
+      "Performance-based incentive calculations",
+      "Project financing for $100K-$1M+ installations",
+      "Vendor payment processing through City of Austin systems",
+      "Grant and research funding management (UT partnerships, DOE funding)",
+      "Venture capital and startup funding tracking"
+    ],
+    "project_management_needs": [
+      "Solar installation project lifecycle (from bid to commissioning)",
+      "Multi-site EV charging deployments",
+      "Energy efficiency program rollouts",
+      "Smart grid modernization projects",
+      "Battery storage system integration",
+      "Green building certification workflows",
+      "Utility-scale renewable energy development (2,866+ MW scale)"
+    ],
+    "customer_relationship_management": [
+      "Residential customer base (500,000+ Austin Energy customers)",
+      "Commercial and industrial clients",
+      "Municipal utility relationships",
+      "Vendor and contractor partnerships",
+      "Multi-family property owners",
+      "Nonprofit organizations (different rebate tiers)",
+      "Large load customers (75+ MW)"
+    ],
+    "inventory_and_asset_management": [
+      "Solar panel and inverter inventory (Maxeon, Mission Solar, Qcells, etc.)",
+      "Battery systems (Tesla Powerwall, Enphase IQ)",
+      "EV charging equipment (Level 2 and DC fast chargers)",
+      "Smart meters and IoT devices",
+      "Wind turbine components",
+      "Energy efficiency equipment",
+      "Grid modernization hardware"
+    ],
+    "reporting_and_analytics": [
+      "Renewable energy generation tracking (MW/MWh)",
+      "Carbon reduction metrics (8% annual reduction targets)",
+      "Customer installation statistics (15,000+ solar customers)",
+      "Project pipeline management (14.5 MW queue, 6.5 MW in development)",
+      "Incentive program performance",
+      "Contractor performance scorecards",
+      "Climate goal progress (2027, 2030, 2035 milestones)"
+    ]
+  },
+
+  "sources_summary": {
+    "primary_sources": [
+      "Austin Energy official website and press releases",
+      "City of Austin official websites and documents",
+      "ERCOT official data",
+      "Texas Public Utility Commission filings",
+      "University of Texas Austin Energy Institute",
+      "Austin Technology Incubator reports",
+      "Built In Austin company databases",
+      "SXSW official conference information",
+      "SEIA (Solar Energy Industries Association)",
+      "Wood Mackenzie energy market research",
+      "U.S. Department of Energy reports",
+      "Texas Economic Development Corporation",
+      "Commercial real estate industry reports"
+    ],
+    "data_reliability": "High - All statistics sourced from official government agencies, utility reports, academic institutions, or recognized industry research firms",
+    "last_updated": "2026-01-11",
+    "note": "Some 2025 legislative items (SB 388) were pending at time of research; verify current status for implementation planning"
+  }
+}

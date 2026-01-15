@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { industries, colorMap } from "@/lib/industryData";
+import { getCityIndustry } from "@/lib/cityIndustryData";
 
 // Icon mapping from string to component
 const iconMap: Record<string, React.ElementType> = {
@@ -71,10 +72,11 @@ const cardVariants = {
 
 interface IndustryModulesProps {
   industryKey: keyof typeof industries;
+  city?: string;
 }
 
-export default function IndustryModules({ industryKey }: IndustryModulesProps) {
-  const industry = industries[industryKey];
+export default function IndustryModules({ industryKey, city }: IndustryModulesProps) {
+  const industry = city ? getCityIndustry(city, industryKey as string) : industries[industryKey];
   const colors = colorMap[industry.color];
 
   return (

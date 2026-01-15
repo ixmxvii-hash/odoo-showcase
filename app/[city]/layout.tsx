@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { cities } from "@/lib/industryData";
-import Header from "@/components/Header";
 import CitySelector from "@/components/CitySelector";
 
 interface CityLayoutProps {
@@ -19,7 +18,6 @@ export default async function CityLayout({ children, params }: CityLayoutProps) 
 
   return (
     <>
-      <Header />
       {children}
       <div className="fixed bottom-6 left-0 right-0 z-40 pointer-events-none">
         <div className="flex justify-center pointer-events-auto">

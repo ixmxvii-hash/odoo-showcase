@@ -11,22 +11,22 @@ const stats = [
   {
     icon: Clock,
     value: "90 Days",
-    label: "Implementation",
+    label: "Typical SMB go-live plan",
   },
   {
     icon: Award,
-    value: "100%",
-    label: "Client Satisfaction",
+    value: "Odoo",
+    label: "Certified partner",
   },
   {
     icon: Users,
-    value: "50+",
-    label: "Projects",
+    value: "Texas",
+    label: "On-site teams",
   },
   {
     icon: Headphones,
-    value: "24/7",
-    label: "Support",
+    value: "Support",
+    label: "Local & remote",
   },
 ] as const;
 
@@ -104,9 +104,9 @@ export function GeneralHero() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
-              One platform for CRM, Sales, Inventory, Manufacturing & more.
+              One platform for CRM, Sales, Inventory, Manufacturing & more with a Texas-based team that can be on-site when you need us.
               <br className="hidden sm:block" />
-              <span className="text-orange-400 font-medium">Go live in 90 days with expert support.</span>
+              <span className="text-orange-400 font-medium">Plan a 90-day go-live with expert guidance.</span>
             </p>
           </motion.div>
 
@@ -143,7 +143,7 @@ export function GeneralHero() {
                 size="lg"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 transition-all duration-300 group"
               >
-                Start Your 90-Day Implementation
+                Plan Your 90-Day Implementation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -167,7 +167,7 @@ export function GeneralHero() {
           >
             <p className="text-sm text-slate-400 flex items-center justify-center gap-2">
               <Users className="w-4 h-4 text-orange-400" />
-              Trusted by 50+ Businesses Across Texas
+              Trusted by manufacturers, distributors, and services teams across Texas
             </p>
           </motion.div>
 

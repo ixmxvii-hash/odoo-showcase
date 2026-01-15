@@ -17,22 +17,20 @@ export default function Home() {
       {/* Pain Points - White background */}
       <GeneralPainPoints />
 
-      {/* O2C & P2P Process Flows - Light gray background */}
-      <ProcessFlows />
-
-      {/* Industries We Serve - White background */}
-      <GeneralIndustries />
-
       {/* Solutions/Apps - White background */}
       <section id="solutions">
         <GeneralSolutions />
       </section>
 
+      {/* Proof: O2C & P2P Process Flows + Comparison */}
+      <ProcessFlows />
+      <Comparison />
+
+      {/* Industries We Serve - White background */}
+      <GeneralIndustries />
+
       {/* Why Local - Light gray background */}
       <WhyLocal />
-
-      {/* Comparison Table - White background */}
-      <Comparison />
 
       {/* Testimonials - Light gray background */}
       <GeneralTestimonials />

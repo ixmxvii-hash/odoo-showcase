@@ -1,0 +1,899 @@
+{
+  "research_metadata": {
+    "region": "Dallas-Fort Worth, Texas",
+    "focus": "Process Manufacturing Industry",
+    "date_compiled": "2026-01-11",
+    "purpose": "Odoo ERP Implementation Research",
+    "data_quality": "Real statistics from government, industry, and corporate sources"
+  },
+
+  "market_overview": {
+    "chemical_manufacturing": {
+      "facilities_count": {
+        "dallas": 57,
+        "fort_worth": 23,
+        "total_basic_chemical": "80+",
+        "source": "https://www.dnb.com/business-directory/company-information.basic_chemical_manufacturing.us.texas.html"
+      },
+      "major_companies": [
+        "Tokai Carbon CB Ltd.",
+        "KMG-Bernuth Inc.",
+        "Bayou Minerals Inc.",
+        "Matheson Tri-Gas Inc.",
+        "TBK One (blending, manufacturing, packaging, warehousing)",
+        "Houston Chemical (toll manufacturing)"
+      ],
+      "chemical_focus_areas": [
+        "Detergents and soaps",
+        "Paints and varnishes",
+        "Pharmaceutical chemicals",
+        "Sulfuric acid",
+        "Synthetic catalysts"
+      ],
+      "notes": "Dallas has more concentrated chemical production than any other Texas city, with output heavily focused in pharmaceutical chemicals, soaps, and varnishes",
+      "sources": [
+        "https://www.tshaonline.org/handbook/entries/chemical-industries",
+        "https://www.dnb.com/business-directory/company-information.basic_chemical_manufacturing.us.texas.fort_worth.html"
+      ]
+    },
+
+    "pharmaceutical_biotech": {
+      "facilities_count": {
+        "pharmaceutical_medicine_manufacturing": 71,
+        "location": "Dallas metro area",
+        "source": "https://www.dnb.com/business-directory/company-information.pharmaceutical_and_medicine_manufacturing.us.texas.dallas.html"
+      },
+      "major_facilities": [
+        {
+          "name": "Sovereign Pharmaceuticals (SovPharm)",
+          "type": "CDMO",
+          "established": 1990,
+          "location": "Fort Worth",
+          "facility_size": "54,000 sq ft cGMP production + 14,500 sq ft R&D/QC",
+          "capabilities": "Contract development and manufacturing organization",
+          "source": "https://www.sovpharm.com/about"
+        },
+        {
+          "name": "BMK Pharma",
+          "investment": "$50M",
+          "location": "Allen",
+          "facility_size": "50,000 sq ft",
+          "type": "503B compounding pharmacy + sterile CDMO",
+          "capabilities": "Injectable drugs and sterile dosage forms",
+          "source": "https://dallasinnovates.com/16-biotech-companies-in-dallas-fort-worth-putting-the-tech-in-bio-to-drive-breakthroughs/"
+        },
+        {
+          "name": "Sachse Evolve",
+          "type": "Plasma-derived therapeutics manufacturing",
+          "location": "Sachse",
+          "status": "State-of-the-art facility investment",
+          "source": "https://dallasinnovates.com/16-biotech-companies-in-dallas-fort-worth-putting-the-tech-in-bio-to-drive-breakthroughs/"
+        }
+      ],
+      "major_companies": [
+        "AbbVie Inc.",
+        "Galderma Laboratories",
+        "Santa Cruz Biotechnology Inc.",
+        "Lantern Pharma (AI-driven oncology)",
+        "Abbott Laboratories",
+        "Smith & Nephew",
+        "Ferris Manufacturing",
+        "Integer",
+        "Stryker"
+      ],
+      "capital_investment": {
+        "private_capital_2018_2023": "$4.6B",
+        "description": "Private capital invested in DFW life science activities",
+        "source": "https://dallasinnovates.com/16-biotech-companies-in-dallas-fort-worth-putting-the-tech-in-bio-to-drive-breakthroughs/"
+      },
+      "sources": [
+        "https://dallasinnovates.com/16-biotech-companies-in-dallas-fort-worth-putting-the-tech-in-bio-to-drive-breakthroughs/",
+        "https://lifesciencedfw.com/ecosystem/"
+      ]
+    },
+
+    "food_processing": {
+      "facilities_count": {
+        "dallas": 100,
+        "fort_worth": 49,
+        "total_food_manufacturing": "149+",
+        "source": "https://www.dnb.com/business-directory/company-information.other_food_manufacturing.us.texas.html"
+      },
+      "major_facilities": [
+        {
+          "name": "Deen Meat and Cooked Foods",
+          "location": "Fort Worth",
+          "established": 1946,
+          "type": "Meat processing",
+          "source": "https://www.inven.ai/company-lists/top-24-food-processing-companies-in-texas"
+        },
+        {
+          "name": "Standard Meat",
+          "location": "Dallas",
+          "established": 1935,
+          "type": "Family-owned meat processing",
+          "source": "https://www.inven.ai/company-lists/top-24-food-processing-companies-in-texas"
+        },
+        {
+          "name": "Select Milk Producers, Inc.",
+          "location": "Dallas",
+          "established": 1994,
+          "type": "Family-owned dairy producer",
+          "specialization": "High-quality dairy products",
+          "source": "https://www.inven.ai/company-lists/top-24-food-processing-companies-in-texas"
+        },
+        {
+          "name": "Bridor USA",
+          "investment": "$410M",
+          "location": "Lancaster (DFW metroplex)",
+          "facility_type": "Industrial bakery",
+          "jobs_created": "Up to 600 (three phases)",
+          "source": "https://gov.texas.gov/news/post/texas-strengthens-booming-manufacturing-industry-in-2024"
+        }
+      ],
+      "industry_segments": [
+        "Meat processing",
+        "Dairy production",
+        "Industrial bakery",
+        "Food distribution"
+      ],
+      "sources": [
+        "https://business.fortworthchamber.com/list/category/food-processing-manufacturing-4168",
+        "https://www.dallaschamber.org/wp-content/uploads/2019/01/WhyDallasFoodIndustry2018-1.pdf"
+      ]
+    },
+
+    "plastics_materials_processing": {
+      "major_companies": [
+        {
+          "name": "Hill Plastics",
+          "location": "Dallas-Fort Worth",
+          "experience": "40+ years",
+          "specialization": "Custom thermoformed parts, enclosures, fabricated parts",
+          "markets": "OEM manufacturers, telecommunication, industrial",
+          "source": "https://www.hillplastics.com/"
+        },
+        {
+          "name": "DFW Plastics Inc",
+          "location": "Saginaw, Texas",
+          "established": 1978,
+          "specialization": "Polymer underground enclosures",
+          "market_position": "Single source manufacturer in North America",
+          "source": "https://www.dfwplasticsinc.com/our-company"
+        },
+        {
+          "name": "Metro Custom Plastics",
+          "location": "Dallas-Fort Worth area",
+          "specialization": "Precision injection molding",
+          "capabilities": "Custom molding solutions for multiple industries",
+          "source": "https://www.metrocustomplastics.com/plastic-injection-custom-mold-news/custom-plastic-molding-solutions-in-the-dallas-fort-worth-area"
+        },
+        {
+          "name": "Reliant Plastics",
+          "location": "Gainesville (near DFW airports)",
+          "established": 1968,
+          "specialization": "Plastic injection molding",
+          "service_area": "Dallas-Fort Worth and beyond",
+          "source": "https://reliantplastics.com/about/"
+        }
+      ],
+      "distribution_fabrication": [
+        {
+          "name": "Regal Plastics",
+          "location": "Dallas-Fort Worth Metroplex",
+          "inventory": "Wide selection of plastics",
+          "materials": ["Acrylic", "Polycarbonate", "HDPE", "Polypropylene"],
+          "source": "https://www.regal-plastics.com/dallas-regal-plastics"
+        },
+        {
+          "name": "Allied Plastic Supply",
+          "location": "Dallas",
+          "services": "Plastic products and fabrication",
+          "source": "https://www.alliedplasticsupply.com/"
+        }
+      ],
+      "equipment_services": [
+        {
+          "name": "Adams Engineers & Equipment",
+          "service_areas": ["Dallas", "Fort Worth", "Other Texas cities"],
+          "services": "Plastic processing equipment and engineering consultation",
+          "source": "https://www.adamsengineers.com/plastic-processing-in-texas"
+        }
+      ],
+      "total_companies_texas": 21,
+      "sources": [
+        "https://www.inven.ai/company-lists/top-21-plastic-manufacturing-companies-in-texas"
+      ]
+    },
+
+    "cosmetics_personal_care": {
+      "major_facilities": [
+        {
+          "name": "Beauty Manufacturing Solutions Corp (BMSC)",
+          "location": "Coppell + Fort Worth",
+          "facility_size": "500,000 sq ft campus (Fort Worth - BMSC2)",
+          "status": "Certified minority-owned business",
+          "clients": ["Naterra", "L'Oreal", "Johnson & Johnson", "Mary Kay", "Unilever", "Tree Hut"],
+          "capabilities": "High volume manufacturing",
+          "source": "https://fortworthinc.com/news/beauty-manufacturing-solutions-corp-expands-into-fort-worth/"
+        },
+        {
+          "name": "Goodier Cosmetics (Goodier Labs)",
+          "location": "Dallas",
+          "facility_size": "140,000 sq ft",
+          "raw_materials": "2,500+",
+          "kettles": 14,
+          "batch_sizes": "40 kg to 2,650 kg",
+          "specialization": "Product development, formulation, cutting-edge technologies",
+          "source": "https://www.goodierlabs.com/"
+        },
+        {
+          "name": "ARG Laboratories",
+          "location": "Dallas area",
+          "certifications": ["cGMP compliant", "FDA registered", "Organic certified", "OTC licensed"],
+          "services": "Formulation, manufacturing, filling",
+          "products": ["Body care", "Face care", "Hair care", "Health beverages", "Men's care", "Pet care"],
+          "source": "https://www.arglaboratories.com/"
+        },
+        {
+          "name": "Coast Southwest Inc.",
+          "location": "Arlington",
+          "facility_size": "30,000 sq ft",
+          "parent": "California distributor and formulator",
+          "functions": ["R&D", "Sales", "Distribution"],
+          "source": "https://www.dmagazine.com/publications/d-ceo/2015/september/inside-the-dallas-beauty-business/"
+        }
+      ],
+      "other_companies": [
+        "CBI Laboratories",
+        "Cosmetic Laboratories",
+        "Swiss-American Products Inc.",
+        "United 1 International Laboratories"
+      ],
+      "sources": [
+        "https://www.manufacturingdive.com/news/beauty-manufacturer-expands-operations-in-Texas-advanced-manufacturing/639121/"
+      ]
+    }
+  },
+
+  "capital_investment": {
+    "recent_dfw_projects": [
+      {
+        "company": "Bell Textron",
+        "investment": "$429M",
+        "location": "Fort Worth",
+        "jobs_created": "400+",
+        "program": "JETI (Jobs, Energy, Technology, and Innovation) - first qualified project",
+        "source": "https://gov.texas.gov/news/post/texas-strengthens-booming-manufacturing-industry-in-2024"
+      },
+      {
+        "company": "SPC Group",
+        "investment": "$208M",
+        "location": "Burleson (DFW metroplex)",
+        "facility_size": "183,000 sq ft plant",
+        "source": "https://gov.texas.gov/news/post/texas-strengthens-booming-manufacturing-industry-in-2024"
+      },
+      {
+        "company": "Bridor USA",
+        "investment": "$410M",
+        "location": "Lancaster (DFW metroplex)",
+        "facility_type": "Industrial bakery",
+        "jobs": "Up to 600 (three phases)",
+        "source": "https://gov.texas.gov/news/post/texas-strengthens-booming-manufacturing-industry-in-2024"
+      },
+      {
+        "company": "BMK Pharma",
+        "investment": "$50M",
+        "location": "Allen",
+        "facility_size": "50,000 sq ft",
+        "type": "503B compounding pharmacy + sterile CDMO",
+        "source": "https://dallasinnovates.com/16-biotech-companies-in-dallas-fort-worth-putting-the-tech-in-bio-to-drive-breakthroughs/"
+      }
+    ],
+
+    "national_trends_texas_impact": {
+      "total_manufacturing_structures_investment_2024": "$231.9B",
+      "description": "National record high, with Texas capturing significant portion",
+      "texas_qualified_projects_2024": 1368,
+      "comparison": "More than double second-place state (Illinois)",
+      "chemical_sector_spending_2024": "$37.6B",
+      "texas_advantage": "Abundant natural gas from shale production",
+      "source": "https://www.dallasfed.org/research/swe/2025/swe2501"
+    },
+
+    "life_sciences_investment": {
+      "private_capital_2018_2023": "$4.6B",
+      "region": "DFW life science activities",
+      "source": "https://dallasinnovates.com/16-biotech-companies-in-dallas-fort-worth-putting-the-tech-in-bio-to-drive-breakthroughs/"
+    },
+
+    "infrastructure_expansion": {
+      "manufacturing_space_added_2019_2024": "9.2M sq ft",
+      "region": "Dallas-Fort Worth metro",
+      "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+    },
+
+    "sources": [
+      "https://gov.texas.gov/news/post/texas-strengthens-booming-manufacturing-industry-in-2024",
+      "https://www.dallasfed.org/research/swe/2025/swe2501"
+    ]
+  },
+
+  "regulatory_compliance": {
+    "environmental_tceq_epa": {
+      "agency": "Texas Commission on Environmental Quality (TCEQ)",
+      "collaboration": "Works with EPA to maintain standards",
+      "air_quality_permits": {
+        "requirement": "Virtually all manufacturing air emissions must be authorized",
+        "coverage": ["Space heaters", "Welding", "Paint booth operations", "Process air emissions"],
+        "permits_by_rule": "~300 PBRs available in Texas",
+        "major_permits": ["New Source Review (NSR) Air Permit", "Title V permit"],
+        "source": "https://bes-corp.com/common-texas-environmental-compliance-requirements/"
+      },
+      "dfw_nonattainment_status": {
+        "status": "Moving from serious to severe nonattainment",
+        "counties_affected": [
+          "Collin", "Dallas", "Denton", "Ellis", "Johnson",
+          "Kaufman", "Parker", "Rockwall", "Tarrant", "Wise"
+        ],
+        "major_source_threshold_change": {
+          "previous": "50 tpy (NOx and VOCs)",
+          "new": "25 tpy (NOx and VOCs)",
+          "impact": "Sources >25 tpy classified as major sources"
+        },
+        "requirements": [
+          "EPA Title V permitting",
+          "Additional recordkeeping obligations",
+          "Emissions control obligations"
+        ],
+        "source": "https://westwardenv.com/proposed-regulatory-changes-in-texas-air-quality-standards-and-compliance-for-bexar-county-and-dfw-area/"
+      },
+      "hazardous_waste_management": {
+        "requirements": [
+          "Complete Waste Determinations for all wastes",
+          "Determine Generator Status (CESQ, SQG, LQG)",
+          "Obtain EPA Identification Number via TCEQ"
+        ],
+        "epa_form": "EPA Form 8700-12",
+        "source": "https://www.okonrecycling.com/industrial-scrap-metal-recycling/steel-and-aluminum/manufacturing-waste-management-texas/"
+      },
+      "tier_ii_chemical_reporting": {
+        "deadline": "Before March 1 annually",
+        "requirement": "Detail hazardous chemical storage and handling",
+        "submitted_to": "TCEQ",
+        "source": "https://www.tceq.texas.gov/permitting/tier2/laws-and-regulations.html"
+      },
+      "sources": [
+        "https://www.tceq.texas.gov/",
+        "https://bes-corp.com/common-texas-environmental-compliance-requirements/"
+      ]
+    },
+
+    "fda_pharmaceutical_food": {
+      "food_manufacturing": {
+        "registration": "Domestic and foreign facilities that manufacture, process, pack, or hold food must register with FDA",
+        "texas_licensing": {
+          "requirement": "Any firm processing/packaging food for wholesale or retail self-service requires licensing",
+          "products_covered": ["Food products", "Dietary supplements", "Ice", "Water"],
+          "contact": "foods.regulatory@dshs.texas.gov or 512-834-6670"
+        },
+        "regulatory_updates_2015_2016": [
+          "Current Good Manufacturing Practice and Hazard Analysis rules",
+          "Risk-Based Preventive Controls for Human Food rules",
+          "Sanitary Transportation of Human and Animal Food rules"
+        ],
+        "texas_adoption": {
+          "posted": "July 28, 2017",
+          "effective_date": "August 2, 2017"
+        },
+        "mfrps_participation": {
+          "program": "Manufactured Food Regulatory Program Standards",
+          "texas_status": "Among 41 states enrolled",
+          "source": "https://www.fda.gov/federal-state-local-tribal-and-territorial-officials/regulatory-program-standards/manufactured-food-regulatory-program-standards-mfrps"
+        },
+        "sources": [
+          "https://www.dshs.texas.gov/food-manufacturers-wholesalers-warehouses/food-manufacturers-general-information"
+        ]
+      },
+      "pharmaceutical_manufacturing": {
+        "federal_regulations_adopted": [
+          "Part 210 - Current Good Manufacturing Practice in Manufacturing, Processing, Packing, or Holding of Drugs; General",
+          "Part 211 - Current Good Manufacturing Practice for Finished Pharmaceuticals"
+        ],
+        "licensing": {
+          "requirement": "Comprehensive licensing requirements",
+          "renewal_period": "Every two years"
+        },
+        "source": "https://www.dshs.texas.gov/drug-manufacturers-distributors/federal-regulations-adopted-by-reference-drug-manufacturers-distributors"
+      },
+      "sources": [
+        "https://www.dshs.texas.gov/food-manufacturers-wholesalers-warehouses/fda-links-food-manufacturers-wholesalers-warehouses",
+        "https://www.fda.gov/food/compliance-enforcement-food/food-compliance-programs"
+      ]
+    },
+
+    "osha_process_safety": {
+      "standard": "Process Safety Management of Highly Hazardous Chemicals (29 CFR 1910.119)",
+      "applicability": {
+        "threshold": "10,000+ pounds of any listed hazardous chemical from OSHA PSM Appendix A",
+        "texas_refineries": "Process involving chemical at or above specified threshold quantities"
+      },
+      "purpose": "Prevent or minimize catastrophic releases of toxic, reactive, flammable, or explosive chemicals",
+      "historical_context": [
+        {
+          "incident": "1989 Phillips 66 explosion, Houston",
+          "casualties": "23 killed, 132 injured",
+          "result": "Led to PSM Standard creation in 1992"
+        },
+        {
+          "incident": "2005 BP Texas City refinery",
+          "casualties": "15 killed, 180 injured",
+          "note": "Occurred despite PSM standard"
+        }
+      ],
+      "key_requirements": [
+        "Comprehensive management program",
+        "Integration of technologies, procedures, and management practices",
+        "Protection for workers dealing with dangerous chemicals"
+      ],
+      "sources": [
+        "https://www.osha.gov/process-safety-management",
+        "https://www.tdi.texas.gov/tips/safety/process-safety-management.html",
+        "https://field1st.com/osha-standards/osha-process-safety-management/"
+      ]
+    },
+
+    "industry_specific_standards": {
+      "cgmp_compliance": {
+        "applicable_industries": ["Pharmaceutical", "Cosmetics", "Food"],
+        "examples": [
+          "Goodier Labs - cGMP compliant (cosmetics)",
+          "ARG Laboratories - cGMP compliant, FDA registered, Organic certified, OTC licensed",
+          "SovPharm - 54,000 sq ft cGMP production facility"
+        ]
+      },
+      "quality_certifications": {
+        "common_standards": [
+          "FDA registration",
+          "Organic certification",
+          "OTC licensing",
+          "ISO quality management systems"
+        ]
+      }
+    }
+  },
+
+  "workforce_requirements": {
+    "manufacturing_employment": {
+      "current_statistics": {
+        "august_2025": {
+          "total_jobs": 308737,
+          "trend": "Above 300,000 since mid-2022",
+          "quarterly_change": "-0.7%",
+          "change_from_peak": "-1.5% from October 2024 peak",
+          "peak_employment": 312090,
+          "peak_date": "May 2024",
+          "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+        },
+        "2019_baseline": {
+          "total_jobs": 302000,
+          "percentage_of_regional_employment": "8%",
+          "total_regional_employment": 3700000,
+          "average_wages": "$81,759",
+          "regional_average_wages": "$63,428",
+          "wage_premium": "29% above regional average",
+          "manufacturing_gdp": "$65.5B",
+          "percentage_of_regional_gdp": "12.1%",
+          "total_wages_paid": "$24.7B",
+          "source": "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php"
+        },
+        "may_2024_wages": {
+          "average_hourly_wage_dfw": "$32.89",
+          "average_hourly_wage_national": "$32.66",
+          "comparison": "DFW wages above national average",
+          "source": "https://www.bls.gov/regions/southwest/news-release/occupationalemploymentandwages_dallasfortworth.htm"
+        },
+        "wage_growth_sept_2025": {
+          "dfw_12_month_growth": "3.5%",
+          "national_12_month_growth": "3.6%",
+          "source": "https://www.bls.gov/regions/southwest/news-release/employmentcostindex_dallasfortworth.htm"
+        }
+      },
+      "unemployment_rate": {
+        "q3_2025": "3.8%",
+        "year_over_year_change": "-18 basis points",
+        "source": "https://nmrk.imgix.net/uploads/fields/pdf-market-reports/3Q25-Dallas-Fort-Worth-Industrial-Market-Report_2025-10-23-144356_skpk.pdf"
+      }
+    },
+
+    "process_engineering_talent": {
+      "demand": "Strong job market with statistical expertise emphasis",
+      "key_requirements": [
+        "Background in chemical, mechanical, or industrial engineering",
+        "Process simulation software proficiency",
+        "Six Sigma methodologies",
+        "Quality management systems familiarity",
+        "Statistical methods for manufacturing process analysis"
+      ],
+      "job_availability": {
+        "manufacturing_engineer_dallas": "Multiple postings on Indeed.com",
+        "process_engineer_dallas": "Active hiring across region",
+        "engineering_overall_dfw": "Large concentration of positions",
+        "source": "https://www.indeed.com/q-Process-Engineer-l-Dallas,TX-jobs.html"
+      }
+    },
+
+    "technician_training_programs": {
+      "texas_skills_development_fund": {
+        "description": "Provides training opportunities",
+        "partnerships": [
+          "Community colleges",
+          "Technical colleges",
+          "Local Workforce Development Boards",
+          "Texas Engineering Extension Service"
+        ],
+        "source": "https://businessintexas.com/why-texas/workforce-education/"
+      },
+      "major_programs": [
+        {
+          "institution": "Houston Community College (HCC)",
+          "program": "AAS degree in Manufacturing Engineering Technology",
+          "focus": "Competent technicians and CNC operators",
+          "source": "https://www.hccs.edu/programs/areas-of-study/construction-industry--manufacturing/manufacturing-engineering-technology/"
+        },
+        {
+          "institution": "Texas State Technical College (TSTC)",
+          "programs": [
+            "Precision machining",
+            "Welding",
+            "Industrial systems",
+            "Automation"
+          ],
+          "focus": "Operating advanced manufacturing equipment",
+          "source": "https://www.tstc.edu/industry/engineering-manufacturing/"
+        }
+      ]
+    },
+
+    "university_partnerships": {
+      "ut_dallas": {
+        "program": "MS in Mechanical Engineering",
+        "location": "Heart of Dallas-Fort Worth metroplex",
+        "description": "One of country's fastest-growing engineering hubs",
+        "career_fields": [
+          "Automotive",
+          "Aerospace",
+          "Energy",
+          "Manufacturing",
+          "Nanotechnology"
+        ],
+        "source": "https://engineering.utdallas.edu/academics/graduate-education/mechanical-engineering/"
+      },
+      "texas_a_m_system": {
+        "secureamerica_institute": {
+          "program": "Texas Workforce Development Ecosystem (TWDE)",
+          "launched": 2020,
+          "approach": "Leverage industry, education, government stakeholders",
+          "goal": "Build skilled manufacturing workforce",
+          "reach": "197 communities across Texas"
+        },
+        "workforce_development": {
+          "prek_12": "Engineering and STEM career awareness",
+          "current_workers": "Skills training for evolving sectors (cybersecurity, manufacturing)",
+          "certifications": "Additive Manufacturing Certificate Program available"
+        },
+        "sources": [
+          "https://tees.tamu.edu/workforce-development/materials-manufacturing-projects/texas-workforce-development-ecosystem.html",
+          "https://stories.tamu.edu/stories/texas-am-is-helping-shape-the-workforce-of-tomorrow/"
+        ]
+      }
+    },
+
+    "workforce_statistics": {
+      "dfw_total_workforce": "4.5M+",
+      "texas_total_workforce": "16M",
+      "dfw_percentage_of_texas": "28%+",
+      "note": "DFW has single largest concentration of positions in Texas",
+      "source": "https://www.dallasnews.com/business/jobs/2025/06/06/jobs-report-d-fw-labor-market-keeps-growing-in-face-of-headwinds/"
+    }
+  },
+
+  "economic_impact": {
+    "manufacturing_sector_contribution": {
+      "percentage_of_regional_economy": "7% by employment",
+      "market_ranking": "Top 2 U.S. manufacturing markets (with Chicago)",
+      "gdp_contribution_2019": "$65.5B",
+      "gdp_percentage": "12.1% of regional GDP",
+      "total_wages_paid_2019": "$24.7B",
+      "source": "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+    },
+
+    "jobs_in_process_manufacturing": {
+      "total_manufacturing_jobs_aug_2025": 308737,
+      "total_manufacturing_jobs_2019": 302000,
+      "average_manufacturing_wage_2019": "$81,759",
+      "regional_average_wage_2019": "$63,428",
+      "wage_premium": "29% higher than regional average",
+      "job_multiplier": "Each manufacturing job creates 5 additional jobs in communities",
+      "sources": [
+        "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php",
+        "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf"
+      ]
+    },
+
+    "supply_chain_relationships": {
+      "geographic_advantage": "Unparalleled access to domestic and international markets",
+      "transportation_hubs": [
+        "DFW International Airport",
+        "Expansive rail networks"
+      ],
+      "logistics_efficiency": "Enhanced logistics for manufacturers",
+      "source": "https://www.advancedtech.com/blog/manufacturing-in-dallas-tx/"
+    },
+
+    "export_activity": {
+      "dfw_region": {
+        "primary_export_industries": [
+          "Agriculture",
+          "Mining",
+          "Durable goods manufacturing",
+          "Nondurable goods manufacturing"
+        ],
+        "durable_goods_gdp_contribution": "$46B",
+        "nondurable_goods_gdp_contribution": "$21B",
+        "total_manufacturing_export_contribution": "$67B",
+        "source": "https://intercom.utdallas.edu/announcements/economic-snapshot-dfw-counties-impact-on-key-import-export-industries/"
+      },
+      "texas_state_level": {
+        "manufactured_goods_exports_2024": "$293B",
+        "national_ranking": "#1 exporting state for 20+ years",
+        "total_goods_exports_2024": "Nearly $300B",
+        "export_support": "Programs promoting global market access",
+        "sources": [
+          "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf",
+          "https://www.advancedtech.com/blog/manufacturing-in-dallas-tx/"
+        ]
+      }
+    },
+
+    "industrial_real_estate": {
+      "vacancy_rate_q3_2025": "9.1%",
+      "quarterly_change": "-10 basis points",
+      "year_over_year_change": "-40 basis points",
+      "manufacturing_space_added_2019_2024": "9.2M sq ft",
+      "source": "https://nmrk.imgix.net/uploads/fields/pdf-market-reports/3Q25-Dallas-Fort-Worth-Industrial-Market-Report_2025-10-23-144356_skpk.pdf"
+    },
+
+    "economic_growth_forecast": {
+      "texas_job_growth_2025": "1.7%",
+      "growth_sectors": [
+        "Professional and business services",
+        "Construction",
+        "Manufacturing"
+      ],
+      "source": "https://www.dallasnews.com/business/jobs/2025/06/06/jobs-report-d-fw-labor-market-keeps-growing-in-face-of-headwinds/"
+    }
+  },
+
+  "odoo_erp_implementation_insights": {
+    "process_manufacturing_requirements": {
+      "batch_production_management": {
+        "industries": ["Chemical", "Pharmaceutical", "Food", "Cosmetics"],
+        "key_features_needed": [
+          "Recipe/formula management",
+          "Batch tracking and genealogy",
+          "Quality control at each production stage",
+          "Shelf life and expiration tracking",
+          "By-product and co-product handling"
+        ]
+      },
+      "regulatory_compliance_tracking": {
+        "environmental": {
+          "agencies": ["TCEQ", "EPA"],
+          "requirements": [
+            "Air emissions tracking and reporting",
+            "Hazardous waste management documentation",
+            "Tier II chemical reporting",
+            "Generator status tracking (CESQ, SQG, LQG)"
+          ]
+        },
+        "quality_regulatory": {
+          "agencies": ["FDA", "Texas DSHS"],
+          "requirements": [
+            "cGMP compliance documentation",
+            "Batch record maintenance",
+            "Deviation tracking",
+            "CAPA (Corrective and Preventive Action)",
+            "Audit trail requirements",
+            "Lot traceability"
+          ]
+        },
+        "safety": {
+          "agency": "OSHA",
+          "requirements": [
+            "Process Safety Management (PSM) documentation",
+            "Chemical inventory tracking (>10,000 lbs threshold)",
+            "Safety incident reporting",
+            "Training records management"
+          ]
+        }
+      },
+      "supply_chain_complexity": {
+        "raw_materials_management": [
+          "Multiple suppliers for chemical ingredients",
+          "Quality testing for incoming materials",
+          "Vendor qualification and audits",
+          "Material safety data sheet (MSDS/SDS) management"
+        ],
+        "warehouse_operations": [
+          "Hazardous material storage requirements",
+          "Temperature-controlled storage (pharma, food)",
+          "FIFO/FEFO inventory rotation",
+          "Quarantine and hold area management"
+        ]
+      },
+      "quality_management": {
+        "testing_requirements": [
+          "In-process quality checks",
+          "Finished product testing",
+          "Stability testing programs",
+          "Certificate of Analysis (COA) generation",
+          "Out-of-specification (OOS) investigations"
+        ],
+        "documentation": [
+          "Standard Operating Procedures (SOPs)",
+          "Batch production records",
+          "Change control management",
+          "Document version control"
+        ]
+      },
+      "production_planning": {
+        "considerations": [
+          "Equipment capacity planning",
+          "Changeover time management",
+          "Clean-in-place (CIP) scheduling",
+          "Multi-stage production processes",
+          "Resource allocation (personnel, equipment)"
+        ]
+      }
+    },
+
+    "industry_specific_modules": {
+      "chemical_manufacturing": [
+        "Formula management with substitutions",
+        "Hazardous material handling",
+        "Environmental compliance reporting",
+        "Tank and vessel management",
+        "Blending operations"
+      ],
+      "pharmaceutical": [
+        "21 CFR Part 11 compliance (electronic records/signatures)",
+        "Batch genealogy and traceability",
+        "Validation documentation",
+        "Clinical trial material management",
+        "Serialization and aggregation"
+      ],
+      "food_processing": [
+        "Allergen management",
+        "Nutritional labeling",
+        "Food safety (HACCP) compliance",
+        "Recall management",
+        "Best before/use by date tracking"
+      ],
+      "cosmetics": [
+        "Color and shade management",
+        "Sample management",
+        "Finished goods variants",
+        "Private label production",
+        "Regulatory compliance (FDA cosmetics)"
+      ]
+    },
+
+    "integration_requirements": {
+      "equipment_integration": [
+        "SCADA systems",
+        "Manufacturing Execution Systems (MES)",
+        "Laboratory Information Management Systems (LIMS)",
+        "Automated packaging lines",
+        "Quality control instruments"
+      ],
+      "data_exchange": [
+        "Electronic Data Interchange (EDI) with suppliers/customers",
+        "Regulatory reporting systems (TCEQ, FDA)",
+        "Third-party logistics (3PL) integration",
+        "E-commerce platforms"
+      ]
+    },
+
+    "workforce_management": {
+      "training_tracking": [
+        "GMP training records",
+        "Safety training (PSM, hazmat)",
+        "Skills certification tracking",
+        "Continuing education requirements"
+      ],
+      "labor_management": [
+        "Shift scheduling (24/7 operations common)",
+        "Time and attendance",
+        "Task assignment and tracking",
+        "Performance metrics"
+      ]
+    },
+
+    "financial_considerations": {
+      "cost_accounting": [
+        "Actual vs. standard costing for batches",
+        "By-product and waste accounting",
+        "Equipment depreciation",
+        "Utility consumption allocation"
+      ],
+      "revenue_management": [
+        "Contract manufacturing billing",
+        "Toll manufacturing agreements",
+        "Volume-based pricing",
+        "Export documentation and compliance"
+      ]
+    }
+  },
+
+  "key_sources": [
+    {
+      "category": "Manufacturing Employment & Statistics",
+      "urls": [
+        "https://www.dallaschamber.org/wp-content/uploads/2025/03/EDG2025-Industry-Manufacturing.pdf",
+        "https://comptroller.texas.gov/economy/economic-data/manufacturing/2020/metroplex.php",
+        "https://www.bls.gov/regions/southwest/news-release/occupationalemploymentandwages_dallasfortworth.htm"
+      ]
+    },
+    {
+      "category": "Chemical Manufacturing",
+      "urls": [
+        "https://www.dnb.com/business-directory/company-information.basic_chemical_manufacturing.us.texas.html",
+        "https://www.tshaonline.org/handbook/entries/chemical-industries"
+      ]
+    },
+    {
+      "category": "Pharmaceutical & Biotech",
+      "urls": [
+        "https://dallasinnovates.com/16-biotech-companies-in-dallas-fort-worth-putting-the-tech-in-bio-to-drive-breakthroughs/",
+        "https://lifesciencedfw.com/ecosystem/"
+      ]
+    },
+    {
+      "category": "Food Processing",
+      "urls": [
+        "https://www.inven.ai/company-lists/top-24-food-processing-companies-in-texas",
+        "https://business.fortworthchamber.com/list/category/food-processing-manufacturing-4168"
+      ]
+    },
+    {
+      "category": "Capital Investment",
+      "urls": [
+        "https://gov.texas.gov/news/post/texas-strengthens-booming-manufacturing-industry-in-2024",
+        "https://www.dallasfed.org/research/swe/2025/swe2501"
+      ]
+    },
+    {
+      "category": "Regulatory Compliance",
+      "urls": [
+        "https://www.tceq.texas.gov/",
+        "https://www.osha.gov/process-safety-management",
+        "https://www.dshs.texas.gov/food-manufacturers-wholesalers-warehouses/food-manufacturers-general-information"
+      ]
+    },
+    {
+      "category": "Workforce Development",
+      "urls": [
+        "https://engineering.utdallas.edu/academics/graduate-education/mechanical-engineering/",
+        "https://tees.tamu.edu/workforce-development/materials-manufacturing-projects/texas-workforce-development-ecosystem.html"
+      ]
+    },
+    {
+      "category": "Economic Impact & Exports",
+      "urls": [
+        "https://intercom.utdallas.edu/announcements/economic-snapshot-dfw-counties-impact-on-key-import-export-industries/",
+        "https://www.advancedtech.com/blog/manufacturing-in-dallas-tx/"
+      ]
+    }
+  ]
+}

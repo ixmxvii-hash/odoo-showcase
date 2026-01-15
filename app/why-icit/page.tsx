@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 
 import Link from "next/link";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/Button";
 
@@ -123,8 +122,6 @@ const WhyICITPage = () => {
 
   return (
     <div className="min-h-screen bg-white selection:bg-orange-200 selection:text-orange-900">
-      <Header />
-
       <main>
         {/* Hero Section */}
         <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 overflow-hidden bg-slate-50">
@@ -292,36 +289,23 @@ const WhyICITPage = () => {
         {/* Values Section */}
         <section className="py-24 md:py-40 bg-white">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-              <div>
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-tight">Our Core <br />Values.</h2>
-                <p className="text-2xl text-slate-600 mb-12 font-medium">
+                <p className="text-2xl text-slate-600 font-medium">
                   We built ICIT Solutions on a simple foundation: honesty, technical excellence, and a relentless focus on our clients' bottom line.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  {values.map((val, idx) => (
-                    <div key={idx} className="flex flex-col gap-4">
-                      <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center text-orange-600">
-                        <val.icon size={32} />
-                      </div>
-                      <h4 className="text-2xl font-black text-slate-900">{val.title}</h4>
-                      <p className="text-lg text-slate-500 leading-snug">{val.desc}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
-              <div className="relative">
-                <div className="aspect-square bg-slate-100 rounded-[4rem] overflow-hidden relative border-8 border-slate-50">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-transparent" />
-                  <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-                    <Factory size={120} className="text-slate-400" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                {values.map((val, idx) => (
+                  <div key={idx} className="flex flex-col gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center text-orange-600">
+                      <val.icon size={32} />
+                    </div>
+                    <h4 className="text-2xl font-black text-slate-900">{val.title}</h4>
+                    <p className="text-lg text-slate-500 leading-snug">{val.desc}</p>
                   </div>
-                </div>
-                {/* Floating Experience Badge */}
-                <div className="absolute -bottom-10 -left-10 bg-orange-500 text-white p-10 rounded-[3rem] shadow-2xl">
-                  <p className="text-6xl font-black">20+</p>
-                  <p className="text-xl font-bold uppercase tracking-widest opacity-80">Years in TX</p>
-                </div>
+                ))}
               </div>
             </div>
           </div>

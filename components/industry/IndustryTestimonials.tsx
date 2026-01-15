@@ -41,6 +41,13 @@ export default function IndustryTestimonials({ industryKey, city }: IndustryTest
   const colors = colorMap[industry.color];
   const cityName = city ? cities[city.toUpperCase()]?.name || "Houston" : "Houston";
 
+  const hasTestimonials = (industry.testimonials || []).length > 0;
+
+  // Don't render anything if there are no testimonials
+  if (!hasTestimonials) {
+    return null;
+  }
+
   return (
     <section className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -77,7 +84,6 @@ export default function IndustryTestimonials({ industryKey, city }: IndustryTest
           </p>
         </motion.div>
 
-        {/* Testimonials Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -115,11 +121,12 @@ export default function IndustryTestimonials({ industryKey, city }: IndustryTest
 
                 {/* Author Info */}
                 <div className="flex items-center gap-4">
-                  {/* Avatar Placeholder */}
-                  <div className={`w-12 h-12 ${colors.bg} rounded-full flex items-center justify-center`}>
-                    <span className={`text-lg font-bold ${colors.text}`}>
-                      {testimonial.author.charAt(0)}
-                    </span>
+                  <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 border border-slate-200">
+                    <img
+                      src={`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(testimonial.author)}`}
+                      alt={testimonial.author}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
                   <div>

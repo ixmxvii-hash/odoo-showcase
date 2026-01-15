@@ -5,7 +5,6 @@ import SolutionUseCases from "@/components/solution/SolutionUseCases";
 import SolutionIntegrations from "@/components/solution/SolutionIntegrations";
 import ROICalculator from "@/components/ROICalculator";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Odoo Invoicing | ICIT Solutions Houston",
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function InvoicingPage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <SolutionHero solutionKey="invoicing" />
       <SolutionFeatures solutionKey="invoicing" />
       <SolutionUseCases solutionKey="invoicing" />

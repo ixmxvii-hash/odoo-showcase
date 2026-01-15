@@ -1,42 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
-
-const testimonials = [
-  {
-    quote: "Finally, our inventory actually matches reality. We saved 20 hours a week on data entry alone.",
-    author: "Mike R.",
-    title: "Operations Manager",
-    company: "Machine Shop, Northwest Houston",
-    location: "77041",
-    rating: 5,
-  },
-  {
-    quote: "The on-site support made all the difference. They understood our shop floor challenges.",
-    author: "Sarah T.",
-    title: "Plant Manager",
-    company: "Chemical Processing, La Porte",
-    location: "77571",
-    rating: 5,
-  },
-  {
-    quote: "We went from 5 disconnected systems to one. Best decision we've made in 10 years.",
-    author: "David L.",
-    title: "CEO",
-    company: "Equipment Manufacturer, Energy Corridor",
-    location: "77079",
-    rating: 5,
-  },
-  {
-    quote: "90 days from kickoff to go-live. No downtime, no chaos. Just results.",
-    author: "Jennifer K.",
-    title: "Controller",
-    company: "Fabrication Shop, Katy",
-    location: "77494",
-    rating: 5,
-  },
-];
+import { Quote, Star } from "lucide-react";
 
 const container = {
   hidden: { opacity: 0 },
@@ -54,6 +19,51 @@ const item = {
 };
 
 export default function Testimonials() {
+  const testimonials = [
+    {
+      author: "Shelly Lewis",
+      title: "Owner",
+      company: "Owings Lewis",
+      quote:
+        "We chose ICIT Solutions as our IT Solutions Provider 5 years ago because we wanted a one stop shop for all our IT needs whether it be hardware, software, cloud, etc. The ICIT Team is very friendly, accessible and responds whenever there’s a problem, they always get us back up and running in as little time as possible.",
+    },
+    {
+      author: "Joe Brown",
+      title: "Owner",
+      company: "Carpet One",
+      quote:
+        "Partnering with ICIT was one of the best decisions we’ve made for our business. They’ve saved us valuable time by automating tasks we once handled manually, making our operations much more efficient and less stressful.",
+    },
+    {
+      author: "Saleh Cambias",
+      title: "Operations Manager",
+      company: "Cambias Insurance, LLC",
+      quote:
+        "We chose ICIT Solutions 10 years ago and the biggest benefit we’ve derived from the relationship is minimal downtime. Having the peace of mind that ICIT Solutions is there with us all the way to help us make the best decisions regarding technology to help us be more productive and grow our business. They always deliver out of the box solutions to fit our business needs, keeping us on the cutting edge.",
+    },
+    {
+      author: "Lori Yeager",
+      title: "IT Manager",
+      company: "Paulson Enterprises",
+      quote:
+        "ICIT Solutions has been our IT Solutions Provider for over 2 years. We chose ICIT because we wanted to just go to a single provider for all our technology needs & since partnering with them, we no longer spend hours researching or coordinating with multiple vendors to solve problems.",
+    },
+    {
+      author: "Joe Bodine",
+      title: "",
+      company: "",
+      quote:
+        "As a long-standing client of ICIT, our relationship with them has remained constant, professional, and—more importantly—constantly improving.",
+    },
+    {
+      author: "Craig S",
+      title: "CEO",
+      company: "Montage Community Services",
+      quote:
+        "Having ICIT as our managed service provider has allowed us to concentrate on other business-related activities since we know that our data is secure and that our network infrastructure is protected.",
+    },
+  ];
+
   return (
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
@@ -92,7 +102,7 @@ export default function Testimonials() {
               </div>
 
               <div className="flex items-center gap-1 mb-4 mt-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
                     className="w-5 h-5 fill-orange-500 text-orange-500"
@@ -104,16 +114,22 @@ export default function Testimonials() {
                 "{testimonial.quote}"
               </blockquote>
 
-              <div className="border-t border-slate-200 pt-4">
-                <div className="font-semibold text-slate-900">
-                  {testimonial.author}
+              <div className="border-t border-slate-200 pt-4 flex gap-3 items-center">
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-100 border border-slate-200">
+                  <img
+                    src={`https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(testimonial.author)}`}
+                    alt={testimonial.author}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="text-sm text-slate-600">{testimonial.title}</div>
-                <div className="text-sm text-slate-500 mt-1">
-                  {testimonial.company}{" "}
-                  <span className="text-orange-600 font-medium">
-                    ({testimonial.location})
-                  </span>
+                <div className="text-left">
+                  <div className="font-semibold text-slate-900">
+                    {testimonial.author}
+                  </div>
+                  <div className="text-sm text-slate-600">{testimonial.title}</div>
+                  <div className="text-sm text-slate-500 mt-1">
+                    {testimonial.company}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -128,14 +144,14 @@ export default function Testimonials() {
           className="text-center mt-16"
         >
           <p className="text-slate-600 text-lg mb-6">
-            Join dozens of Houston manufacturers transforming their operations
+            Want to speak with a client? Ask for a reference call in your industry.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-orange-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl"
           >
-            Schedule Your Free Assessment
+            Request a reference
           </motion.button>
         </motion.div>
       </div>

@@ -1,0 +1,829 @@
+{
+  "research_metadata": {
+    "topic": "Austin, Texas Professional Services Industry",
+    "research_date": "2026-01-11",
+    "focus": "Market data for Odoo ERP implementation (project management, billing, resource planning)",
+    "data_quality_note": "Real statistics from multiple verified sources with citations"
+  },
+
+  "executive_summary": {
+    "overview": "Austin's professional services sector is a critical component of the city's economy, employing approximately 280,000+ workers. While the sector faced a -1.5% decline in 2024 (losing 4,400 jobs), it showed signs of recovery by late 2024 and early 2025. The tech-focused professional services ecosystem is particularly robust, with 7,693 tech companies employing over 180,000 professionals. Austin ranks as the 5th fastest-growing large metro in the U.S. for overall job growth.",
+    "key_strengths": [
+      "No state income tax reduces operational costs for professional services firms",
+      "Housing costs 46-273% lower than San Francisco",
+      "Ranked #2 metro for corporate HQ relocations (81 new HQs from 2018-2024)",
+      "340,000 remote workers (28% of workforce) - 2nd highest percentage among American metros",
+      "Professional and business services represent 36.1% of virtual employees",
+      "Strong VC ecosystem with $4B raised in 2024 across 3,000+ funded startups"
+    ],
+    "challenges": [
+      "Professional services sector declined -1.5% in 2024 before stabilizing",
+      "Lower salaries than SF/NYC (though offset by cost of living)",
+      "Office vacancy rates downtown remain 3% above metro average due to remote work"
+    ]
+  },
+
+  "market_overview": {
+    "professional_services_employment": {
+      "total_employment_2024": "280,300 - 281,700",
+      "year_over_year_change_2024": "-1.5% (-4,400 jobs as of August 2024)",
+      "december_2024_change": "-0.2% (-500 jobs)",
+      "recovery_trend_2025": "Professional and Business Services added 3,700 jobs in January 2025 (Texas-wide)",
+      "employment_share": "Professional and business services is one of Austin's largest employment sectors",
+      "sources": [
+        "https://opportunityaustin.com/austin-job-growth-unemployment-update-august-2024/",
+        "https://www.bls.gov/regions/southwest/tx_austin_msa.htm",
+        "https://www.twc.texas.gov/news/texas-labor-market-expansion-continues-2025"
+      ]
+    },
+
+    "major_sectors": {
+      "tech_consulting_and_it_services": {
+        "description": "IT consulting, software development, data analytics, AI consulting, cybersecurity",
+        "employment_estimate": "180,000+ tech professionals across 7,693 tech companies",
+        "us_it_consulting_market_2024": "$27.2 billion (US market)",
+        "global_it_consulting_market_2024": "$561.8 billion",
+        "notes": "Austin is a key innovation hub alongside Silicon Valley and Boston; Silicon Hills IT hub has 7,500+ startups and large enterprises"
+      },
+      "legal_services": {
+        "description": "Law firms including Big 4 representation, corporate law, IP law",
+        "major_firms": [
+          "Jackson Walker LLP (400+ attorneys)",
+          "Vinson & Elkins LLP (700+ attorneys)",
+          "Baker Botts LLP (700+ attorneys)",
+          "DLA Piper (4,000+ lawyers globally)"
+        ],
+        "employment_trend": "Net losses over 2000-2010 and 2010-2020 periods, but major firms maintain presence"
+      },
+      "accounting_and_tax": {
+        "description": "CPA firms, Big 4 presence, tax advisory, audit services",
+        "major_firms": [
+          "Cherry Bekaert (6th largest CPA firm in Austin area)",
+          "Crowe LLP (Top 10 nationally)",
+          "Forvis Mazars (Top 10 nationally)",
+          "Carr, Riggs & Ingram (Top 20 nationally)"
+        ],
+        "big_four_presence": "Big Four accounting firms represented through Sidley Austin LLP legal services"
+      },
+      "engineering_and_architecture": {
+        "top_53_firms_design_revenue_2024": "$425+ million",
+        "licensed_architects_employed": 465,
+        "total_local_jobs_supported": 1775,
+        "total_architects_and_firms": "1,817 Austin architects, architecture firms and building designers (Houzz listing)",
+        "project_pipeline": "25+ million square feet through 2027 (nearly half targeting AEGB, LEED, or WELL certification)",
+        "sources": [
+          "https://www.houzz.com/professionals/architect/austin-tx-us-probr0-bo~t_11784~r_4671654"
+        ]
+      },
+      "management_consulting": {
+        "major_firms": "McKinsey, BCG, Bain, Deloitte, PwC, KPMG, Accenture",
+        "global_market_size": "$1+ trillion (projected 8% CAGR by 2028)",
+        "accenture_employment": "373,000+ employees globally",
+        "local_context": "Strong demand from Austin's tech, finance, and healthcare sectors; known as 'Silicon Hills'"
+      }
+    },
+
+    "revenue_estimates": {
+      "professional_services_global_2024": "$1.04 - $1.16 trillion",
+      "us_professional_services_market_2024": "$283.5 million+ (specific segment, full market data unavailable)",
+      "us_it_consulting_2024": "$27.2 billion",
+      "austin_specific_revenue": "Data not available in public sources",
+      "top_53_architecture_firms_austin_2024": "$425+ million in design revenue",
+      "note": "Austin-specific total professional services revenue requires proprietary economic reports"
+    },
+
+    "company_count_by_category": {
+      "tech_companies_total": 7693,
+      "software_development_saas": "1,644 companies (Seamless.AI) / 110 (DesignRush) / 95 (Built In Austin)",
+      "cybersecurity_firms": "34+ specialized firms",
+      "architects_and_firms": "1,817 listings",
+      "data_analytics_ai_consulting": "Multiple firms identified, no specific count",
+      "cloud_services_providers": "Multiple MSPs serving AWS, Azure, Google Cloud",
+      "staffing_recruiting_firms": "23+ major firms identified",
+      "advertising_marketing_agencies": "Varies by size: 10-500 employees per agency",
+      "note": "Company counts vary by directory and categorization methodology"
+    }
+  },
+
+  "tech_focused_services": {
+    "it_consulting_firms": {
+      "market_context": "Austin is one of top 3 US innovation hubs for IT consulting",
+      "us_market_2024": "$27.2 billion",
+      "digital_services_consulting_us_2024": "$48.19 billion",
+      "growth_rate": "7.4% CAGR (global market)",
+      "local_ecosystem": "Silicon Hills IT hub with 7,500+ startups and enterprises including Cisco, Dell, Oracle"
+    },
+
+    "software_development_agencies": {
+      "company_count": "1,644 Software Development / SaaS companies",
+      "alternative_counts": "110 (DesignRush), 95 (Built In Austin)",
+      "tech_employment": "180,000+ tech professionals",
+      "tech_gdp_increase_2024": "7.79% (second only to Silicon Valley)",
+      "startup_funding_2024": "$4.5 billion across 487 deals",
+      "sources": [
+        "https://seamless.ai/search-companies?industry=software-development-or-saas&state=texas&city=austin",
+        "https://www.builtinaustin.com/articles/software-companies-in-austin-to-know"
+      ]
+    },
+
+    "data_analytics_ai_consulting": {
+      "major_firms": [
+        {
+          "name": "Austin Artificial Intelligence (Austin AI)",
+          "services": "Machine learning, NLP, predictive modeling, custom AI solutions"
+        },
+        {
+          "name": "Opinosis Analytics",
+          "services": "Sentiment analysis, chatbots, NER, document classification"
+        },
+        {
+          "name": "Hypergiant",
+          "services": "AI products and consulting"
+        },
+        {
+          "name": "Northwest AI Consulting",
+          "services": "Advanced analytics, visualization, business intelligence"
+        },
+        {
+          "name": "ZFort Group",
+          "services": "Data analysis, integration, predictive analytics"
+        }
+      ],
+      "industries_served": "Fintech, healthcare, manufacturing, e-commerce",
+      "market_context": "Hub for technological innovation with AI-driven automation solutions"
+    },
+
+    "cybersecurity_firms": {
+      "company_count": "34+ specialized cybersecurity companies",
+      "market_status": "Emerging as one of top U.S. cybersecurity hubs",
+      "salary_range": "$66,000 - $184,000",
+      "average_salary": "$131,793",
+      "unemployment_rate_2024": "3.0%",
+      "major_employers": [
+        {
+          "name": "SailPoint",
+          "employees": "1,647+ professionals"
+        },
+        {
+          "name": "CrowdStrike",
+          "employees": "7,500+ globally with Austin presence"
+        },
+        {
+          "name": "Cloudflare",
+          "employees": "3,900"
+        },
+        {
+          "name": "Rapid7",
+          "description": "Major cybersecurity firm"
+        },
+        {
+          "name": "BAE Systems",
+          "description": "Major defense/cybersecurity contractor"
+        }
+      ],
+      "sources": [
+        "https://www.edendata.com/post/list-of-cybersecurity-companies-austin",
+        "https://www.builtinaustin.com/companies/type/cybersecurity-companies"
+      ]
+    },
+
+    "cloud_services_providers": {
+      "description": "Managed service providers specializing in AWS, Azure, and Google Cloud",
+      "major_providers": [
+        {
+          "name": "TeamLogic IT Austin",
+          "services": "Cloud orchestration, managed services for AWS, Azure, Google Cloud"
+        },
+        {
+          "name": "ICS (Integrated Computer Solutions)",
+          "services": "Cloud hosting, scalable solutions for Austin tech scene"
+        },
+        {
+          "name": "SinglePoint Global",
+          "services": "Cloud solutions consulting"
+        },
+        {
+          "name": "Clarus",
+          "services": "Leading cloud services provider nationally"
+        }
+      ],
+      "market_trend": "Many Austin companies migrating to AWS, Azure, and Google Cloud platforms"
+    }
+  },
+
+  "engineering_and_architecture": {
+    "engineering_firms": {
+      "market_size": "Top 53 firms generated $425+ million in design revenue (2024)",
+      "licensed_architects": 465,
+      "jobs_supported": 1775,
+      "project_pipeline": "25+ million square feet through 2027",
+      "sustainability_focus": "Nearly 50% of projects targeting AEGB, LEED, or WELL certification"
+    },
+
+    "architecture_firms": {
+      "total_listings": "1,817 architects, architecture firms, and building designers",
+      "notable_firms": [
+        "Lake|Flato",
+        "Page Southerland Page",
+        "Alterstudio Architecture",
+        "Perkins+Will"
+      ],
+      "market_context": "Robust and competitive architecture market with multiple 'top 10/15/50' rankings"
+    },
+
+    "construction_management": {
+      "firms_identified": [
+        "Spire Consulting Group"
+      ],
+      "note": "Specific count and employment data not available in public sources"
+    },
+
+    "environmental_consulting": {
+      "job_openings_july_2025": 241,
+      "major_firms": [
+        {
+          "name": "ACI Consulting",
+          "location": "Headquartered in Austin"
+        },
+        {
+          "name": "TRC Companies",
+          "employees": "Nearly 7,000 globally"
+        },
+        {
+          "name": "Civil & Environmental Consultants (CEC)",
+          "description": "Leading civil engineering and environmental services firm"
+        },
+        {
+          "name": "SWCA Environmental Consulting",
+          "presence": "Austin office"
+        },
+        {
+          "name": "ESE Partners",
+          "services": "Environmental consulting"
+        },
+        {
+          "name": "Terracon",
+          "services": "Environmental assessment"
+        }
+      ],
+      "market_context": "Substantial industry serving Austin's growth and development needs"
+    },
+
+    "civil_engineering_growth_related": {
+      "context": "Rapid population growth drives demand for civil engineering services",
+      "population_influx_2022": "668,000 people moved to Texas (175,000 from California)",
+      "infrastructure_demand": "25+ million sq ft development pipeline through 2027"
+    }
+  },
+
+  "business_services": {
+    "accounting_firms": {
+      "big_four_presence": "Represented through legal services (Sidley Austin represents 2 of Big 4)",
+      "major_national_firms": [
+        {
+          "name": "Cherry Bekaert",
+          "ranking": "6th largest CPA and consulting firm in Austin area"
+        },
+        {
+          "name": "Crowe LLP",
+          "ranking": "Top 10 nationally"
+        },
+        {
+          "name": "Forvis Mazars",
+          "ranking": "Top 10 nationally"
+        },
+        {
+          "name": "Carr, Riggs & Ingram (CRI)",
+          "ranking": "Top 20 nationally"
+        }
+      ],
+      "local_firms": [
+        "DK Partners",
+        "Maxwell Locke & Ritter",
+        "Atchley & Associates"
+      ],
+      "services": "Comprehensive accounting, tax, audit, and advisory services",
+      "sources": [
+        "https://clutch.co/accounting/austin",
+        "https://www.crowe.com/about-us/our-offices/austin"
+      ]
+    },
+
+    "law_firms": {
+      "major_firms_employment": [
+        {
+          "name": "Jackson Walker LLP",
+          "attorneys": "400+",
+          "founded": 1887,
+          "offices": 7
+        },
+        {
+          "name": "Vinson & Elkins LLP",
+          "attorneys": "700+",
+          "offices": 11,
+          "description": "One of oldest and most prestigious Texas law firms"
+        },
+        {
+          "name": "Baker Botts LLP",
+          "attorneys": "700+",
+          "founded": 1840,
+          "offices": 14
+        },
+        {
+          "name": "DLA Piper",
+          "attorneys": "4,000+",
+          "offices": "40+ countries"
+        },
+        {
+          "name": "Winstead",
+          "attorneys": "300+"
+        },
+        {
+          "name": "Bracewell LLP",
+          "attorneys": "300+",
+          "offices": 10
+        },
+        {
+          "name": "Norton Rose Fulbright",
+          "attorneys": "3,700+",
+          "offices": 50
+        }
+      ],
+      "smaller_firms_examples": [
+        {
+          "name": "Capitol Services, Inc.",
+          "revenue": "$22.4 million",
+          "employees": 123
+        },
+        {
+          "name": "Pirkey Barber PLLC",
+          "revenue": "$8.9 million",
+          "employees": 89
+        }
+      ],
+      "employment_trend": "Net losses 2000-2020, but major firms maintain strong presence"
+    },
+
+    "management_consulting": {
+      "major_firms": [
+        "McKinsey",
+        "BCG",
+        "Bain",
+        "Deloitte",
+        "PwC",
+        "KPMG",
+        "Accenture"
+      ],
+      "market_drivers": "Tech, finance, and healthcare sectors in 'Silicon Hills'",
+      "global_industry_value": "$1+ trillion",
+      "growth_projection": "8% CAGR by 2028",
+      "accenture_scale": "373,000+ employees, 96 of Fortune Global 100 as clients"
+    },
+
+    "marketing_advertising_agencies": {
+      "firm_sizes": [
+        {
+          "name": "The Engine is Red",
+          "employees": "~20",
+          "founded": 2008,
+          "services": "Marketing strategy, branding, web design"
+        },
+        {
+          "name": "Rock Candy Media",
+          "employees": 22,
+          "services": "Marketing strategy, social media, digital strategy"
+        },
+        {
+          "name": "Envision Creative Group",
+          "employees": 23,
+          "services": "Branding, conversion optimization, web design"
+        },
+        {
+          "name": "LYFE Marketing",
+          "employees": "10-49"
+        },
+        {
+          "name": "Optimal",
+          "employees": "201-500"
+        },
+        {
+          "name": "83Bar",
+          "employees": "51-200",
+          "founded": 2013,
+          "focus": "Healthcare digital marketing"
+        }
+      ],
+      "national_context": "277,113 people employed in US advertising agencies; average agency has 2.6 employees",
+      "austin_market": "Ranges from 10-person boutique firms to 200+ employee agencies"
+    },
+
+    "staffing_recruiting_firms": {
+      "major_firms": [
+        {
+          "name": "Burnett Specialists",
+          "distinction": "2nd largest employee-owned staffing firm in U.S."
+        },
+        {
+          "name": "Frontline Source Group",
+          "experience": "21+ years as fastest-growing staffing agency in Austin"
+        },
+        {
+          "name": "Insight Global",
+          "services": "Professional services, staffing, custom apps, cloud migration"
+        },
+        {
+          "name": "Scion Staffing Austin",
+          "candidate_pool": "16+ million vetted candidates"
+        },
+        {
+          "name": "The HT Group",
+          "location": "North Austin full-service recruitment"
+        },
+        {
+          "name": "Aerotek",
+          "scale": "Top staffing agency in North America"
+        }
+      ],
+      "industries_served": "Technology, professional services, healthcare, finance, administrative",
+      "total_firms_identified": "23+ major staffing and recruiting firms"
+    }
+  },
+
+  "austin_tech_ecosystem": {
+    "startup_services_ecosystem": {
+      "total_companies": "4,500+ companies",
+      "funded_startups": "3,000+",
+      "vc_investment_2024": "$4 billion",
+      "unicorns": 20,
+      "unicorn_valuation": "$54.4 billion",
+      "active_vcs": 117,
+      "top_vcs": [
+        "8VC",
+        "Multicoin Capital",
+        "Silverton Partners"
+      ],
+      "investors_headquartered_austin": "400+ with at least one investment in past 10 years",
+      "q4_2024_funding": "$804.5 million (29% decline YoY)",
+      "sources": [
+        "https://dealroom.co/guides/austin",
+        "https://www.siliconhillsnews.com/2025/01/17/austin-startups-secure-804-5-million-in-q4-2024-vc-funding-marking-29-year-over-year-decline/"
+      ]
+    },
+
+    "vc_pe_professional_services": {
+      "s3_ventures_fund_2024": "$200 million (healthtech, business tech, digital experiences)",
+      "life_sciences_investment": "$1.5 billion in 253 startups",
+      "life_sciences_ranking": "8th nationally",
+      "ut_austin_initiatives": "Dell Medical School, upcoming UT Medical Center",
+      "pitchbook_ranking": "Capital Factory = most active Texas investor since 2010"
+    },
+
+    "accelerator_incubator_consulting": {
+      "capital_factory": {
+        "status": "Most active investor in Texas since 2010 (Pitchbook)",
+        "healthtech_accelerator_2024": "Launched June 2024 for early-stage health tech startups"
+      },
+      "techstars_austin": {
+        "expansion_2024": "Dedicated FinTech cohort for financial technology startups"
+      },
+      "masschallenge_texas": {
+        "program_type": "Zero-equity accelerator",
+        "benefits": "Expert mentorship, corporate partners, equity-free cash prizes",
+        "cohort_2024": "Named 2024 cohort across various industries"
+      }
+    },
+
+    "tech_talent_recruiting": {
+      "median_salary_remote_workers": "$82,000",
+      "high_earners": "50%+ make above $75,000",
+      "workforce_education": "70% of work-from-home employees have bachelor's degree or higher",
+      "tech_professional_median_salary": "$89,000 (vs. $121K SF, but 46.8% lower cost of living)",
+      "software_engineer_salary_range": "$126,000 - $221,500",
+      "unemployment_rate": "3.0%"
+    }
+  },
+
+  "growth_and_trends": {
+    "professional_services_job_growth": {
+      "2024_performance": {
+        "overall_austin_job_growth": "2.1% (28,500 jobs) - revised upward, 5th fastest large metro",
+        "professional_business_services_growth": "-1.5% initially, revised to -0.2% by December",
+        "monthly_improvement": "4 of last 5 months showed positive monthly growth by year-end 2024"
+      },
+      "2025_outlook": {
+        "may_2024_to_may_2025": "18,500 jobs added (1.4% growth), 10th among top 50 metros",
+        "year_over_year_average_2024": "2.2%",
+        "year_over_year_average_early_2025": "1.4%",
+        "texas_professional_services_jan_2025": "+3,700 jobs"
+      },
+      "trend_summary": "After difficult 2024, professional services showing stabilization and early recovery in 2025",
+      "sources": [
+        "https://opportunityaustin.com/austin-job-growth-unemployment-update-june-2025/",
+        "https://www.twc.texas.gov/news/texas-labor-market-expansion-continues-2025"
+      ]
+    },
+
+    "remote_work_impact": {
+      "remote_workers": "340,000 (28% of metro workforce)",
+      "2021_peak": "32%",
+      "national_ranking": "2nd highest percentage among American metros, highest in Texas",
+      "professional_services_share": "36.1% of virtual employees",
+      "demographics": {
+        "millennials": "45.7%",
+        "gen_x": "34.3%",
+        "education": "70% have bachelor's degree or higher",
+        "median_income": "$82,000"
+      },
+      "commercial_real_estate_impact": "Downtown office vacancy 3% higher than metro average",
+      "implications_for_professional_services": "Enables distributed workforce, reduces office costs, attracts talent from other markets",
+      "sources": [
+        "https://www.kxan.com/news/local/austin/report-austin-has-300k-remote-workers-who-exactly-is-working-from-home/",
+        "https://www.axios.com/local/austin/2023/09/22/remote-work-census-data"
+      ]
+    },
+
+    "california_company_relocations": {
+      "austin_hq_relocations_2018_2024": "81 new corporate headquarters (ranked #2 metro nationally)",
+      "california_losses_2024": "17 companies left California (12 went to Texas)",
+      "california_to_texas_migration_2022": "175,000 of 668,000 new Texas residents came from California",
+      "notable_2024_relocations": [
+        {
+          "company": "ABBYY",
+          "from": "California (Milipitas)",
+          "to": "Austin",
+          "date": "October 2024",
+          "reason": "Product leadership team already in Austin, 'heart of growing tech ecosystem'"
+        },
+        {
+          "company": "X (formerly Twitter)",
+          "from": "California",
+          "to": "Austin",
+          "date": "July 2024",
+          "reason": "California's social policies and business climate"
+        },
+        {
+          "company": "SpaceX",
+          "from": "California",
+          "to": "Austin",
+          "date": "July 2024"
+        }
+      ],
+      "trend_drivers": [
+        "No state income tax",
+        "Lower cost of living",
+        "Business-friendly regulatory environment",
+        "Growing tech talent pool",
+        "Quality of life factors"
+      ],
+      "sources": [
+        "https://austin.culturemap.com/news/city-life/corporate-headquarters-relocations-austin/",
+        "https://www.kvue.com/article/money/economy/boomtown-2040/abbyy-relocating-austin/269-8d29d0df-315d-4688-9d89-eefe0de3d795"
+      ]
+    },
+
+    "cost_comparison_to_other_tech_hubs": {
+      "housing": {
+        "san_francisco_premium": "273% higher than Austin",
+        "median_home_price_sf": "$1.3 million",
+        "median_home_price_austin": "$485,000",
+        "rent_2br_sf_premium_areas": "$5,000+/month",
+        "rent_austin_tech_areas": "~20% above city average, still much lower than SF"
+      },
+      "cost_of_living": {
+        "austin_vs_san_francisco": "46.8% lower",
+        "austin_vs_bay_area_overall": "~30% lower",
+        "new_york_cost_of_living": "$59,200 (highest anywhere)"
+      },
+      "salaries": {
+        "austin_it_median": "$89,000",
+        "san_francisco_it_median": "$121,000",
+        "austin_software_engineer": "$126,000 - $221,500",
+        "nyc_tech_workers": "$132,000 - $242,000 (avg $180,000)",
+        "purchasing_power": "Austin's lower costs often result in better real purchasing power"
+      },
+      "transportation_and_daily": {
+        "gas_austin": "$3.20/gallon",
+        "gas_bay_area": "$4.80/gallon",
+        "parking_austin": "$150-200/month",
+        "parking_sf": "$350-450/month"
+      },
+      "taxes": {
+        "state_income_tax_austin": "0%",
+        "state_income_tax_sf": "Up to 13.3%",
+        "state_income_tax_nyc": "Up to 10.9% (plus city tax)",
+        "impact": "No state income tax means significantly higher take-home pay"
+      },
+      "value_proposition": "Lower salaries in Austin are offset by 30-47% lower costs and no state income tax, often resulting in better financial outcomes for professionals",
+      "sources": [
+        "https://bramlettpartners.com/blog/austin-vs-bay-area-comparing-lifestyle-costs-and-opportunities-in-2024",
+        "https://www.mod24.com/blog/austin-vs-bay-area-cost-of-living-for-tech-workers"
+      ]
+    }
+  },
+
+  "odoo_erp_implementation_relevance": {
+    "target_market_segments": [
+      {
+        "segment": "Software Development Agencies",
+        "company_count": "1,644+",
+        "pain_points": [
+          "Project management across multiple client engagements",
+          "Time tracking and billing for developers",
+          "Resource allocation and capacity planning",
+          "Client communication and deliverable tracking"
+        ],
+        "odoo_modules": "Project, Timesheet, Sales, Accounting, HR"
+      },
+      {
+        "segment": "IT Consulting Firms",
+        "market_size": "$27.2B US market, strong Austin presence",
+        "pain_points": [
+          "Managing consultant utilization rates",
+          "Complex billing (fixed fee, T&M, retainer)",
+          "Skills inventory and resource matching",
+          "Project profitability tracking"
+        ],
+        "odoo_modules": "Project, Timesheet, Accounting, HR, Sales"
+      },
+      {
+        "segment": "Architecture & Engineering Firms",
+        "company_count": "1,817+ firms, 1,775 jobs",
+        "pain_points": [
+          "Project lifecycle management",
+          "Drawing/document version control",
+          "Subcontractor management",
+          "Budget vs. actual tracking",
+          "Certification and compliance tracking"
+        ],
+        "odoo_modules": "Project, Documents, Accounting, Purchase, Quality"
+      },
+      {
+        "segment": "Marketing & Advertising Agencies",
+        "firm_count": "Dozens (10-500 employees each)",
+        "pain_points": [
+          "Campaign project management",
+          "Creative asset management",
+          "Client approval workflows",
+          "Media buying and budget tracking",
+          "Freelancer/contractor management"
+        ],
+        "odoo_modules": "Project, Marketing Automation, Accounting, Purchase, HR"
+      },
+      {
+        "segment": "Management Consulting",
+        "presence": "All major firms (McKinsey, BCG, Bain, Big 4)",
+        "pain_points": [
+          "Engagement management",
+          "Knowledge management",
+          "Proposal generation",
+          "Resource forecasting",
+          "Client relationship management"
+        ],
+        "odoo_modules": "Project, CRM, Documents, Timesheet, Accounting"
+      },
+      {
+        "segment": "Cybersecurity Firms",
+        "company_count": "34+ specialized firms",
+        "pain_points": [
+          "Security assessment project tracking",
+          "Compliance documentation",
+          "Incident response management",
+          "Client security posture tracking",
+          "Recurring service billing (SOC, monitoring)"
+        ],
+        "odoo_modules": "Project, Helpdesk, Documents, Accounting, Field Service"
+      },
+      {
+        "segment": "Staffing & Recruiting Firms",
+        "firm_count": "23+ major firms",
+        "pain_points": [
+          "Candidate pipeline management",
+          "Client job order tracking",
+          "Placement and commission tracking",
+          "Timesheet management for contract workers",
+          "Payroll and invoicing automation"
+        ],
+        "odoo_modules": "Recruitment, CRM, Timesheet, Accounting, Payroll"
+      }
+    ],
+
+    "market_opportunities": {
+      "total_addressable_market": "280,000+ professional services employees, 7,693+ tech companies",
+      "growth_trajectory": "Recovering from 2024 decline, stabilizing in 2025",
+      "remote_work_adoption": "28% remote workforce creates need for cloud-based ERP",
+      "company_relocations": "81 new HQs 2018-2024 need new systems/processes",
+      "startup_ecosystem": "3,000+ funded startups need professional systems as they scale",
+      "key_drivers": [
+        "Need for unified project management and billing systems",
+        "Resource utilization optimization (critical for profitability)",
+        "Remote work requires cloud-based collaboration tools",
+        "Scaling companies need to professionalize operations",
+        "Cost consciousness (vs. Salesforce, SAP, ServiceNow)"
+      ]
+    },
+
+    "competitive_positioning": {
+      "odoo_advantages_for_austin_market": [
+        "Cost-effective vs. enterprise solutions (appeals to cost-conscious Austin market)",
+        "Open source flexibility (appeals to tech-savvy Austin companies)",
+        "Integrated modules reduce tool sprawl",
+        "Cloud-based supports remote workforce (28% of Austin works remotely)",
+        "Scales from startup to enterprise",
+        "Strong project management and timesheet capabilities"
+      ],
+      "implementation_focus_areas": [
+        "Project Management & Billing",
+        "Resource Planning & Utilization",
+        "Time Tracking & Timesheets",
+        "Client Relationship Management",
+        "Document Management",
+        "Financial Management & Reporting"
+      ]
+    }
+  },
+
+  "data_quality_and_sources": {
+    "high_confidence_data": [
+      "Professional services employment: 280,000+ (BLS, Opportunity Austin)",
+      "Year-over-year change 2024: -1.5% to -0.2% (BLS)",
+      "Remote workers: 340,000 (28%) (U.S. Census)",
+      "Tech companies: 7,693 (Multiple sources)",
+      "Software companies: 1,644 (Seamless.AI)",
+      "VC investment 2024: $4B (Dealroom.co)",
+      "Unicorns: 20 valued at $54.4B (Multiple sources)",
+      "Corporate HQ relocations 2018-2024: 81 (CBRE)",
+      "Architecture firms revenue: $425M+ for top 53 (Austin Business Journal)"
+    ],
+    "moderate_confidence_data": [
+      "Cybersecurity firms: 34+ (Directory aggregation)",
+      "Staffing firms: 23+ (Built In Austin)",
+      "Median salaries (vary by source and role)",
+      "Cost of living comparisons (multiple methodologies)"
+    ],
+    "limited_data_availability": [
+      "Austin-specific professional services total revenue",
+      "Total count of management consulting firms",
+      "Environmental consulting firm count",
+      "Construction management firm count",
+      "AI/data analytics consulting firm count"
+    ],
+    "primary_sources": [
+      "U.S. Bureau of Labor Statistics",
+      "Opportunity Austin (Greater Austin Chamber)",
+      "Texas Workforce Commission",
+      "U.S. Census Bureau",
+      "Dealroom.co",
+      "Built In Austin",
+      "Clutch.co",
+      "DesignRush",
+      "Glassdoor",
+      "Houzz",
+      "Austin Business Journal"
+    ]
+  },
+
+  "methodology_notes": {
+    "data_collection": "Web search across government sources, industry directories, business publications, and tech ecosystem reports",
+    "date_range": "Primarily 2024-2025 data, with some 2022-2023 baseline comparisons",
+    "verification": "Cross-referenced multiple sources where possible",
+    "limitations": [
+      "Austin-specific revenue data often unavailable (need proprietary reports)",
+      "Company counts vary by directory and categorization methodology",
+      "Some sectors lack comprehensive public data",
+      "Employment data sometimes provided at Texas-wide level vs. Austin metro"
+    ],
+    "recommendations_for_further_research": [
+      "Contact Greater Austin Chamber of Commerce for proprietary market reports",
+      "Access IBISWorld or similar industry research databases for Austin-specific revenue",
+      "Review Austin Business Journal's Book of Lists for company rankings",
+      "Consult Austin Technology Council for tech sector deep-dive",
+      "Review Opportunity Austin economic development reports"
+    ]
+  },
+
+  "key_insights_for_odoo_showcase": {
+    "austin_professional_services_profile": "A large, diverse, and growing market with 280,000+ employees across software development, consulting, engineering, legal, accounting, and other professional services. While the sector faced headwinds in 2024 (-1.5% employment decline), it's stabilizing in 2025 and benefits from strong remote work adoption (28% of workforce), ongoing company relocations (81 new HQs since 2018), and a robust startup ecosystem ($4B VC investment in 2024).",
+
+    "ideal_odoo_targets": [
+      "Software development agencies (1,644+ companies) needing project/billing systems",
+      "IT consulting firms in growing sectors (cybersecurity, AI, cloud)",
+      "Architecture/engineering firms (1,817+ firms, $425M+ revenue) needing project lifecycle management",
+      "Marketing agencies (ranging 10-500 employees) needing campaign management",
+      "Staffing firms (23+ major firms) needing candidate/placement tracking",
+      "Scaling startups (3,000+ funded) professionalizing operations"
+    ],
+
+    "value_proposition_angles": [
+      "Cost-effectiveness: Austin companies are cost-conscious (vs. SF/NYC); Odoo competes on price",
+      "Remote-first: 340,000 remote workers need cloud-based, accessible systems",
+      "Scalability: Support startups as they grow from 5 to 500 employees",
+      "Integration: Reduce tool sprawl with unified platform (project, billing, CRM, HR)",
+      "Flexibility: Open-source appeals to tech-savvy Austin market",
+      "Professional services specific: Strong timesheet, project, and billing capabilities"
+    ],
+
+    "market_timing": "Good timing - sector stabilizing after 2024 decline, companies looking to optimize operations and improve efficiency as growth moderates. Remote work adoption creates need for better systems. Company relocations bring fresh opportunities for system selection.",
+
+    "competitive_context": "Austin professional services firms currently use mix of tools (Salesforce, QuickBooks, Asana, Monday.com, etc.). Opportunity to consolidate onto Odoo platform, especially for mid-market firms (50-500 employees) outgrowing basic tools but finding enterprise solutions too expensive/complex."
+  }
+}
