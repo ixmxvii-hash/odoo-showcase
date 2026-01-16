@@ -3,6 +3,15 @@ import Credentials from "next-auth/providers/credentials";
 import { pool } from "./db";
 import bcrypt from "bcryptjs";
 
+const authSecret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET;
+
+if (!authSecret) {
+  console.warn(
+    "⚠️  AUTH_SECRET is not set. Authentication may not work properly. " +
+    "Please set AUTH_SECRET or NEXTAUTH_SECRET in your environment variables."
+  );
+}
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     Credentials({
@@ -68,5 +77,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return session;
     },
   },
-  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
+  secret: authSecret,
+  trustHost: true, // Required for NextAuth v5 in some deployment scenarios
 });

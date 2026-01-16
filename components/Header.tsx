@@ -198,8 +198,8 @@ export default function Header() {
               <div className="grid grid-cols-2 gap-0.5">
                 <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
                 <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
-                <div className="w-3 h-3 bg-slate-700 rounded-sm"></div>
                 <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
+                <div className="w-3 h-3 bg-slate-600 rounded-sm"></div>
               </div>
               <span className="text-white font-bold text-xl tracking-tight group-hover:text-orange-400 transition-colors">
                 ICIT

@@ -19,14 +19,21 @@ import {
   DollarSign,
   BarChart3,
   Zap,
+  Search,
+  BookOpen,
+  Calculator,
+  FileSpreadsheet,
+  PieChart,
+  CheckSquare,
+  LineChart,
 } from "lucide-react";
 
 const orderToCashSteps = [
   {
     icon: FileText,
     step: "1",
-    title: "Quote & Sales Order",
-    description: "Customer requests quote, negotiation, order confirmation",
+    title: "Quote",
+    description: "Customer requests quote, create proposal, negotiate pricing",
     painPoints: [
       "Manual quote creation in Word/Excel",
       "No visibility into quote status",
@@ -40,8 +47,25 @@ const orderToCashSteps = [
     metric: "50% faster quote turnaround",
   },
   {
-    icon: PackageCheck,
+    icon: ClipboardList,
     step: "2",
+    title: "Sales Order",
+    description: "Convert quote to order, confirm terms, schedule fulfillment",
+    painPoints: [
+      "Manual re-entry from quote to order",
+      "Order confirmation delays",
+      "Miscommunication on delivery dates",
+    ],
+    odooSolution: [
+      "One-click quote to sales order conversion",
+      "Automated order confirmation emails",
+      "Integrated delivery scheduling",
+    ],
+    metric: "Zero data re-entry",
+  },
+  {
+    icon: PackageCheck,
+    step: "3",
     title: "Order Fulfillment",
     description: "Pick, pack, and prepare goods for shipment",
     painPoints: [
@@ -58,7 +82,7 @@ const orderToCashSteps = [
   },
   {
     icon: Truck,
-    step: "3",
+    step: "4",
     title: "Delivery & Shipping",
     description: "Ship to customer, track delivery, confirm receipt",
     painPoints: [
@@ -75,7 +99,7 @@ const orderToCashSteps = [
   },
   {
     icon: Receipt,
-    step: "4",
+    step: "5",
     title: "Invoicing",
     description: "Generate invoice, send to customer, track payment terms",
     painPoints: [
@@ -92,7 +116,7 @@ const orderToCashSteps = [
   },
   {
     icon: Banknote,
-    step: "5",
+    step: "6",
     title: "Payment Collection",
     description: "Receive payment, reconcile, close the order",
     painPoints: [
@@ -128,8 +152,25 @@ const procureToPaySteps = [
     metric: "Full spend visibility",
   },
   {
-    icon: FileCheck,
+    icon: Search,
     step: "2",
+    title: "RFQ",
+    description: "Request quotes from vendors, compare pricing and terms",
+    painPoints: [
+      "Manual vendor outreach via email",
+      "No standardized quote comparison",
+      "Missed better pricing opportunities",
+    ],
+    odooSolution: [
+      "Automated RFQ to multiple vendors",
+      "Side-by-side quote comparison",
+      "Vendor response tracking & reminders",
+    ],
+    metric: "Compare 3+ vendors in minutes",
+  },
+  {
+    icon: FileCheck,
+    step: "3",
     title: "Purchase Order",
     description: "Select vendor, negotiate, confirm order",
     painPoints: [
@@ -138,7 +179,7 @@ const procureToPaySteps = [
       "Duplicate orders",
     ],
     odooSolution: [
-      "Auto-generate PO from requisition",
+      "Auto-generate PO from winning quote",
       "Vendor price comparison",
       "Blanket orders & contracts",
     ],
@@ -146,7 +187,7 @@ const procureToPaySteps = [
   },
   {
     icon: PackageCheck,
-    step: "3",
+    step: "4",
     title: "Goods Receipt",
     description: "Receive goods, quality check, update inventory",
     painPoints: [
@@ -163,7 +204,7 @@ const procureToPaySteps = [
   },
   {
     icon: Receipt,
-    step: "4",
+    step: "5",
     title: "Invoice Matching",
     description: "Receive vendor invoice, match to PO & receipt",
     painPoints: [
@@ -180,7 +221,7 @@ const procureToPaySteps = [
   },
   {
     icon: Wallet,
-    step: "5",
+    step: "6",
     title: "Payment",
     description: "Approve payment, execute, reconcile",
     painPoints: [
@@ -194,6 +235,111 @@ const procureToPaySteps = [
       "Cash flow forecasting",
     ],
     metric: "Capture all early pay discounts",
+  },
+];
+
+const recordToReportSteps = [
+  {
+    icon: BookOpen,
+    step: "1",
+    title: "Journal Entries",
+    description: "Record transactions, adjustments, and accruals",
+    painPoints: [
+      "Manual journal entry in spreadsheets",
+      "No audit trail for changes",
+      "Delayed transaction recording",
+    ],
+    odooSolution: [
+      "Automated journal entries from operations",
+      "Full audit trail with user tracking",
+      "Real-time transaction posting",
+    ],
+    metric: "90% automated entries",
+  },
+  {
+    icon: CheckSquare,
+    step: "2",
+    title: "Reconciliation",
+    description: "Match and reconcile accounts, bank statements, intercompany",
+    painPoints: [
+      "Manual bank reconciliation",
+      "Unidentified discrepancies",
+      "Time-consuming account matching",
+    ],
+    odooSolution: [
+      "Automated bank feed reconciliation",
+      "AI-powered transaction matching",
+      "Intercompany auto-reconciliation",
+    ],
+    metric: "80% faster reconciliation",
+  },
+  {
+    icon: Calculator,
+    step: "3",
+    title: "Period Close",
+    description: "Close sub-ledgers, run validations, lock periods",
+    painPoints: [
+      "Manual close checklists",
+      "Missed close tasks",
+      "No period locking controls",
+    ],
+    odooSolution: [
+      "Automated close task workflows",
+      "Pre-close validation checks",
+      "Period lock with override controls",
+    ],
+    metric: "Close books 5 days faster",
+  },
+  {
+    icon: FileSpreadsheet,
+    step: "4",
+    title: "Consolidation",
+    description: "Consolidate entities, eliminate intercompany, currency translation",
+    painPoints: [
+      "Manual consolidation spreadsheets",
+      "Intercompany elimination errors",
+      "Currency translation mistakes",
+    ],
+    odooSolution: [
+      "Automated multi-entity consolidation",
+      "Auto intercompany eliminations",
+      "Real-time currency translation",
+    ],
+    metric: "One-click consolidation",
+  },
+  {
+    icon: PieChart,
+    step: "5",
+    title: "Financial Reporting",
+    description: "Generate financial statements, management reports, compliance",
+    painPoints: [
+      "Manual report building in Excel",
+      "Version control nightmares",
+      "Inconsistent report formats",
+    ],
+    odooSolution: [
+      "Real-time financial dashboards",
+      "Standardized report templates",
+      "Drill-down to transaction detail",
+    ],
+    metric: "Reports in minutes, not days",
+  },
+  {
+    icon: LineChart,
+    step: "6",
+    title: "Analysis & Review",
+    description: "Variance analysis, KPIs, executive review and sign-off",
+    painPoints: [
+      "Ad-hoc variance analysis",
+      "No standardized KPI tracking",
+      "Delayed executive insights",
+    ],
+    odooSolution: [
+      "Automated variance reporting",
+      "Configurable KPI dashboards",
+      "Mobile executive summaries",
+    ],
+    metric: "Real-time business insights",
   },
 ];
 
@@ -224,7 +370,7 @@ interface ProcessDiagramProps {
   subtitle: string;
   description: string;
   steps: typeof orderToCashSteps;
-  accentColor: "orange" | "blue";
+  accentColor: "orange" | "blue" | "green";
   icon: React.ElementType;
 }
 
@@ -258,6 +404,17 @@ function ProcessDiagram({
       highlight: "bg-blue-500",
       gradient: "from-blue-500 to-blue-600",
       lightBg: "bg-blue-50",
+    },
+    green: {
+      badge: "bg-green-500",
+      badgeLight: "bg-green-50 text-green-700 border-green-200",
+      iconBg: "bg-green-100",
+      iconColor: "text-green-600",
+      border: "border-green-200",
+      line: "bg-green-300",
+      highlight: "bg-green-500",
+      gradient: "from-green-500 to-green-600",
+      lightBg: "bg-green-50",
     },
   };
 
@@ -434,14 +591,14 @@ export default function ProcessFlows() {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how ICIT Solutions implements Odoo to transform your Order to Cash and Procure to Pay cycles from manual chaos to automated efficiency.
+            See how ICIT Solutions implements Odoo to transform your Quote to Cash, Procure to Pay, and Record to Report cycles from manual chaos to automated efficiency.
           </p>
         </motion.div>
 
-        {/* Order to Cash */}
+        {/* Quote to Cash */}
         <ProcessDiagram
-          title="Order to Cash"
-          subtitle="O2C Revenue Cycle"
+          title="Quote to Cash"
+          subtitle="Q2C Revenue Cycle"
           description="From customer quote to cash in the bank — streamline your entire revenue cycle"
           steps={orderToCashSteps}
           accentColor="orange"
@@ -458,6 +615,16 @@ export default function ProcessFlows() {
           icon={BarChart3}
         />
 
+        {/* Record to Report */}
+        <ProcessDiagram
+          title="Record to Report"
+          subtitle="R2R Financial Close"
+          description="From transaction to financial statements — accelerate your close and gain real-time insights"
+          steps={recordToReportSteps}
+          accentColor="green"
+          icon={BookOpen}
+        />
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -471,7 +638,7 @@ export default function ProcessFlows() {
               Ready to Automate Your Business Processes?
             </h3>
             <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-              ICIT Solutions specializes in implementing Odoo to streamline your O2C and P2P cycles. Let us show you how much time and money you can save.
+              ICIT Solutions specializes in implementing Odoo to streamline your Q2C, P2P, and R2R cycles. Let us show you how much time and money you can save.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.button
