@@ -122,17 +122,23 @@ export default function RootLayout({
               }),
             }}
           />
+          {/* Google Ads Tag */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-16884728503"
+            strategy="afterInteractive"
+          />
+          <Script id="google-ads-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16884728503');
+            `}
+          </Script>
           {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
             <>
-              <Script
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-                strategy="afterInteractive"
-              />
               <Script id="ga-init" strategy="afterInteractive">
                 {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
                   gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
                 `}
               </Script>
