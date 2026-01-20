@@ -1,6 +1,13 @@
 "use client";
 
 import { useState, FormEvent, ChangeEvent } from "react";
+
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "./ui/Button";
@@ -180,6 +187,15 @@ export default function ContactForm() {
       }
 
       trackEvent("lead_submit", { form: "contact" });
+
+      // Google Ads conversion tracking
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-16884728503/C9DPCIXr2ugbELeFovM-",
+          value: 1.0,
+          currency: "USD",
+        });
+      }
 
       // Success state
       setIsSuccess(true);

@@ -1,6 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Calculator, DollarSign, Clock, TrendingUp } from "lucide-react";
 import Link from "next/link";
@@ -157,6 +164,15 @@ export default function ROICalculator() {
 
       if (!response.ok) {
         throw new Error("Failed to submit");
+      }
+
+      // Google Ads conversion tracking
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "conversion", {
+          send_to: "AW-16884728503/C9DPCIXr2ugbELeFovM-",
+          value: 1.0,
+          currency: "USD",
+        });
       }
 
       alert("Thank you! Your custom report will be sent to " + email);
