@@ -138,7 +138,7 @@ export default function RootLayout({
           {/* Google Analytics */}
           <Script id="ga-init" strategy="afterInteractive">
             {`
-              gtag('config', 'G-520894845');
+              gtag('config', 'G-ZKRYDWR8P1');
             `}
           </Script>
           </SmoothScroll>
