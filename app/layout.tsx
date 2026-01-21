@@ -62,6 +62,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16884728503"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16884728503');
+              gtag('config', 'G-ZKRYDWR8P1');
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <Providers>
           <SmoothScroll>
@@ -122,25 +137,6 @@ export default function RootLayout({
               }),
             }}
           />
-          {/* Google Ads Tag */}
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=AW-16884728503"
-            strategy="afterInteractive"
-          />
-          <Script id="google-ads-init" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-16884728503');
-            `}
-          </Script>
-          {/* Google Analytics */}
-          <Script id="ga-init" strategy="afterInteractive">
-            {`
-              gtag('config', 'G-ZKRYDWR8P1');
-            `}
-          </Script>
           </SmoothScroll>
         </Providers>
       </body>
