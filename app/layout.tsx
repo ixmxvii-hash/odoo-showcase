@@ -135,15 +135,12 @@ export default function RootLayout({
               gtag('config', 'AW-16884728503');
             `}
           </Script>
-          {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-            <>
-              <Script id="ga-init" strategy="afterInteractive">
-                {`
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-                `}
-              </Script>
-            </>
-          )}
+          {/* Google Analytics */}
+          <Script id="ga-init" strategy="afterInteractive">
+            {`
+              gtag('config', 'G-520894845');
+            `}
+          </Script>
           </SmoothScroll>
         </Providers>
       </body>
