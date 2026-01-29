@@ -68,7 +68,7 @@ const Hero = () => {
           <motion.div variants={badgeVariants} className="flex justify-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/80 backdrop-blur-sm border border-orange-500/30 rounded-full text-sm font-medium text-orange-400">
               <CheckCircle2 className="w-4 h-4" />
-              <span>Official Odoo Partner</span>
+              <span>Certified Odoo Partner</span>
             </div>
           </motion.div>
 

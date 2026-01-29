@@ -52,13 +52,13 @@ const getFeatures = (cityName: string) => [
   },
   {
     icon: Wrench,
-    title: "On-Site Support",
+    title: "We Come to You",
     description: "When your systems go down, we drive to your plant. Same day.",
   },
   {
     icon: Clock,
     title: "90-Day Implementation",
-    description: "We help you go live fast. No 12-month enterprise projects.",
+    description: "We help you go live quickly and efficiently.",
   },
   {
     icon: Shield,
@@ -67,8 +67,8 @@ const getFeatures = (cityName: string) => [
   },
   {
     icon: Users,
-    title: "We Walk Your Floor",
-    description: "We understand manufacturing. We've seen the chaos.",
+    title: "We Understand Your Business",
+    description: "We work with you to understand your business process.",
   },
   {
     icon: Phone,
@@ -136,24 +136,6 @@ export default function WhyLocal({ city }: WhyLocalProps) {
                 </div>
               </motion.div>
             ))}
-
-            {/* Trust Badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex flex-wrap gap-3 pt-4"
-            >
-              {content.trustBadges.map((badge) => (
-                <span
-                  key={badge}
-                  className="inline-flex items-center px-4 py-2 rounded-full bg-orange-50 text-orange-700 text-sm font-medium border border-orange-200"
-                >
-                  {badge}
-                </span>
-              ))}
-            </motion.div>
           </div>
 
           {/* Right Column - Visual Elements */}

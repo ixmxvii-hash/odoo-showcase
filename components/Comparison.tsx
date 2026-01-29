@@ -20,42 +20,42 @@ interface ComparisonRow {
 
 const comparisonData: ComparisonRow[] = [
   {
-    criteria: "Implementation Time",
-    odoo: { value: "60-90 days", status: "check" },
-    netsuite: { value: "6-12 months", status: "x" },
-    sap: { value: "9-18 months", status: "x" },
-    quickbooks: { value: "30-60 days", status: "check" },
-  },
-  {
-    criteria: "Total Cost of Ownership (3-year)",
-    odoo: { value: "$50K-$100K", status: "check" },
-    netsuite: { value: "$150K-$300K", status: "x" },
-    sap: { value: "$200K-$500K", status: "x" },
-    quickbooks: { value: "$30K-$60K", status: "minus", note: "but limited" },
-  },
-  {
-    criteria: "Local On-Site Support",
+    criteria: "Out of the Box Customization",
     odoo: { value: "Yes", status: "check" },
-    netsuite: { value: "Remote only", status: "x" },
-    sap: { value: "Remote only", status: "x" },
-    quickbooks: { value: "Varies", status: "minus" },
+    netsuite: { value: "Limited", status: "minus" },
+    sap: { value: "No", status: "x" },
+    quickbooks: { value: "Limited", status: "minus" },
   },
   {
-    criteria: "Manufacturing/MRP",
-    odoo: { value: "Full", status: "check" },
-    netsuite: { value: "Full", status: "check" },
-    sap: { value: "Full", status: "check" },
-    quickbooks: { value: "Limited", status: "x" },
-  },
-  {
-    criteria: "Modular/Phased Rollout",
+    criteria: "On-Prem Support",
     odoo: { value: "Yes", status: "check" },
-    netsuite: { value: "Difficult", status: "minus" },
-    sap: { value: "Difficult", status: "minus" },
-    quickbooks: { value: "N/A", status: "x" },
+    netsuite: { value: "No", status: "x" },
+    sap: { value: "Limited", status: "minus" },
+    quickbooks: { value: "No", status: "x" },
   },
   {
-    criteria: "Open Source/No Lock-in",
+    criteria: "24/7 Support",
+    odoo: { value: "Yes", status: "check" },
+    netsuite: { value: "No", status: "x" },
+    sap: { value: "Varies", status: "minus" },
+    quickbooks: { value: "No", status: "x" },
+  },
+  {
+    criteria: "Cost",
+    odoo: { value: "Affordable", status: "check" },
+    netsuite: { value: "Expensive", status: "x" },
+    sap: { value: "Expensive", status: "x" },
+    quickbooks: { value: "Affordable", status: "check", note: "but limited" },
+  },
+  {
+    criteria: "Training",
+    odoo: { value: "Personalized", status: "check" },
+    netsuite: { value: "Generic", status: "minus" },
+    sap: { value: "Generic", status: "minus" },
+    quickbooks: { value: "Generic", status: "minus" },
+  },
+  {
+    criteria: "Only Odoo",
     odoo: { value: "Yes", status: "check" },
     netsuite: { value: "No", status: "x" },
     sap: { value: "No", status: "x" },
@@ -64,9 +64,9 @@ const comparisonData: ComparisonRow[] = [
 ];
 
 const calloutBoxes = [
-  { text: "40% lower TCO than NetSuite", color: "from-green-500 to-emerald-600" },
-  { text: "Go live in 90 days, not 12 months", color: "from-blue-500 to-indigo-600" },
-  { text: "No vendor lock-in", color: "from-orange-500 to-red-600" },
+  { text: "Dedicated Odoo Expertise", color: "from-green-500 to-emerald-600" },
+  { text: "Personalized Implementation", color: "from-blue-500 to-indigo-600" },
+  { text: "Local Support You Can Trust", color: "from-orange-500 to-red-600" },
 ];
 
 const StatusIcon = ({ status }: { status: "check" | "x" | "minus" }) => {
@@ -115,12 +115,15 @@ export default function Comparison() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <p className="text-lg text-orange-600 font-semibold mb-2">
+            We Make Odoo Work for You
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             The Smart Alternative
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how Odoo compares to enterprise ERP solutions. Lower cost, faster implementation,
-            better support.
+            See how ICIT compares to other implementation options. Better support, personalized training,
+            dedicated expertise.
           </p>
         </motion.div>
 
@@ -159,13 +162,13 @@ export default function Comparison() {
           <div className="grid grid-cols-5 bg-gray-900 text-white sticky top-0 z-20">
             <div className="p-6 font-bold text-lg border-r border-gray-700">Criteria</div>
             <div className="p-6 font-bold text-lg text-center bg-orange-600 border-r border-orange-700">
-              Odoo
+              ICIT
             </div>
             <div className="p-6 font-bold text-lg text-center border-r border-gray-700">
-              NetSuite
+              Odoo Direct
             </div>
             <div className="p-6 font-bold text-lg text-center border-r border-gray-700">
-              SAP Business One
+              Other Partners
             </div>
             <div className="p-6 font-bold text-lg text-center">QuickBooks + Fishbowl</div>
           </div>
@@ -223,21 +226,21 @@ export default function Comparison() {
               </div>
               <div className="divide-y divide-gray-200">
                 <div className="bg-orange-50 p-4 flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">Odoo</span>
+                  <span className="font-semibold text-gray-900">ICIT</span>
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium">{row.odoo.value}</span>
                     <StatusIcon status={row.odoo.status} />
                   </div>
                 </div>
                 <div className="p-4 flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">NetSuite</span>
+                  <span className="font-semibold text-gray-900">Odoo Direct</span>
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium">{row.netsuite.value}</span>
                     <StatusIcon status={row.netsuite.status} />
                   </div>
                 </div>
                 <div className="p-4 flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">SAP Business One</span>
+                  <span className="font-semibold text-gray-900">Other Partners</span>
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium">{row.sap.value}</span>
                     <StatusIcon status={row.sap.status} />

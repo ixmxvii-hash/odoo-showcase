@@ -85,7 +85,7 @@ export function GeneralHero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500" />
             </span>
             <span className="text-sm font-medium text-orange-400">
-              Official Odoo Partner
+              Certified Odoo Partner
             </span>
           </motion.div>
 
@@ -106,7 +106,7 @@ export function GeneralHero() {
             <p className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
               One platform for CRM, Sales, Inventory, Manufacturing & more with a Texas-based team that can be on-site when you need us.
               <br className="hidden sm:block" />
-              <span className="text-orange-400 font-medium">Plan a 90-day go-live with expert guidance.</span>
+              <span className="text-orange-400 font-medium">Go live in 90 days with expert guidance.</span>
             </p>
           </motion.div>
 

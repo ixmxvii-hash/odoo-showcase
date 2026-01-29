@@ -12,8 +12,6 @@ import {
   Wallet,
   ArrowRight,
   CheckCircle2,
-  AlertTriangle,
-  Sparkles,
   TrendingUp,
   Clock,
   DollarSign,
@@ -452,7 +450,7 @@ function ProcessDiagram({
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -477,32 +475,12 @@ function ProcessDiagram({
                   <h4 className="font-bold text-gray-900 mb-1">{step.title}</h4>
                   <p className="text-sm text-gray-500 mb-4">{step.description}</p>
 
-                  {/* Pain Points */}
+                  {/* Odoo Solution - Simplified */}
                   <div className="mb-4">
-                    <div className="flex items-center gap-1.5 mb-2">
-                      <AlertTriangle className="w-3.5 h-3.5 text-red-500" />
-                      <span className="text-xs font-semibold text-red-600 uppercase tracking-wide">Without Odoo</span>
-                    </div>
-                    <ul className="space-y-1">
-                      {step.painPoints.map((pain, i) => (
-                        <li key={i} className="text-xs text-gray-500 flex items-start gap-1.5">
-                          <span className="text-red-400 mt-0.5">•</span>
-                          {pain}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Odoo Solution */}
-                  <div className="mb-4">
-                    <div className="flex items-center gap-1.5 mb-2">
-                      <Sparkles className="w-3.5 h-3.5 text-green-500" />
-                      <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">With Odoo</span>
-                    </div>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1.5">
                       {step.odooSolution.map((solution, i) => (
                         <li key={i} className="text-xs text-gray-600 flex items-start gap-1.5">
-                          <CheckCircle2 className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-green-500 mt-0.5 flex-shrink-0" />
                           {solution}
                         </li>
                       ))}
@@ -599,7 +577,7 @@ export default function ProcessFlows() {
         <ProcessDiagram
           title="Quote to Cash"
           subtitle="Q2C Revenue Cycle"
-          description="From customer quote to cash in the bank — streamline your entire revenue cycle"
+          description="From customer quote to cash in the bank — ICIT streamlines your entire revenue cycle"
           steps={orderToCashSteps}
           accentColor="orange"
           icon={DollarSign}
@@ -609,7 +587,7 @@ export default function ProcessFlows() {
         <ProcessDiagram
           title="Procure to Pay"
           subtitle="P2P Spend Cycle"
-          description="From purchase request to vendor payment — gain control over your spending"
+          description="From purchase request to vendor payment — ICIT makes it easy"
           steps={procureToPaySteps}
           accentColor="blue"
           icon={BarChart3}
@@ -619,7 +597,7 @@ export default function ProcessFlows() {
         <ProcessDiagram
           title="Record to Report"
           subtitle="R2R Financial Close"
-          description="From transaction to financial statements — accelerate your close and gain real-time insights"
+          description="Get real time insights — from transaction to financial statements"
           steps={recordToReportSteps}
           accentColor="green"
           icon={BookOpen}
