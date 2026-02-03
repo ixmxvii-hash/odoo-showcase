@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check, X, Minus } from "lucide-react";
 import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 
 interface ComparisonCell {
   value: string;
@@ -20,42 +21,42 @@ interface ComparisonRow {
 
 const comparisonData: ComparisonRow[] = [
   {
-    criteria: "Out of the Box Customization",
-    odoo: { value: "Yes", status: "check" },
+    criteria: "Customization for Your Workflows",
+    odoo: { value: "Tailored", status: "check" },
     netsuite: { value: "Limited", status: "minus" },
-    sap: { value: "No", status: "x" },
+    sap: { value: "Complex", status: "minus" },
     quickbooks: { value: "Limited", status: "minus" },
   },
   {
-    criteria: "On-Prem Support",
-    odoo: { value: "Yes", status: "check" },
+    criteria: "Local + On-Prem Support",
+    odoo: { value: "Included", status: "check" },
     netsuite: { value: "No", status: "x" },
     sap: { value: "Limited", status: "minus" },
     quickbooks: { value: "No", status: "x" },
   },
   {
-    criteria: "24/7 Support",
-    odoo: { value: "Yes", status: "check" },
+    criteria: "Ongoing Support",
+    odoo: { value: "Continuous", status: "check" },
     netsuite: { value: "No", status: "x" },
     sap: { value: "Varies", status: "minus" },
     quickbooks: { value: "No", status: "x" },
   },
   {
-    criteria: "Cost",
-    odoo: { value: "Affordable", status: "check" },
+    criteria: "Implementation Cost Clarity",
+    odoo: { value: "Guaranteed Up Front", status: "check" },
     netsuite: { value: "Expensive", status: "x" },
     sap: { value: "Expensive", status: "x" },
-    quickbooks: { value: "Affordable", status: "check", note: "but limited" },
+    quickbooks: { value: "Lower Entry Cost", status: "minus", note: "often needs add-ons" },
   },
   {
-    criteria: "Training",
+    criteria: "Training Included",
     odoo: { value: "Personalized", status: "check" },
     netsuite: { value: "Generic", status: "minus" },
     sap: { value: "Generic", status: "minus" },
     quickbooks: { value: "Generic", status: "minus" },
   },
   {
-    criteria: "Only Odoo",
+    criteria: "Dedicated Odoo Expertise",
     odoo: { value: "Yes", status: "check" },
     netsuite: { value: "No", status: "x" },
     sap: { value: "No", status: "x" },
@@ -116,14 +117,13 @@ export default function Comparison() {
           className="text-center mb-16"
         >
           <p className="text-lg text-orange-600 font-semibold mb-2">
-            We Make Odoo Work for You
+            Benefits of Choosing ICIT
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            The Smart Alternative
+            Compare Your Implementation Options
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how ICIT compares to other implementation options. Better support, personalized training,
-            dedicated expertise.
+            See how ICIT stacks up against Odoo direct, other partners, and disconnected accounting stacks.
           </p>
         </motion.div>
 
@@ -272,15 +272,18 @@ export default function Comparison() {
           className="mt-16 text-center"
         >
           <p className="text-lg text-gray-600 mb-6">
-            Ready to see Odoo in action for your Houston business?
+            Ready to move forward with a local Odoo partner?
           </p>
-          <Link href="/contact">
+          <Link
+            href="/contact"
+            onClick={() => trackEvent("cta_click", { location: "comparison", cta: "book_consultation" })}
+          >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              Schedule Your Demo
+              Book Your Free Consultation
             </motion.button>
           </Link>
         </motion.div>

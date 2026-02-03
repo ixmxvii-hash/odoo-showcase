@@ -101,8 +101,8 @@ export default function WhyLocal({ city }: WhyLocalProps) {
             Your ERP Partner Should Know Your Zip Code
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Enterprise software doesn't have to feel like dealing with a faceless corporation.
-            We're your neighbors at ICIT Solutions.
+            Enterprise software doesn&apos;t have to feel like dealing with a faceless corporation.
+            We&apos;re your neighbors at ICIT Solutions.
           </p>
         </motion.div>
 

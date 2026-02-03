@@ -111,7 +111,7 @@ export default function Testimonials() {
               </div>
 
               <blockquote className="text-slate-700 text-lg mb-6 leading-relaxed">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </blockquote>
 
               <div className="border-t border-slate-200 pt-4 flex gap-3 items-center">

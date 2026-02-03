@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Users, Clock, Award, Headphones } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/Button";
+import { trackEvent } from "@/lib/analytics";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
@@ -31,11 +32,11 @@ const stats = [
 ] as const;
 
 const features = [
-  "Manufacturing (MRP)",
-  "Inventory Management",
-  "Accounting & Finance",
-  "Purchase Management",
-  "Sales & CRM",
+  "Manage inventory",
+  "Automate sales workflow",
+  "Customize by industry",
+  "On-site local support",
+  "Training included",
 ] as const;
 
 export function GeneralHero() {
@@ -85,7 +86,7 @@ export function GeneralHero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500" />
             </span>
             <span className="text-sm font-medium text-orange-400">
-              Certified Odoo Partner
+              Houston Odoo Implementation Partner
             </span>
           </motion.div>
 
@@ -104,9 +105,9 @@ export function GeneralHero() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
-              One platform for CRM, Sales, Inventory, Manufacturing & more with a Texas-based team that can be on-site when you need us.
+              Trusted Odoo partner for Houston businesses with local support and real results.
               <br className="hidden sm:block" />
-              <span className="text-orange-400 font-medium">Go live in 90 days with expert guidance.</span>
+              <span className="text-orange-400 font-medium">End-to-end implementation: migration, rollout, training, and ongoing support.</span>
             </p>
           </motion.div>
 
@@ -138,22 +139,28 @@ export function GeneralHero() {
             transition={{ duration: 0.6, delay: 0.4, ease: easeOut }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
-            <Link href="/contact">
+            <Link
+              href="/contact"
+              onClick={() => trackEvent("cta_click", { location: "hero", cta: "free_consultation" })}
+            >
               <Button
                 size="lg"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-xl shadow-orange-500/25 hover:shadow-orange-500/40 transition-all duration-300 group"
               >
-                Plan Your 90-Day Implementation
+                Get a Free Odoo Consultation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/roi-calculator">
+            <Link
+              href="/#our-approach"
+              onClick={() => trackEvent("cta_click", { location: "hero", cta: "see_implementation_plan" })}
+            >
               <Button
                 variant="outline"
                 size="lg"
                 className="border-slate-600 hover:border-orange-400 text-slate-300 hover:text-orange-400 px-8 py-6 text-lg font-semibold rounded-xl backdrop-blur-sm bg-slate-800/30 hover:bg-slate-800/50 transition-all duration-300"
               >
-                Calculate Your ROI
+                See Implementation Plan
               </Button>
             </Link>
           </motion.div>
@@ -167,7 +174,7 @@ export function GeneralHero() {
           >
             <p className="text-sm text-slate-400 flex items-center justify-center gap-2">
               <Users className="w-4 h-4 text-orange-400" />
-              Trusted by manufacturers, distributors, and services teams across Texas
+              Local support for manufacturing, distribution, and service teams across Texas
             </p>
           </motion.div>
 

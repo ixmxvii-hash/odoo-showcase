@@ -49,13 +49,13 @@ export default function ContactPage() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
                 </span>
-                Houston's Trusted Odoo Partner
+                Houston&apos;s Trusted Odoo Partner
               </div>
               <h1 className="text-6xl md:text-8xl font-black text-slate-900 leading-[1.05] tracking-tight mb-8">
-                Let's <span className="text-orange-600">Talk</span> Business.
+                Let&apos;s <span className="text-orange-600">Talk</span> Business.
               </h1>
               <p className="text-2xl md:text-3xl text-slate-600 leading-relaxed max-w-2xl font-medium">
-                Whether you're scaling up or just getting started with ERP,
+                Whether you&apos;re scaling up or just getting started with ERP,
                 our local Houston team is here to guide your digital transformation
                 with a handshake and a plan.
               </p>
@@ -81,7 +81,7 @@ export default function ContactPage() {
 
                   <div className="mb-12">
                     <h2 className="text-4xl font-bold text-slate-900 mb-4">Send us a message</h2>
-                    <p className="text-xl text-slate-500">Tell us about your project and we'll get back to you within 24 hours.</p>
+                    <p className="text-xl text-slate-500">Tell us about your project and we&apos;ll get back to you within 24 hours.</p>
                   </div>
 
                   <ContactForm />

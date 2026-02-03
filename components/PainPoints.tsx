@@ -87,7 +87,7 @@ export default function PainPoints() {
             The Software Chaos Killing Your Growth
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Sound familiar? You're not alone. These are the pain points we hear
+            Sound familiar? You&apos;re not alone. These are the pain points we hear
             from Houston manufacturers every single day.
           </p>
         </motion.div>
@@ -138,10 +138,10 @@ export default function PainPoints() {
                   32% of small and mid-sized businesses
                 </span>{" "}
                 cite business disruption as their #1 barrier to ERP adoption.
-                They want the benefits, but they're terrified of the risk.
+                They want the benefits, but they&apos;re terrified of the risk.
               </p>
               <p className="text-gray-700 mt-2">
-                That's exactly why we built our proven implementation framework
+                That&apos;s exactly why we built our proven implementation framework
                 — to eliminate that fear and deliver results in weeks, not
                 years.
               </p>

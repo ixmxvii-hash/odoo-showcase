@@ -14,39 +14,39 @@ import { Card, CardHeader, CardContent } from "./ui/Card";
 const painPoints = [
   {
     icon: Layers,
-    title: "Too Many Disconnected Systems",
+    title: "Disconnected Tools Everywhere",
     description:
-      "QuickBooks for accounting, spreadsheets for inventory, another tool for CRM. Data silos everywhere.",
+      "QuickBooks for accounting, spreadsheets for inventory, and separate tools for CRM create daily data silos.",
   },
   {
     icon: Clock,
-    title: "Hours Lost to Manual Work",
+    title: "Manual Work Steals Time",
     description:
-      "Re-entering data, reconciling spreadsheets, chasing down information. Your team deserves better.",
+      "Re-entering data, reconciling spreadsheets, and chasing updates slows your team down every day.",
   },
   {
     icon: Eye,
     title: "No Real-Time Visibility",
     description:
-      "Month-end surprises, outdated reports, decisions based on stale data.",
+      "Leaders make critical decisions using stale reports and delayed updates.",
   },
   {
     icon: DollarSign,
-    title: "Revenue Leaking Through Cracks",
+    title: "Failed Implementation Risk",
     description:
-      "Missed invoices, billing errors, inventory discrepancies eating into your margins.",
+      "Many teams worry about costly projects, weak adoption, and going live with a system that does not fit.",
   },
   {
     icon: TrendingUp,
-    title: "Scaling Feels Impossible",
+    title: "Odoo Feels Hard to Customize",
     description:
-      "Your current systems worked when you were smaller. Now they're holding you back.",
+      "Without a partner, it is hard to map Odoo to your exact workflows and priorities.",
   },
   {
     icon: Users,
-    title: "Knowledge Trapped in People",
+    title: "Support Gaps After Go-Live",
     description:
-      "Key processes live in someone's head. What happens when they're gone?",
+      "Teams are often left without local guidance, structured training, or fast support after launch.",
   },
 ] as const;
 
@@ -98,7 +98,7 @@ export default function GeneralPainPoints() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Sound Familiar?
+            Is This What You Are Dealing With?
           </h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto" />
         </motion.div>
@@ -149,8 +149,7 @@ export default function GeneralPainPoints() {
             <CardContent className="py-8">
               <blockquote className="text-center">
                 <p className="text-2xl font-medium text-gray-900 mb-4">
-                  "The average SMB uses 5+ disconnected tools. It doesn't have
-                  to be this way."
+                  &quot;You do not need to choose between affordability and a successful Odoo implementation.&quot;
                 </p>
                 <div className="w-16 h-1 bg-orange-500 mx-auto" />
               </blockquote>

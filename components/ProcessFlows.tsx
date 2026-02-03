@@ -1,6 +1,8 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 import {
   FileText,
   Truck,
@@ -13,7 +15,6 @@ import {
   ArrowRight,
   CheckCircle2,
   TrendingUp,
-  Clock,
   DollarSign,
   BarChart3,
   Zap,
@@ -562,9 +563,9 @@ export default function ProcessFlows() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Streamline Your{" "}
+            Odoo Business Cycles{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-blue-600">
-              Core Business Processes
+              from Quote to Report
             </span>
           </h2>
 
@@ -577,7 +578,7 @@ export default function ProcessFlows() {
         <ProcessDiagram
           title="Quote to Cash"
           subtitle="Q2C Revenue Cycle"
-          description="From customer quote to cash in the bank — ICIT streamlines your entire revenue cycle"
+          description="From customer quote to cash in the bank - ICIT streamlines your entire revenue cycle"
           steps={orderToCashSteps}
           accentColor="orange"
           icon={DollarSign}
@@ -587,7 +588,7 @@ export default function ProcessFlows() {
         <ProcessDiagram
           title="Procure to Pay"
           subtitle="P2P Spend Cycle"
-          description="From purchase request to vendor payment — ICIT makes it easy"
+          description="From purchase request to vendor payment - ICIT makes it easy"
           steps={procureToPaySteps}
           accentColor="blue"
           icon={BarChart3}
@@ -597,7 +598,7 @@ export default function ProcessFlows() {
         <ProcessDiagram
           title="Record to Report"
           subtitle="R2R Financial Close"
-          description="Get real time insights — from transaction to financial statements"
+          description="Get real time insights - from transaction to financial statements"
           steps={recordToReportSteps}
           accentColor="green"
           icon={BookOpen}
@@ -618,27 +619,23 @@ export default function ProcessFlows() {
             <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
               ICIT Solutions specializes in implementing Odoo to streamline your Q2C, P2P, and R2R cycles. Let us show you how much time and money you can save.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              onClick={() => trackEvent("cta_click", { location: "process_flows", cta: "book_consultation" })}
+            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl shadow-lg transition-colors flex items-center gap-2"
+                className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl shadow-lg transition-colors inline-flex items-center gap-2"
               >
-                <Clock className="w-5 h-5" />
-                Schedule Process Review
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-colors flex items-center gap-2"
-              >
-                Download Process Guide
+                Book a Consultation
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
-            </div>
+            </Link>
           </div>
         </motion.div>
       </div>
     </section>
   );
 }
+

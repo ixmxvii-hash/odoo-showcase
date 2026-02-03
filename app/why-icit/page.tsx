@@ -172,12 +172,12 @@ const WhyICITPage = () => {
                 transition={{ delay: 0.3 }}
                 className="flex flex-wrap gap-6 items-center"
               >
-                <a
+                <Link
                   href="/contact"
                   className="px-10 py-6 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl text-xl font-bold shadow-2xl shadow-orange-200 transition-all flex items-center gap-3 active:scale-95"
                 >
                   Start Your Project <ArrowRight size={24} />
-                </a>
+                </Link>
                 <a
                   href="tel:8322907185"
                   className="px-10 py-6 bg-white border-4 border-slate-200 hover:border-orange-500 text-slate-900 rounded-2xl text-xl font-bold transition-all flex items-center gap-3"
@@ -215,7 +215,7 @@ const WhyICITPage = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-24">
               <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-6">Built Different. Built Local.</h2>
-              <p className="text-2xl text-slate-600 max-w-2xl mx-auto">We've spent two decades fixing broken ERP implementations. Here's why we're the last consultants you'll ever need.</p>
+              <p className="text-2xl text-slate-600 max-w-2xl mx-auto">We&apos;ve spent two decades fixing broken ERP implementations. Here&apos;s why we&apos;re the last consultants you&apos;ll ever need.</p>
             </div>
 
             <motion.div
@@ -293,7 +293,7 @@ const WhyICITPage = () => {
               <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-tight">Our Core <br />Values.</h2>
                 <p className="text-2xl text-slate-600 font-medium">
-                  We built ICIT Solutions on a simple foundation: honesty, technical excellence, and a relentless focus on our clients' bottom line.
+                  We built ICIT Solutions on a simple foundation: honesty, technical excellence, and a relentless focus on our clients&apos; bottom line.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -334,7 +334,7 @@ const WhyICITPage = () => {
             <motion.div variants={fadeInUp} initial="initial" whileInView="whileInView">
               <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">Ready to Shake Hands?</h2>
               <p className="text-2xl text-orange-100 mb-12 font-medium max-w-3xl mx-auto">
-                Let's discuss your manufacturing or distribution challenges over coffee. We'll give you a straight-forward assessment of how Odoo can fix the gaps.
+                Let&apos;s discuss your manufacturing or distribution challenges over coffee. We&apos;ll give you a straight-forward assessment of how Odoo can fix the gaps.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
