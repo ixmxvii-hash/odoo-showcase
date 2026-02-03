@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Factory,
-  ShoppingBag,
   Truck,
   Briefcase,
   UtensilsCrossed,
@@ -145,8 +144,7 @@ export default function GeneralIndustries() {
             Industries We Serve
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            ICIT Solutions delivers tailored Odoo implementations across diverse
-            industries, bringing operational excellence to businesses of all sizes
+            Odoo implementations tailored for your industry, processes, and growth goals.
           </p>
         </motion.div>
 
@@ -288,13 +286,13 @@ export default function GeneralIndustries() {
           className="text-center mt-16"
         >
           <p className="text-lg text-slate-600 mb-6">
-            Don't see your industry? We work with businesses across all sectors.
+            Don&apos;t see your industry? We work with businesses across all sectors.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
-            Discuss Your Industry Needs
+            Book an Industry Rollout Call
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </motion.div>

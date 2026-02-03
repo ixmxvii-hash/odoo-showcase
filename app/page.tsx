@@ -3,8 +3,10 @@ import GeneralPainPoints from "@/components/GeneralPainPoints";
 import GeneralIndustries from "@/components/GeneralIndustries";
 import ProcessFlows from "@/components/ProcessFlows";
 import GeneralSolutions from "@/components/GeneralSolutions";
-import WhyLocal from "@/components/WhyLocal";
+import OurApproach from "@/components/OurApproach";
 import Comparison from "@/components/Comparison";
+import HomeLeadForm from "@/components/HomeLeadForm";
+import PricingOverview from "@/components/PricingOverview";
 import GeneralTestimonials from "@/components/GeneralTestimonials";
 import Footer from "@/components/Footer";
 
@@ -24,13 +26,13 @@ export default function Home() {
 
       {/* Proof: O2C & P2P Process Flows + Comparison */}
       <ProcessFlows />
+      <OurApproach />
       <Comparison />
+      <HomeLeadForm />
+      <PricingOverview />
 
       {/* Industries We Serve - White background */}
       <GeneralIndustries />
-
-      {/* Why Local - Light gray background */}
-      <WhyLocal />
 
       {/* Testimonials - Light gray background */}
       <GeneralTestimonials />

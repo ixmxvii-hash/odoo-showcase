@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Zap, Settings, Beaker, Cpu, MapPin, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Zap, Settings, Beaker, Cpu, MapPin, AlertCircle, CheckCircle2, type LucideIcon } from "lucide-react";
 
 interface Industry {
   id: string;
   name: string;
-  icon: any;
+  icon: LucideIcon;
   zipCodes: string[];
   industries: string[];
   painPoints: string[];
@@ -141,7 +141,7 @@ export default function Industries() {
             We Know Houston Manufacturing
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Deep expertise in the industries that power Houston's economy. Select your region to see how Odoo transforms your operations.
+            Deep expertise in the industries that power Houston&apos;s economy. Select your region to see how Odoo transforms your operations.
           </p>
         </motion.div>
 

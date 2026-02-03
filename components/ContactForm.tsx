@@ -262,7 +262,7 @@ export default function ContactForm() {
           Get Your Free Consultation
         </h2>
         <p className="text-lg text-gray-600">
-          Tell us about your business and we'll show you how Odoo can transform
+          Tell us about your business and we&apos;ll show you how Odoo can transform
           your operations.
         </p>
         <p className="text-sm text-gray-500 mt-3">

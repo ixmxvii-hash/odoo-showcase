@@ -17,6 +17,12 @@ export async function OPTIONS() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+    if (!body?.email) {
+      return NextResponse.json(
+        { error: "Email is required" },
+        { status: 400, headers: corsHeaders }
+      );
+    }
 
     const databaseUrl = process.env.DATABASE_URL;
 
@@ -33,15 +39,24 @@ export async function POST(request: NextRequest) {
 
     // Build notes from form data
     const notes: string[] = [];
+    const leadSource =
+      typeof body.source === "string" && body.source.trim()
+        ? body.source.trim()
+        : "odoo-showcase";
     if (body.companySize) notes.push(`Company Size: ${body.companySize}`);
     if (body.currentSystems?.length) notes.push(`Current Systems: ${body.currentSystems.join(", ")}`);
     if (body.biggestChallenge) notes.push(`Biggest Challenge: ${body.biggestChallenge}`);
     if (body.hearAboutUs) notes.push(`How they heard about us: ${body.hearAboutUs}`);
     if (body.sourceUrl) notes.push(`Source URL: ${body.sourceUrl}`);
     if (body.message) notes.push(`Message: ${body.message}`);
+    if (body.primaryNeed) notes.push(`Primary Need: ${body.primaryNeed}`);
+    if (body.intent) notes.push(`Intent: ${body.intent}`);
 
     // Build tags
     const tags: string[] = ["odoo-showcase"];
+    if (leadSource) tags.push(`source:${leadSource.toLowerCase().replace(/\s+/g, "-")}`);
+    if (body.intent) tags.push(`intent:${String(body.intent).toLowerCase().replace(/\s+/g, "-")}`);
+    if (body.primaryNeed) tags.push(`need:${String(body.primaryNeed).toLowerCase().replace(/\s+/g, "-")}`);
     if (body.companySize) tags.push(`size:${body.companySize}`);
     if (body.biggestChallenge) tags.push(`challenge:${body.biggestChallenge.toLowerCase().replace(/\s+/g, "-")}`);
 
@@ -57,7 +72,7 @@ export async function POST(request: NextRequest) {
       body.phone || null,
       body.companyName || body.company || null,
       "new",
-      "odoo-showcase",
+      leadSource,
       notes.join("\n\n"),
       tags,
     ];

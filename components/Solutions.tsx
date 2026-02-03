@@ -99,8 +99,8 @@ export default function Solutions() {
   const handleModuleHover = (moduleId: string | null) => {
     setHoveredModule(moduleId);
     if (moduleId) {
-      const module = modules.find((m) => m.id === moduleId);
-      setActiveConnections(module?.connections || []);
+      const selectedModule = modules.find((m) => m.id === moduleId);
+      setActiveConnections(selectedModule?.connections || []);
     } else {
       setActiveConnections([]);
     }
@@ -140,10 +140,10 @@ export default function Solutions() {
             One System. Zero Data Silos.
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-            Start small, scale up. No "big bang" required.
+            Start small, scale up. No &quot;big bang&quot; required.
           </p>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Begin with Inventory and Sales. Add Manufacturing when you're ready. Grow at your pace.
+            Begin with Inventory and Sales. Add Manufacturing when you&apos;re ready. Grow at your pace.
           </p>
         </motion.div>
 

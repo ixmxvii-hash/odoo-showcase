@@ -76,7 +76,7 @@ export default function GeneralTestimonials() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Trusted by businesses across industries throughout Houston and beyond
+            Real feedback from Houston-area teams that implemented Odoo with ICIT
           </p>
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function GeneralTestimonials() {
               </div>
 
               <blockquote className="text-slate-700 text-lg leading-relaxed mb-6 relative z-10">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </blockquote>
 
               <div className="border-t border-slate-200 pt-4">
@@ -131,7 +131,7 @@ export default function GeneralTestimonials() {
           className="text-center mt-16"
         >
           <p className="text-slate-600 text-lg">
-            Join hundreds of businesses that have transformed their operations with Odoo
+            You do not have to figure out implementation alone. We guide every phase.
           </p>
         </motion.div>
       </div>

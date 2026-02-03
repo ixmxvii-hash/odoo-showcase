@@ -128,10 +128,13 @@ export default function Header() {
 
   // Close mobile menu on route change
   useEffect(() => {
-    setIsMobileMenuOpen(false);
-    setIsMobileIndustriesOpen(false);
-    setIsSearchOpen(false);
-    setSearchQuery("");
+    const frame = requestAnimationFrame(() => {
+      setIsMobileMenuOpen(false);
+      setIsMobileIndustriesOpen(false);
+      setIsSearchOpen(false);
+      setSearchQuery("");
+    });
+    return () => cancelAnimationFrame(frame);
   }, [pathname]);
 
   // Focus search input when opened
