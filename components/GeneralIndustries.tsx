@@ -10,6 +10,7 @@ import {
   Globe,
   Zap,
   ArrowRight,
+  Building2,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -140,6 +141,10 @@ export default function GeneralIndustries() {
           transition={{ duration: 0.6, ease: EASE }}
           className="text-center mb-16"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <Building2 className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Industry Expertise</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Industries We Serve
           </h2>
@@ -292,7 +297,7 @@ export default function GeneralIndustries() {
             href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
-            Book an Industry Rollout Call
+            Book a free Odoo consultation
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </motion.div>

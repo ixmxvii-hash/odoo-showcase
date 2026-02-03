@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { Card, CardHeader, CardContent } from "./ui/Card";
+import { AlertTriangle } from "lucide-react";
 
 const painPoints = [
   {
@@ -97,10 +98,13 @@ export default function GeneralPainPoints() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <AlertTriangle className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Common Challenges</span>
+          </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Is This What You Are Dealing With?
+            Is your business facing this?
           </h2>
-          <div className="w-24 h-1 bg-orange-500 mx-auto" />
         </motion.div>
 
         <motion.div
@@ -149,7 +153,7 @@ export default function GeneralPainPoints() {
             <CardContent className="py-8">
               <blockquote className="text-center">
                 <p className="text-2xl font-medium text-gray-900 mb-4">
-                  &quot;You do not need to choose between affordability and a successful Odoo implementation.&quot;
+                  &quot;A successful Odoo rollout connects your sales, inventory, and finance workflows into one automated system - with end-to-end support from ICIT.&quot;
                 </p>
                 <div className="w-16 h-1 bg-orange-500 mx-auto" />
               </blockquote>

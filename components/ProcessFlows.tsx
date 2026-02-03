@@ -563,22 +563,19 @@ export default function ProcessFlows() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Odoo Business Cycles{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-blue-600">
-              from Quote to Report
-            </span>
+            Streamline Workflows in Odoo
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how ICIT Solutions implements Odoo to transform your Quote to Cash, Procure to Pay, and Record to Report cycles from manual chaos to automated efficiency.
+            We implement practical sales, inventory, and finance workflows - including Quote to Cash, Procure to Pay, and Record to Report.
           </p>
         </motion.div>
 
         {/* Quote to Cash */}
         <ProcessDiagram
-          title="Quote to Cash"
-          subtitle="Q2C Revenue Cycle"
-          description="From customer quote to cash in the bank - ICIT streamlines your entire revenue cycle"
+          title="Sales Workflow"
+          subtitle="Quote to Cash Cycle"
+          description="From quote creation to customer payment with fewer manual handoffs."
           steps={orderToCashSteps}
           accentColor="orange"
           icon={DollarSign}
@@ -586,9 +583,9 @@ export default function ProcessFlows() {
 
         {/* Procure to Pay */}
         <ProcessDiagram
-          title="Procure to Pay"
-          subtitle="P2P Spend Cycle"
-          description="From purchase request to vendor payment - ICIT makes it easy"
+          title="Inventory & Purchasing"
+          subtitle="Procure to Pay Cycle"
+          description="From purchase request to supplier payment with tighter inventory control."
           steps={procureToPaySteps}
           accentColor="blue"
           icon={BarChart3}
@@ -596,9 +593,9 @@ export default function ProcessFlows() {
 
         {/* Record to Report */}
         <ProcessDiagram
-          title="Record to Report"
-          subtitle="R2R Financial Close"
-          description="Get real time insights - from transaction to financial statements"
+          title="Finance & Reporting"
+          subtitle="Record to Report Cycle"
+          description="From transaction posting to financial reports with faster close cycles."
           steps={recordToReportSteps}
           accentColor="green"
           icon={BookOpen}

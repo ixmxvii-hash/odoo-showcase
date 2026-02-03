@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BadgeDollarSign, ShieldCheck, Handshake, ArrowRight, CheckCircle2 } from "lucide-react";
+import { BadgeDollarSign, ShieldCheck, Handshake, ArrowRight, CheckCircle2, Receipt } from "lucide-react";
 import { Button } from "./ui/Button";
 import { trackEvent } from "@/lib/analytics";
 
@@ -24,9 +24,10 @@ export default function PricingOverview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold tracking-wide uppercase text-orange-600 mb-3">
-            Pricing
-          </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <Receipt className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Pricing</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Clear Pricing, Built for Real-World Rollouts
           </h2>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X, Minus } from "lucide-react";
+import { Check, X, Minus, Scale } from "lucide-react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 
@@ -15,7 +15,6 @@ interface ComparisonRow {
   criteria: string;
   odoo: ComparisonCell;
   netsuite: ComparisonCell;
-  sap: ComparisonCell;
   quickbooks: ComparisonCell;
 }
 
@@ -24,42 +23,36 @@ const comparisonData: ComparisonRow[] = [
     criteria: "Customization for Your Workflows",
     odoo: { value: "Tailored", status: "check" },
     netsuite: { value: "Limited", status: "minus" },
-    sap: { value: "Complex", status: "minus" },
     quickbooks: { value: "Limited", status: "minus" },
   },
   {
     criteria: "Local + On-Prem Support",
     odoo: { value: "Included", status: "check" },
     netsuite: { value: "No", status: "x" },
-    sap: { value: "Limited", status: "minus" },
     quickbooks: { value: "No", status: "x" },
   },
   {
     criteria: "Ongoing Support",
     odoo: { value: "Continuous", status: "check" },
     netsuite: { value: "No", status: "x" },
-    sap: { value: "Varies", status: "minus" },
     quickbooks: { value: "No", status: "x" },
   },
   {
-    criteria: "Implementation Cost Clarity",
+    criteria: "Implementation Affordability",
     odoo: { value: "Guaranteed Up Front", status: "check" },
     netsuite: { value: "Expensive", status: "x" },
-    sap: { value: "Expensive", status: "x" },
     quickbooks: { value: "Lower Entry Cost", status: "minus", note: "often needs add-ons" },
   },
   {
     criteria: "Training Included",
     odoo: { value: "Personalized", status: "check" },
     netsuite: { value: "Generic", status: "minus" },
-    sap: { value: "Generic", status: "minus" },
     quickbooks: { value: "Generic", status: "minus" },
   },
   {
     criteria: "Dedicated Odoo Expertise",
     odoo: { value: "Yes", status: "check" },
     netsuite: { value: "No", status: "x" },
-    sap: { value: "No", status: "x" },
     quickbooks: { value: "No", status: "x" },
   },
 ];
@@ -116,14 +109,15 @@ export default function Comparison() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-lg text-orange-600 font-semibold mb-2">
-            Benefits of Choosing ICIT
-          </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <Scale className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Benefits of Choosing ICIT</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Compare Your Implementation Options
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how ICIT stacks up against Odoo direct, other partners, and disconnected accounting stacks.
+            See how ICIT stacks up against Odoo direct and disconnected accounting stacks.
           </p>
         </motion.div>
 
@@ -159,16 +153,13 @@ export default function Comparison() {
           className="hidden lg:block bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200"
         >
           {/* Header Row */}
-          <div className="grid grid-cols-5 bg-gray-900 text-white sticky top-0 z-20">
+          <div className="grid grid-cols-4 bg-gray-900 text-white sticky top-0 z-20">
             <div className="p-6 font-bold text-lg border-r border-gray-700">Criteria</div>
             <div className="p-6 font-bold text-lg text-center bg-orange-600 border-r border-orange-700">
               ICIT
             </div>
             <div className="p-6 font-bold text-lg text-center border-r border-gray-700">
               Odoo Direct
-            </div>
-            <div className="p-6 font-bold text-lg text-center border-r border-gray-700">
-              Other Partners
             </div>
             <div className="p-6 font-bold text-lg text-center">QuickBooks + Fishbowl</div>
           </div>
@@ -181,7 +172,7 @@ export default function Comparison() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-              className={`grid grid-cols-5 border-b border-gray-200 last:border-b-0 ${
+              className={`grid grid-cols-4 border-b border-gray-200 last:border-b-0 ${
                 index % 2 === 0 ? "bg-gray-50" : "bg-white"
               }`}
             >
@@ -193,9 +184,6 @@ export default function Comparison() {
               </div>
               <div className="border-r border-gray-200">
                 <ComparisonCell cell={row.netsuite} />
-              </div>
-              <div className="border-r border-gray-200">
-                <ComparisonCell cell={row.sap} />
               </div>
               <div>
                 <ComparisonCell cell={row.quickbooks} />
@@ -237,13 +225,6 @@ export default function Comparison() {
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-medium">{row.netsuite.value}</span>
                     <StatusIcon status={row.netsuite.status} />
-                  </div>
-                </div>
-                <div className="p-4 flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">Other Partners</span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">{row.sap.value}</span>
-                    <StatusIcon status={row.sap.status} />
                   </div>
                 </div>
                 <div className="p-4 flex items-center justify-between">

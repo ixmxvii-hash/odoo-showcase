@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Users, Clock, Award, Headphones } from "lucide-react";
+import { ArrowRight, Users, Clock, Headphones, Workflow, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/Button";
 import { trackEvent } from "@/lib/analytics";
@@ -11,32 +11,24 @@ const easeOut = [0.16, 1, 0.3, 1] as const;
 const stats = [
   {
     icon: Clock,
-    value: "90 Days",
-    label: "Typical SMB go-live plan",
-  },
-  {
-    icon: Award,
-    value: "Odoo",
-    label: "Certified partner",
-  },
-  {
-    icon: Users,
-    value: "Texas",
-    label: "On-site teams",
+    title: "90 Day Rollout",
+    subtitle: "Typical SMB go-live",
   },
   {
     icon: Headphones,
-    value: "Support",
-    label: "Local & remote",
+    title: "Support Onsite & Remote",
+    subtitle: "Texas-based team",
   },
-] as const;
-
-const features = [
-  "Manage inventory",
-  "Automate sales workflow",
-  "Customize by industry",
-  "On-site local support",
-  "Training included",
+  {
+    icon: Workflow,
+    title: "End-to-End Implementation",
+    subtitle: "Discovery through go-live",
+  },
+  {
+    icon: GraduationCap,
+    title: "Training Included",
+    subtitle: "Adoption for your team",
+  },
 ] as const;
 
 export function GeneralHero() {
@@ -105,31 +97,9 @@ export function GeneralHero() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
-              Trusted Odoo partner for Houston businesses with local support and real results.
-              <br className="hidden sm:block" />
-              <span className="text-orange-400 font-medium">End-to-end implementation: migration, rollout, training, and ongoing support.</span>
+              Trusted Odoo partner for Houston businesses with local support and measurable results.
+              <span className="text-orange-400 font-medium"> We deliver end-to-end implementation, training, and ongoing support.</span>
             </p>
-          </motion.div>
-
-          {/* Feature Pills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: easeOut }}
-            className="flex flex-wrap items-center justify-center gap-3"
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1, ease: easeOut }}
-                className="flex items-center gap-2 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-full backdrop-blur-sm"
-              >
-                <CheckCircle className="w-4 h-4 text-orange-400" />
-                <span className="text-sm font-medium text-slate-300">{feature}</span>
-              </motion.div>
-            ))}
           </motion.div>
 
           {/* CTA Buttons */}
@@ -235,7 +205,7 @@ export function GeneralHero() {
               const Icon = stat.icon;
               return (
                 <motion.div
-                  key={stat.label}
+                  key={stat.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 + index * 0.1, ease: easeOut }}
@@ -246,8 +216,8 @@ export function GeneralHero() {
                       <div className="p-3 bg-orange-500/10 rounded-xl group-hover:bg-orange-500/20 transition-colors">
                         <Icon className="w-6 h-6 text-orange-400" />
                       </div>
-                      <div className="text-3xl font-bold text-white">{stat.value}</div>
-                      <div className="text-sm text-slate-400">{stat.label}</div>
+                      <div className="text-lg sm:text-xl font-bold text-white leading-tight">{stat.title}</div>
+                      <div className="text-xs text-slate-400">{stat.subtitle}</div>
                     </div>
                   </div>
                 </motion.div>

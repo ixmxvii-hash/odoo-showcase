@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ClipboardCheck, Search, Layers, GraduationCap, Rocket, ArrowRight } from "lucide-react";
+import { ClipboardCheck, Search, Layers, GraduationCap, Rocket, ArrowRight, Route } from "lucide-react";
 import { Button } from "./ui/Button";
 
 const approachSteps = [
@@ -49,9 +49,10 @@ export default function OurApproach() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold tracking-wide uppercase text-orange-600 mb-3">
-            Our Approach
-          </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <Route className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Our Approach</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             A Clear Odoo Implementation Plan
           </h2>
