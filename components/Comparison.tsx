@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X, Minus } from "lucide-react";
+import { Check, X, Minus, Scale } from "lucide-react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 
@@ -109,9 +109,10 @@ export default function Comparison() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-lg text-orange-600 font-semibold mb-2">
-            Benefits of Choosing ICIT
-          </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <Scale className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Benefits of Choosing ICIT</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Compare Your Implementation Options
           </h2>

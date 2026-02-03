@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Star, Quote } from "lucide-react"
+import { Star, Quote, MessageSquare } from "lucide-react"
 
 // Real testimonials from icitsolutions.com
 const testimonials = [
@@ -72,6 +72,10 @@ export default function GeneralTestimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <MessageSquare className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Client Success Stories</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             What Our Clients Say
           </h2>

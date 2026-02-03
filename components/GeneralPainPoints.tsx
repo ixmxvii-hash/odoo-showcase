@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { Card, CardHeader, CardContent } from "./ui/Card";
+import { AlertTriangle } from "lucide-react";
 
 const painPoints = [
   {
@@ -97,10 +98,13 @@ export default function GeneralPainPoints() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <AlertTriangle className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Common Challenges</span>
+          </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Is your business facing this?
           </h2>
-          <div className="w-24 h-1 bg-orange-500 mx-auto" />
         </motion.div>
 
         <motion.div

@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle2, Loader2, CalendarCheck } from "lucide-react";
 import { Button } from "./ui/Button";
 import { trackEvent } from "@/lib/analytics";
 
@@ -140,9 +140,10 @@ export default function HomeLeadForm() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <p className="text-sm font-semibold tracking-wide uppercase text-orange-600 mb-3">
-            Free Consultation
-          </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
+            <CalendarCheck className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-medium text-orange-700">Free Consultation</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Tell Us What You Need Most
           </h2>
