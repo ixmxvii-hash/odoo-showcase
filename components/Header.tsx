@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ChevronDown, Factory, Beaker, Zap, UtensilsCrossed, Settings, Truck, ShoppingBag, Briefcase, Search } from "lucide-react";
 import { Button } from "./ui/Button";
@@ -197,16 +198,16 @@ export default function Header() {
         <nav className="w-full px-4 sm:px-6 py-4">
           <div className="relative flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group z-10">
-              <div className="grid grid-cols-2 gap-0.5">
-                <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
-                <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
-                <div className="w-3 h-3 bg-orange-500 rounded-sm"></div>
-                <div className="w-3 h-3 bg-slate-600 rounded-sm"></div>
-              </div>
-              <span className="text-white font-bold text-xl tracking-tight group-hover:text-orange-400 transition-colors">
-                ICIT
-              </span>
+            <Link href="/" className="flex items-center group z-10">
+              <Image
+                src="/icit-logo.svg"
+                alt="ICIT Solutions"
+                width={340}
+                height={210}
+                priority
+                className="h-10 w-auto sm:h-11 transition-transform duration-200 group-hover:scale-[1.02]"
+              />
+              <span className="sr-only">ICIT Solutions</span>
             </Link>
 
             {/* Desktop Navigation - Perfectly Centered Pills */}
