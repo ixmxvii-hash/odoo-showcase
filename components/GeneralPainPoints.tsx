@@ -98,7 +98,7 @@ export default function GeneralPainPoints() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Is This What You Are Dealing With?
+            Is your business facing this?
           </h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto" />
         </motion.div>
@@ -149,7 +149,7 @@ export default function GeneralPainPoints() {
             <CardContent className="py-8">
               <blockquote className="text-center">
                 <p className="text-2xl font-medium text-gray-900 mb-4">
-                  &quot;You do not need to choose between affordability and a successful Odoo implementation.&quot;
+                  &quot;A successful Odoo rollout connects your sales, inventory, and finance workflows into one automated system - with end-to-end support from ICIT.&quot;
                 </p>
                 <div className="w-16 h-1 bg-orange-500 mx-auto" />
               </blockquote>

@@ -292,7 +292,7 @@ export default function GeneralIndustries() {
             href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
-            Book an Industry Rollout Call
+            Book a free Odoo consultation
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </motion.div>
