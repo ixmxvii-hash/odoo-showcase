@@ -200,10 +200,10 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center group z-10">
               <Image
-                src="/icit-logo.svg"
+                src="/icit-logo.png"
                 alt="ICIT Solutions"
-                width={340}
-                height={210}
+                width={1536}
+                height={1024}
                 priority
                 className="h-10 w-auto sm:h-11 transition-transform duration-200 group-hover:scale-[1.02]"
               />
