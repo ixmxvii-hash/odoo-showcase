@@ -363,7 +363,6 @@ Data audit       Custom workflows      UAT validation      30-day support
 ### ICIT Solutions
 
 **Phone:** (832) 290-7185
-**Email:** info@icitsolutions.com
 **Web:** icitsolutions.com
 
 ### Locations:

@@ -170,13 +170,13 @@ export default function HomeCaseStudyGate() {
       <AnimatePresence>
         {showNotification && !isDismissed && !isFormOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 100, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            exit={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 80 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed bottom-6 right-6 z-40 max-w-sm"
+            className="fixed bottom-0 inset-x-0 md:bottom-6 md:right-6 md:left-auto z-40 md:max-w-sm"
           >
-            <div className="bg-slate-900 rounded-2xl shadow-2xl border border-slate-700 overflow-hidden">
+            <div className="bg-slate-900 md:rounded-2xl rounded-t-2xl shadow-2xl border border-slate-700 overflow-hidden">
               {/* Close button */}
               <button
                 onClick={dismissNotification}
@@ -186,7 +186,7 @@ export default function HomeCaseStudyGate() {
                 <X className="w-4 h-4" />
               </button>
 
-              <div className="p-5">
+              <div className="p-4 md:p-5">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-400/30 mb-3">
                   <FileText className="w-3 h-3 text-orange-300" />
@@ -194,10 +194,10 @@ export default function HomeCaseStudyGate() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-white mb-2 pr-6">
+                <h3 className="text-base md:text-lg font-bold text-white mb-1.5 md:mb-2 pr-6">
                   See Odoo in Action
                 </h3>
-                <p className="text-sm text-slate-300 mb-4">
+                <p className="text-sm text-slate-300 mb-3 md:mb-4">
                   Learn how ICIT helped a Lagos restaurant chain achieve 30% revenue growth with Odoo.
                 </p>
 
@@ -210,6 +210,9 @@ export default function HomeCaseStudyGate() {
                   <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                 </Button>
               </div>
+
+              {/* Safe area spacer for phones with home indicator */}
+              <div className="h-[env(safe-area-inset-bottom,0px)] md:hidden" />
             </div>
           </motion.div>
         )}
@@ -222,71 +225,77 @@ export default function HomeCaseStudyGate() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end md:items-center justify-center md:p-4"
             onClick={closeForm}
           >
             <motion.div
-              initial={{ scale: 0.95, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-xl rounded-2xl bg-white shadow-2xl p-6 md:p-8"
+              className="w-full md:max-w-xl rounded-t-2xl md:rounded-2xl bg-white shadow-2xl max-h-[90dvh] overflow-y-auto"
             >
-              <div className="flex items-start justify-between gap-4 mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900">Unlock the Case Study</h3>
-                  <p className="text-slate-600 mt-1">
-                    Fill out this short form and we will take you straight to the download page.
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={closeForm}
-                  className="text-slate-500 hover:text-slate-700"
-                  aria-label="Close"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+              {/* Drag handle on mobile */}
+              <div className="flex justify-center pt-3 pb-1 md:hidden">
+                <div className="w-10 h-1 bg-slate-300 rounded-full" />
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="case-study-name" className="block text-sm font-semibold text-slate-900 mb-1.5">
-                    Name *
-                  </label>
-                  <input
-                    id="case-study-name"
-                    type="text"
-                    value={form.name}
-                    onChange={(e) => {
-                      setForm((prev) => ({ ...prev, name: e.target.value }));
-                      if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
-                    }}
-                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900"
-                    placeholder="Jane Doe"
-                  />
-                  {errors.name && <p className="text-sm text-red-600 mt-1">{errors.name}</p>}
+              <div className="p-5 md:p-8">
+                <div className="flex items-start justify-between gap-4 mb-5 md:mb-6">
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900">Unlock the Case Study</h3>
+                    <p className="text-slate-600 mt-1 text-sm md:text-base">
+                      Fill out this short form and we will take you straight to the download page.
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={closeForm}
+                    className="text-slate-500 hover:text-slate-700 flex-shrink-0"
+                    aria-label="Close"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
 
-                <div>
-                  <label htmlFor="case-study-company" className="block text-sm font-semibold text-slate-900 mb-1.5">
-                    Company Name *
-                  </label>
-                  <input
-                    id="case-study-company"
-                    type="text"
-                    value={form.company}
-                    onChange={(e) => {
-                      setForm((prev) => ({ ...prev, company: e.target.value }));
-                      if (errors.company) setErrors((prev) => ({ ...prev, company: undefined }));
-                    }}
-                    className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900"
-                    placeholder="Acme Restaurants"
-                  />
-                  {errors.company && <p className="text-sm text-red-600 mt-1">{errors.company}</p>}
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+                  <div>
+                    <label htmlFor="case-study-name" className="block text-sm font-semibold text-slate-900 mb-1.5">
+                      Name *
+                    </label>
+                    <input
+                      id="case-study-name"
+                      type="text"
+                      value={form.name}
+                      onChange={(e) => {
+                        setForm((prev) => ({ ...prev, name: e.target.value }));
+                        if (errors.name) setErrors((prev) => ({ ...prev, name: undefined }));
+                      }}
+                      className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 md:py-3 text-slate-900 text-base"
+                      placeholder="Jane Doe"
+                    />
+                    {errors.name && <p className="text-sm text-red-600 mt-1">{errors.name}</p>}
+                  </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="case-study-company" className="block text-sm font-semibold text-slate-900 mb-1.5">
+                      Company Name *
+                    </label>
+                    <input
+                      id="case-study-company"
+                      type="text"
+                      value={form.company}
+                      onChange={(e) => {
+                        setForm((prev) => ({ ...prev, company: e.target.value }));
+                        if (errors.company) setErrors((prev) => ({ ...prev, company: undefined }));
+                      }}
+                      className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 md:py-3 text-slate-900 text-base"
+                      placeholder="Acme Restaurants"
+                    />
+                    {errors.company && <p className="text-sm text-red-600 mt-1">{errors.company}</p>}
+                  </div>
+
                   <div>
                     <label htmlFor="case-study-email" className="block text-sm font-semibold text-slate-900 mb-1.5">
                       Email *
@@ -299,7 +308,7 @@ export default function HomeCaseStudyGate() {
                         setForm((prev) => ({ ...prev, email: e.target.value }));
                         if (errors.email) setErrors((prev) => ({ ...prev, email: undefined }));
                       }}
-                      className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900"
+                      className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 md:py-3 text-slate-900 text-base"
                       placeholder="you@company.com"
                     />
                     {errors.email && <p className="text-sm text-red-600 mt-1">{errors.email}</p>}
@@ -317,30 +326,33 @@ export default function HomeCaseStudyGate() {
                         setForm((prev) => ({ ...prev, phone: formatPhoneNumber(e.target.value) }));
                         if (errors.phone) setErrors((prev) => ({ ...prev, phone: undefined }));
                       }}
-                      className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900"
+                      className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 md:py-3 text-slate-900 text-base"
                       placeholder="(832) 555-0123"
                       maxLength={14}
                     />
                     {errors.phone && <p className="text-sm text-red-600 mt-1">{errors.phone}</p>}
                   </div>
-                </div>
 
-                {submitError && <p className="text-sm text-red-600">{submitError}</p>}
+                  {submitError && <p className="text-sm text-red-600">{submitError}</p>}
 
-                <Button type="submit" disabled={isSubmitting} className="w-full mt-2">
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      Unlocking...
-                    </>
-                  ) : (
-                    <>
-                      Get the Case Study
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </>
-                  )}
-                </Button>
-              </form>
+                  <Button type="submit" disabled={isSubmitting} className="w-full mt-2">
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Unlocking...
+                      </>
+                    ) : (
+                      <>
+                        Get the Case Study
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </div>
+
+              {/* Safe area spacer for phones with home indicator */}
+              <div className="h-[env(safe-area-inset-bottom,0px)] md:hidden" />
             </motion.div>
           </motion.div>
         )}

@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Linkedin, Facebook } from "lucide-react";
+import { MapPin, Phone, Linkedin, Facebook } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -34,15 +34,6 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <a
-                  href="mailto:info@icitsolutions.com"
-                  className="text-sm hover:text-orange-500 transition-colors"
-                >
-                  info@icitsolutions.com
-                </a>
-              </div>
             </div>
 
             <div className="flex items-center gap-4 mt-6">

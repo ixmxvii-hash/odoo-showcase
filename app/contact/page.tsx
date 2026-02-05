@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import {
   Phone,
-  Mail,
   MapPin,
   Clock,
   ChevronRight,
@@ -143,21 +142,6 @@ export default function ContactPage() {
                     <ChevronRight className="ml-auto text-slate-300 group-hover:text-orange-600 transition-transform group-hover:translate-x-2" size={32} />
                   </motion.a>
 
-                  {/* EMAIL CARD */}
-                  <motion.a
-                    variants={fadeIn}
-                    href="mailto:info@icitsolutions.com"
-                    className="group bg-white p-8 rounded-[2rem] border-2 border-slate-100 shadow-sm flex items-center gap-8 hover:border-orange-500 transition-all duration-300"
-                  >
-                    <div className="p-5 bg-slate-50 rounded-2xl text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
-                      <Mail size={36} />
-                    </div>
-                    <div>
-                      <p className="text-slate-500 font-bold uppercase tracking-wider text-sm mb-1">Email Support</p>
-                      <h4 className="text-2xl font-black text-slate-900">info@icitsolutions.com</h4>
-                    </div>
-                    <ChevronRight className="ml-auto text-slate-300 group-hover:text-orange-600 transition-transform group-hover:translate-x-2" size={32} />
-                  </motion.a>
 
                   {/* ADDRESS CARD */}
                   <motion.div
