@@ -5,6 +5,7 @@ import ProcessFlows from "@/components/ProcessFlows";
 import GeneralSolutions from "@/components/GeneralSolutions";
 import OurApproach from "@/components/OurApproach";
 import Comparison from "@/components/Comparison";
+import HomeCaseStudyGate from "@/components/HomeCaseStudyGate";
 import HomeLeadForm from "@/components/HomeLeadForm";
 import PricingOverview from "@/components/PricingOverview";
 import GeneralTestimonials from "@/components/GeneralTestimonials";
@@ -28,6 +29,7 @@ export default function Home() {
       <ProcessFlows />
       <OurApproach />
       <Comparison />
+      <HomeCaseStudyGate />
       <HomeLeadForm />
       <PricingOverview />
 

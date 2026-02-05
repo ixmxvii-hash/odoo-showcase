@@ -59,6 +59,9 @@ export default function ContactPage() {
                 our local Houston team is here to guide your digital transformation
                 with a handshake and a plan.
               </p>
+              <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl mt-6">
+                We provide Texas-based hybrid support: on-site when you need hands-on help, remote when you need speed.
+              </p>
             </motion.div>
           </div>
         </section>

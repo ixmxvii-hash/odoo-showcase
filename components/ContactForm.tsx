@@ -126,26 +126,6 @@ export default function ContactForm() {
       newErrors.phone = "Please enter a valid 10-digit phone number";
     }
 
-    // Company Size validation
-    if (!formData.companySize) {
-      newErrors.companySize = "Please select company size";
-    }
-
-    // Current Systems validation
-    if (formData.currentSystems.length === 0) {
-      newErrors.currentSystems = "Please select at least one system";
-    }
-
-    // Biggest Challenge validation
-    if (!formData.biggestChallenge) {
-      newErrors.biggestChallenge = "Please select your biggest challenge";
-    }
-
-    // Hear About Us validation
-    if (!formData.hearAboutUs) {
-      newErrors.hearAboutUs = "Please tell us how you heard about us";
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -428,14 +408,13 @@ export default function ContactForm() {
             htmlFor="companySize"
             className="block text-sm font-semibold text-gray-900 mb-2"
           >
-            Company Size <span className="text-orange-500">*</span>
+            Company Size
           </label>
           <select
             id="companySize"
             name="companySize"
             value={formData.companySize}
             onChange={handleInputChange}
-            aria-required="true"
             className={`w-full px-4 py-3 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 ${
               errors.companySize
                 ? "border-red-500 focus:ring-red-500"
@@ -465,7 +444,7 @@ export default function ContactForm() {
         {/* Current Systems */}
         <div>
           <label className="block text-sm font-semibold text-gray-900 mb-3">
-            Current Systems <span className="text-orange-500">*</span>
+            Current Systems
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {[
@@ -510,14 +489,13 @@ export default function ContactForm() {
             htmlFor="biggestChallenge"
             className="block text-sm font-semibold text-gray-900 mb-2"
           >
-            Biggest Challenge <span className="text-orange-500">*</span>
+            Biggest Challenge
           </label>
           <select
             id="biggestChallenge"
             name="biggestChallenge"
             value={formData.biggestChallenge}
             onChange={handleInputChange}
-            aria-required="true"
             className={`w-full px-4 py-3 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 ${
               errors.biggestChallenge
                 ? "border-red-500 focus:ring-red-500"
@@ -554,14 +532,13 @@ export default function ContactForm() {
             htmlFor="hearAboutUs"
             className="block text-sm font-semibold text-gray-900 mb-2"
           >
-            How did you hear about us? <span className="text-orange-500">*</span>
+            How did you hear about us?
           </label>
           <select
             id="hearAboutUs"
             name="hearAboutUs"
             value={formData.hearAboutUs}
             onChange={handleInputChange}
-            aria-required="true"
             className={`w-full px-4 py-3 rounded-lg border bg-white text-gray-900 placeholder:text-gray-400 ${
               errors.hearAboutUs
                 ? "border-red-500 focus:ring-red-500"

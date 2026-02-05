@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Chain Case Study | ICIT Solutions</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.75in 1.25in;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Carlito', 'Segoe UI', -apple-system, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        /* Page 1 */
+        .page-1 {
+            page-break-after: always;
+        }
+
+        /* Cover Header */
+        .cover-header {
+            background: #1e293b;
+            margin: 0 -60px;
+            padding: 45px 40px 40px 40px;
+            position: relative;
+        }
+
+        .cover-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #33A9E0, #FF6B1A);
+        }
+
+        .cover-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 35px;
+        }
+
+        .cover-badge {
+            background: #FF6B1A;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 6px 14px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .cover-logo {
+            width: 85px;
+        }
+
+        .cover-title {
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.15;
+            max-width: 85%;
+        }
+
+        /* Overview Table */
+        .overview-section {
+            margin-top: 36px;
+            margin-bottom: 40px;
+        }
+
+        .overview-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10.5pt;
+        }
+
+        .overview-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+
+        .overview-table td:first-child {
+            width: 180px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .overview-table td:last-child {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .overview-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 16pt;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #33A9E0;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #33A9E0;
+            margin-bottom: 10px;
+        }
+
+        /* Body Text */
+        p {
+            margin-bottom: 12px;
+            color: #374151;
+            text-align: justify;
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        /* Challenge List */
+        .challenge-list {
+            margin: 16px 0;
+        }
+
+        .challenge-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding: 12px 14px;
+            background: #f8fafc;
+            border-left: 3px solid #FF6B1A;
+        }
+
+        .challenge-item strong {
+            color: #1e293b;
+            min-width: 160px;
+        }
+
+        .challenge-item span {
+            color: #475569;
+        }
+
+        /* Phase List */
+        .phase-list {
+            margin: 16px 0;
+        }
+
+        .phase-item {
+            margin-bottom: 18px;
+        }
+
+        .phase-item h3 {
+            margin-bottom: 8px;
+        }
+
+        .phase-item ul {
+            margin-left: 20px;
+            color: #475569;
+        }
+
+        .phase-item li {
+            margin-bottom: 4px;
+        }
+
+        /* Results List */
+        .results-list {
+            margin: 16px 0;
+            columns: 2;
+            column-gap: 24px;
+        }
+
+        .results-list li {
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+            break-inside: avoid;
+            color: #374151;
+        }
+
+        .results-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #33A9E0;
+            font-weight: 700;
+        }
+
+        /* Approach List */
+        .approach-list {
+            list-style: none;
+            margin: 14px 0;
+        }
+
+        .approach-list li {
+            padding: 8px 0;
+            padding-left: 22px;
+            position: relative;
+            border-bottom: 1px solid #f1f5f9;
+            color: #374151;
+        }
+
+        .approach-list li:last-child {
+            border-bottom: none;
+        }
+
+        .approach-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: #FF6B1A;
+            font-size: 16pt;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Tech Note */
+        .tech-note {
+            background: #f0fdf4;
+            border-left: 3px solid #22c55e;
+            padding: 12px 16px;
+            margin: 16px 0;
+            font-size: 10pt;
+            color: #166534;
+        }
+
+        /* Conclusion Box */
+        .conclusion-box {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: #ffffff;
+            padding: 28px 40px;
+            margin: 36px -60px 0 -60px;
+        }
+
+        .conclusion-box h2 {
+            color: #ffffff;
+            border-bottom-color: #FF6B1A;
+            margin-bottom: 12px;
+        }
+
+        .conclusion-box p {
+            color: #e2e8f0;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 44px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer h4 {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .footer p {
+            font-size: 9.5pt;
+            color: #64748b;
+            max-width: 420px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact {
+            font-size: 10pt;
+            color: #33A9E0;
+            font-weight: 600;
+        }
+
+        .footer-contact span {
+            margin-right: 20px;
+        }
+
+        .footer-logo {
+            width: 65px;
+        }
+
+        /* Mobile */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 0 20px;
+            }
+
+            .cover-header {
+                margin: 0 -20px;
+                padding: 30px 20px;
+            }
+
+            .cover-title {
+                font-size: 22px;
+                max-width: 100%;
+            }
+
+            .cover-logo {
+                width: 60px;
+            }
+
+            .overview-table td:first-child {
+                width: 120px;
+            }
+
+            .challenge-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .challenge-item strong {
+                min-width: auto;
+            }
+
+            .results-list {
+                columns: 1;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .conclusion-box {
+                margin: 36px -20px 0 -20px;
+                padding: 24px 20px;
+            }
+        }
+
+        @media print {
+            .page-1 {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page-1">
+        <header class="cover-header">
+            <div class="cover-top">
+                <div class="cover-badge">Case Study</div>
+                <img class="cover-logo" src="7211E43C-4E53-467A-B240-229C5B920B79.PNG" alt="ICIT Solutions">
+            </div>
+            <h1 class="cover-title">Restaurant Chain Accelerates Growth With Odoo ERP And ICIT</h1>
+        </header>
+
+        <div class="overview-section">
+            <table class="overview-table">
+                <tr>
+                    <td>Company</td>
+                    <td>Multi-Location Restaurant Chain</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Lagos, Nigeria</td>
+                </tr>
+                <tr>
+                    <td>Industry</td>
+                    <td>Food Service / Restaurant Operations</td>
+                </tr>
+                <tr>
+                    <td>Employees</td>
+                    <td>700</td>
+                </tr>
+                <tr>
+                    <td>Implementation Partner</td>
+                    <td>ICIT Solutions</td>
+                </tr>
+                <tr>
+                    <td>Apps Implemented</td>
+                    <td>Inventory, Accounting, Point of Sale, Manufacturing (MRP), eCommerce</td>
+                </tr>
+            </table>
+        </div>
+
+        <section class="section">
+            <h2>Introduction: A Growing Restaurant Chain at a Crossroads</h2>
+            <p>This fast-growing restaurant chain operates multiple locations across Lagos, Nigeria. Known for delivering quality food and exceptional customer service, the company built a strong brand presence throughout the region. As demand increased and new locations opened, their operations quickly outgrew the patchwork of spreadsheets and disconnected systems they relied on.</p>
+            <p>With ambitious plans to expand across West Africa, the leadership team knew they needed a unified system that could scale with their growth and provide real-time visibility across all locations.</p>
+        </section>
+
+        <section class="section">
+            <h2>The Challenge: Disconnected Systems Holding Back Growth</h2>
+            <p>The restaurant chain's operations were managed through a fragmented mix of Excel spreadsheets, standalone POS systems, and separate accounting software. Each restaurant location ran different applications that didn't communicate with one another, creating major operational blind spots:</p>
+
+            <div class="challenge-list">
+                <div class="challenge-item">
+                    <strong>Inventory chaos</strong>
+                    <span>Tracking inventory across multiple locations via spreadsheets led to stock discrepancies and significant losses</span>
+                </div>
+                <div class="challenge-item">
+                    <strong>No financial visibility</strong>
+                    <span>The POS system didn't integrate with accounting, making financial reporting slow and error-prone</span>
+                </div>
+                <div class="challenge-item">
+                    <strong>Vendor management gaps</strong>
+                    <span>No centralized way to track vendor deliveries or manage payment schedules</span>
+                </div>
+                <div class="challenge-item">
+                    <strong>Operational bottlenecks</strong>
+                    <span>Leadership lacked real-time data to make informed decisions about purchasing, staffing, or expansion</span>
+                </div>
+            </div>
+
+            <p>These inefficiencies weren't just frustrating–they were costing money and preventing the company from scaling confidently into new markets.</p>
+        </section>
+    </div>
+
+    <!-- Page 2 -->
+    <section class="section">
+        <h2>The Solution: A Phased Odoo Implementation</h2>
+        <p>Rather than disrupting operations with a complete system overhaul, ICIT Solutions recommended a phased implementation approach that would allow the restaurant chain to transition gradually while maintaining business continuity.</p>
+
+        <div class="phase-list">
+            <div class="phase-item">
+                <h3>Phase 1: Financial Foundation</h3>
+                <ul>
+                    <li>Migrated from Excel to Odoo for centralized inventory management</li>
+                    <li>Implemented Odoo Accounting across all restaurant locations</li>
+                    <li>Established a single source of truth for financials and stock levels</li>
+                </ul>
+            </div>
+            <div class="phase-item">
+                <h3>Phase 2: Integration & Production</h3>
+                <ul>
+                    <li>Integrated existing POS system with Odoo to sync daily transactions automatically</li>
+                    <li>Deployed Odoo Manufacturing (MRP) module to manage food production and recipes</li>
+                    <li>Enabled real-time reporting across inventory, sales, and accounting</li>
+                </ul>
+            </div>
+            <div class="phase-item">
+                <h3>Phase 3: Complete Platform Unification</h3>
+                <ul>
+                    <li>Retired legacy POS system and migrated to Odoo Point of Sale</li>
+                    <li>Launched Odoo eCommerce for online ordering</li>
+                    <li>Achieved full operational integration across all locations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tech-note">
+            <strong>Technical Infrastructure:</strong> As a Microsoft partner, ICIT Solutions provided additional value by setting up a dedicated Azure cloud environment to host Odoo, giving the client full autonomy and control over their infrastructure.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Results: Operational Excellence and Accelerated Growth</h2>
+        <p>Since going live with Odoo, this restaurant chain has transformed from a regionally fragmented operation into a unified, data-driven business positioned for expansion.</p>
+
+        <ul class="results-list">
+            <li><strong>30% revenue increase</strong> driven by improved inventory efficiency and reduced waste</li>
+            <li>Centralized management of inventory, sales, and accounting across all locations</li>
+            <li>Online ordering capability launched without adding headcount</li>
+            <li>Real-time visibility into operations enabling faster, smarter decisions</li>
+            <li>Vendor accountability with full tracking of deliveries and payment schedules</li>
+            <li>Expansion-ready platform supporting growth across West Africa</li>
+        </ul>
+
+        <p>The company now operates with significantly less overhead while serving more customers across more channels. The team can do more with less, and leadership has the confidence and data they need to open new locations throughout the region.</p>
+    </section>
+
+    <section class="section">
+        <h2>The ICIT Solutions Approach: Partnership Beyond Implementation</h2>
+        <p>ICIT Solutions didn't just implement software–we became a strategic technology partner for this client's growth journey.</p>
+
+        <ul class="approach-list">
+            <li>Phased implementation strategy to minimize disruption</li>
+            <li>Ongoing post-implementation support to ensure long-term success</li>
+            <li>Cloud infrastructure management through Azure hosting for full data control</li>
+            <li>Custom configuration tailored to restaurant operations and Nigerian business requirements</li>
+            <li>Training and knowledge transfer to build internal capability</li>
+        </ul>
+
+        <p>By combining Odoo expertise with Microsoft partnership capabilities, ICIT Solutions delivered a complete technology ecosystem that supports operations today and scales for tomorrow.</p>
+    </section>
+
+    <div class="conclusion-box">
+        <h2>Conclusion: The Right System Unlocks Growth</h2>
+        <p>This transformation demonstrates how the right ERP system–implemented thoughtfully by the right partner–can turn operational chaos into competitive advantage. With Odoo as their operational backbone, this Lagos-based restaurant chain is now positioned to scale confidently across West Africa while maintaining the excellence that built their reputation.</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>About ICIT Solutions</h4>
+                <p>ICIT Solutions is a Houston-based digital transformation partner specializing in Odoo ERP implementation, cybersecurity and cloud infrastructure services. As a certified Odoo partner, we help businesses across industries streamline operations, eliminate inefficiencies, and scale smarter. From restaurants to manufacturing, we deliver tailored solutions that drive real business results.</p>
+                <div class="footer-contact">
+                    <span>odoo.icitsolutions.com</span>
+                    <span>(832) 290-7185</span>
+                </div>
+            </div>
+            <img class="footer-logo" src="7211E43C-4E53-467A-B240-229C5B920B79.PNG" alt="ICIT Solutions">
+        </div>
+    </footer>
+</body>
+</html>

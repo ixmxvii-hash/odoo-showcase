@@ -84,7 +84,7 @@ export default function PricingOverview() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {includedItems.map((item) => (
               <div key={item} className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                 <p className="text-slate-700">{item}</p>
               </div>
             ))}

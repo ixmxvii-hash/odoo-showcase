@@ -48,7 +48,7 @@ const getFeatures = (cityName: string) => [
   {
     icon: MapPin,
     title: `ICIT Solutions - ${cityName}-Based Team`,
-    description: "Not a 1-800 number. We're in your time zone, in your city.",
+    description: "Texas-based support with hybrid flexibility. Local presence, remote capability.",
   },
   {
     icon: Wrench,
