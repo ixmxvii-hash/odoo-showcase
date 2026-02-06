@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Building2,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const EASE = [0.6, 0.05, 0.01, 0.9] as const;
@@ -26,6 +27,7 @@ interface Industry {
   gradient: string;
   iconBg: string;
   iconColor: string;
+  image: string;
 }
 
 const industries: Industry[] = [
@@ -44,22 +46,7 @@ const industries: Industry[] = [
     gradient: "from-blue-500 to-blue-600",
     iconBg: "bg-blue-50",
     iconColor: "text-blue-600",
-  },
-  {
-    id: "energy",
-    title: "Energy Services",
-    icon: Zap,
-    description: "Oilfield equipment and field service operations",
-    features: [
-      "Mobile timesheet entry",
-      "Real-time project costing",
-      "Field service integration",
-      "Serialized equipment tracking",
-    ],
-    link: "/energy-services",
-    gradient: "from-orange-500 to-orange-600",
-    iconBg: "bg-orange-50",
-    iconColor: "text-orange-600",
+    image: "/images/industry-manufacturing.png",
   },
   {
     id: "food",
@@ -76,6 +63,24 @@ const industries: Industry[] = [
     gradient: "from-purple-500 to-purple-600",
     iconBg: "bg-purple-50",
     iconColor: "text-purple-600",
+    image: "/images/industry-food.png",
+  },
+  {
+    id: "energy",
+    title: "Energy Services",
+    icon: Zap,
+    description: "Oilfield equipment and field service operations",
+    features: [
+      "Mobile timesheet entry",
+      "Real-time project costing",
+      "Field service integration",
+      "Serialized equipment tracking",
+    ],
+    link: "/energy-services",
+    gradient: "from-orange-500 to-orange-600",
+    iconBg: "bg-orange-50",
+    iconColor: "text-orange-600",
+    image: "/images/industry-energy.png",
   },
   {
     id: "distribution",
@@ -92,22 +97,7 @@ const industries: Industry[] = [
     gradient: "from-green-500 to-green-600",
     iconBg: "bg-green-50",
     iconColor: "text-green-600",
-  },
-  {
-    id: "professional",
-    title: "Professional Services",
-    icon: Briefcase,
-    description: "Consulting, agencies, and business services",
-    features: [
-      "Project profitability tracking",
-      "Time & expense management",
-      "Resource scheduling",
-      "Automated billing",
-    ],
-    link: "/professional-services",
-    gradient: "from-cyan-500 to-cyan-600",
-    iconBg: "bg-cyan-50",
-    iconColor: "text-cyan-600",
+    image: "/images/industry-distribution.png",
   },
   {
     id: "retail",
@@ -124,6 +114,24 @@ const industries: Industry[] = [
     gradient: "from-pink-500 to-pink-600",
     iconBg: "bg-pink-50",
     iconColor: "text-pink-600",
+    image: "/images/industry-retail.png",
+  },
+  {
+    id: "professional",
+    title: "Professional Services",
+    icon: Briefcase,
+    description: "Consulting, agencies, and business services",
+    features: [
+      "Project profitability tracking",
+      "Time & expense management",
+      "Resource scheduling",
+      "Automated billing",
+    ],
+    link: "/professional-services",
+    gradient: "from-cyan-500 to-cyan-600",
+    iconBg: "bg-cyan-50",
+    iconColor: "text-cyan-600",
+    image: "/images/industry-professional.png",
   },
 ];
 
@@ -180,17 +188,16 @@ export default function GeneralIndustries() {
                     whileHover={{ y: -8 }}
                     transition={{ duration: 0.3, ease: EASE }}
                   >
-                    {/* Decorative top gradient bar */}
-                    <div className={`h-1.5 bg-gradient-to-r ${industry.gradient}`} />
-
-                    {/* Background Pattern */}
-                    <div className="absolute top-0 right-0 w-48 h-48 opacity-[0.03] pointer-events-none">
-                      <svg viewBox="0 0 100 100" className="w-full h-full">
-                        <pattern id={`grid-${industry.id}`} width="10" height="10" patternUnits="userSpaceOnUse">
-                          <circle cx="5" cy="5" r="1" fill="currentColor" />
-                        </pattern>
-                        <rect width="100" height="100" fill={`url(#grid-${industry.id})`} />
-                      </svg>
+                    {/* Industry Image Header */}
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={industry.image}
+                        alt={`${industry.title} - Odoo ERP solution`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent`} />
                     </div>
 
                     {/* Background Gradient (appears on hover) */}

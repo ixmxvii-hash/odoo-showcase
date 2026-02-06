@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ClipboardCheck, Search, Layers, GraduationCap, Rocket, ArrowRight, Route } from "lucide-react";
 import { Button } from "./ui/Button";
 
@@ -38,7 +40,40 @@ const approachSteps = [
   },
 ] as const;
 
+function StepCard({ step, index }: { step: typeof approachSteps[number]; index: number }) {
+  const Icon = step.icon;
+  return (
+    <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6 h-full">
+      <div className="w-11 h-11 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
+        <Icon className="w-6 h-6" />
+      </div>
+      <p className="text-sm font-semibold text-orange-700 mb-2">Step {index + 1}</p>
+      <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
+      <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
+    </article>
+  );
+}
+
 export default function OurApproach() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / approachSteps.length;
+    const index = Math.round(el.scrollLeft / cardWidth);
+    setActiveIndex(Math.min(index, approachSteps.length - 1));
+  }, []);
+
+  const scrollTo = useCallback((index: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / approachSteps.length;
+    el.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+    setActiveIndex(index);
+  }, []);
+
   return (
     <section id="our-approach" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,27 +99,132 @@ export default function OurApproach() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
-          {approachSteps.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <motion.article
+        {/* Desktop: Roadmap with overlaid step cards */}
+        <div className="hidden lg:block max-w-6xl mx-auto mb-14">
+          <div className="relative py-28">
+            {/* Image centered */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="mx-auto w-[70%]"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/approach-roadmap.png"
+                  alt="5-step Odoo implementation roadmap - Assess, Discover, Implement, Train, and Go Live"
+                  width={1200}
+                  height={675}
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+
+            {/* Floating step cards positioned along the roadmap path */}
+            {approachSteps.map((step, index) => {
+              /*
+               * Steps 1,3,5 (even indices 0,2,4) → below the image
+               * Steps 2,4 (odd indices 1,3) → above the image
+               * Spread horizontally to match the 5 stages left→right
+               */
+              const positions = [
+                "left-[0%] bottom-0",           // Step 1: far left, below
+                "left-[12%] top-0",             // Step 2: left-center, above
+                "left-[38%] bottom-0",          // Step 3: center, below
+                "right-[12%] top-0",            // Step 4: right-center, above
+                "right-[0%] bottom-0",          // Step 5: far right, below
+              ];
+              const animY = index % 2 === 0 ? 20 : -20;
+
+              return (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, y: animY }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.12 }}
+                  className={`absolute ${positions[index]} w-[190px] z-10`}
+                >
+                  <div className="bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-lg p-3.5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-2">
+                      {(() => { const Icon = step.icon; return <Icon className="w-4 h-4" />; })()}
+                    </div>
+                    <p className="text-xs font-semibold text-orange-700 mb-0.5">Step {index + 1}</p>
+                    <h3 className="text-sm font-bold text-slate-900 mb-1 leading-tight">{step.title}</h3>
+                    <p className="text-slate-600 text-[11px] leading-relaxed">{step.description}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Tablet Grid */}
+        <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-5 mb-14">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="md:col-span-2 mb-4"
+          >
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/approach-roadmap.png"
+                alt="5-step Odoo implementation roadmap"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+              />
+            </div>
+          </motion.div>
+          {approachSteps.map((step, index) => (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+            >
+              <StepCard step={step} index={index} />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
+            style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {approachSteps.map((step, index) => (
+              <div
                 key={step.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 h-full"
+                className="flex-shrink-0 w-[80vw] max-w-[300px] snap-center"
               >
-                <div className="w-11 h-11 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <p className="text-sm font-semibold text-orange-700 mb-2">Step {index + 1}</p>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
-              </motion.article>
-            );
-          })}
+                <StepCard step={step} index={index} />
+              </div>
+            ))}
+          </div>
+
+          {/* Dots */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            {approachSteps.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "w-6 h-2.5 bg-orange-500"
+                    : "w-2.5 h-2.5 bg-orange-200"
+                }`}
+                aria-label={`Go to step ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         <motion.div

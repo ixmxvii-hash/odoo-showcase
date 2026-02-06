@@ -1,5 +1,5 @@
 import { industries, cities, type IndustryConfig, type Testimonial } from "./industryData";
-import { getResearchData, type ResearchData } from "./researchData";
+import { getResearchData, isGeneratedResearch, type ResearchData } from "./researchData";
 
 // City-specific overrides for industry pages
 export interface CityIndustryOverride {
@@ -714,15 +714,21 @@ function titleize(label: string) {
 }
 
 function statsFromResearch(research: ResearchData | null) {
-  if (!research?.keyStatistics) return null;
-  const stats = Object.entries(research.keyStatistics)
+  if (isGeneratedResearch(research)) return null;
+  const sourceStats = research?.headlineStats;
+  if (!sourceStats) return null;
+  const sourceKeys = Object.keys(sourceStats);
+  const evidenceOnly = sourceKeys.length > 0 && sourceKeys.every((key) => key.endsWith("_evidence_links"));
+  if (evidenceOnly) return null;
+
+  const stats = Object.entries(sourceStats)
     .slice(0, 3)
     .map(([label, value]) => ({
       label: titleize(label),
       value,
       description: research.researchDate
-        ? `Source: ${research.fileName} (${research.researchDate})`
-        : `Source: ${research.fileName}`,
+        ? `Source-verified profile (${research.researchDate})`
+        : "Source-verified profile",
     }));
   return stats.length ? stats : null;
 }

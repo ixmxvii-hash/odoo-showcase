@@ -148,7 +148,7 @@ export function GeneralHero() {
             </p>
           </motion.div>
 
-          {/* Odoo Dashboard Preview */}
+          {/* Odoo Platform Video */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -157,39 +157,23 @@ export function GeneralHero() {
           >
             <div className="relative">
               {/* Glow Effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-3xl blur-2xl" />
+              <div className="absolute -inset-8 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-3xl blur-3xl" />
 
-              {/* Browser Chrome */}
-              <div className="relative bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 overflow-hidden">
-                {/* Browser Header */}
-                <div className="flex items-center gap-2 px-4 py-3 bg-slate-900 border-b border-slate-700">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-500" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                    <div className="w-3 h-3 rounded-full bg-green-500" />
-                  </div>
-                  <div className="flex-1 flex justify-center">
-                    <div className="px-4 py-1 bg-slate-800 rounded-md text-sm text-slate-400 font-mono">
-                      yourbusiness.odoo.com
-                    </div>
-                  </div>
-                </div>
-
-                {/* Video */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <video
                   autoPlay
-                  loop
                   muted
+                  loop
                   playsInline
                   className="w-full h-auto"
                 >
-                  <source src="https://download.odoocdn.com/videos/odoo_com/video_homepage.webm" type="video/webm" />
-                  <img
-                    src="https://odoocdn.com/openerp_website/static/src/img/apps/crm/hero_image.webp"
-                    alt="Odoo Dashboard"
-                    className="w-full h-auto"
+                  <source
+                    src="https://download.odoocdn.com/videos/odoo_com/video_homepage.webm"
+                    type="video/webm"
                   />
                 </video>
+                {/* Subtle overlay gradient for blending */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </motion.div>
@@ -209,10 +193,10 @@ export function GeneralHero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 + index * 0.1, ease: easeOut }}
-                  className="relative group"
+                  className="relative group h-full"
                 >
-                  <div className="relative bg-slate-800/50 border border-slate-700 rounded-2xl p-6 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
-                    <div className="flex flex-col items-center text-center space-y-2">
+                  <div className="relative h-full bg-slate-800/50 border border-slate-700 rounded-2xl p-6 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
+                    <div className="flex flex-col items-center justify-center text-center space-y-2 h-full">
                       <div className="p-3 bg-orange-500/10 rounded-xl group-hover:bg-orange-500/20 transition-colors">
                         <Icon className="w-6 h-6 text-orange-400" />
                       </div>

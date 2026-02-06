@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/Button";
-import { industries, colorMap, type IndustryConfig } from "@/lib/industryData";
+import { industries, colorMap } from "@/lib/industryData";
 import { getCityIndustry } from "@/lib/cityIndustryData";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
@@ -90,12 +90,6 @@ export default function IndustryHero({ industryKey, city }: IndustryHeroProps) {
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
               {industry.heroDescription}
             </p>
-            {industry.research && (
-              <p className="text-sm text-slate-400 max-w-3xl mx-auto">
-                Research: {industry.research.fileName}
-                {industry.research.researchDate ? ` • ${industry.research.researchDate}` : ""}
-              </p>
-            )}
           </motion.div>
 
           {/* Stats Bar - Prominent Position */}

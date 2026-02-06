@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
+import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 import {
@@ -381,6 +382,9 @@ function ProcessDiagram({
   accentColor,
   icon: TitleIcon,
 }: ProcessDiagramProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   const colors = {
     orange: {
       badge: "bg-orange-500",
@@ -392,6 +396,8 @@ function ProcessDiagram({
       highlight: "bg-orange-500",
       gradient: "from-orange-500 to-orange-600",
       lightBg: "bg-orange-50",
+      dot: "bg-orange-500",
+      dotInactive: "bg-orange-200",
     },
     blue: {
       badge: "bg-blue-500",
@@ -403,6 +409,8 @@ function ProcessDiagram({
       highlight: "bg-blue-500",
       gradient: "from-blue-500 to-blue-600",
       lightBg: "bg-blue-50",
+      dot: "bg-blue-500",
+      dotInactive: "bg-blue-200",
     },
     green: {
       badge: "bg-green-500",
@@ -414,10 +422,62 @@ function ProcessDiagram({
       highlight: "bg-green-500",
       gradient: "from-green-500 to-green-600",
       lightBg: "bg-green-50",
+      dot: "bg-green-500",
+      dotInactive: "bg-green-200",
     },
   };
 
   const c = colors[accentColor];
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / steps.length;
+    const index = Math.round(el.scrollLeft / cardWidth);
+    setActiveIndex(Math.min(index, steps.length - 1));
+  }, [steps.length]);
+
+  const scrollTo = useCallback((index: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / steps.length;
+    el.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+    setActiveIndex(index);
+  }, [steps.length]);
+
+  const renderStepCard = (step: typeof steps[number], index: number) => {
+    const Icon = step.icon;
+    return (
+      <div className="bg-white rounded-2xl border-2 border-gray-100 p-5 h-full hover:border-gray-200 hover:shadow-lg transition-all duration-300 group">
+        <div className="flex items-center gap-3 mb-4">
+          <div className={`w-10 h-10 ${c.iconBg} rounded-xl flex items-center justify-center`}>
+            <Icon className={`w-5 h-5 ${c.iconColor}`} />
+          </div>
+          <div className={`w-8 h-8 bg-gradient-to-br ${c.gradient} rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg`}>
+            {step.step}
+          </div>
+        </div>
+        <h4 className="font-bold text-gray-900 mb-1">{step.title}</h4>
+        <p className="text-sm text-gray-500 mb-4">{step.description}</p>
+        <div className="mb-4">
+          <ul className="space-y-1.5">
+            {step.odooSolution.map((solution, i) => (
+              <li key={i} className="text-xs text-gray-600 flex items-start gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-green-500 mt-0.5 flex-shrink-0" />
+                {solution}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={`${c.lightBg} rounded-lg px-3 py-2 mt-auto`}>
+          <div className="flex items-center gap-1.5">
+            <TrendingUp className={`w-3.5 h-3.5 ${c.iconColor}`} />
+            <span className={`text-xs font-semibold ${c.iconColor}`}>{step.metric}</span>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <motion.div
@@ -437,8 +497,8 @@ function ProcessDiagram({
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">{description}</p>
       </motion.div>
 
-      {/* Process Flow Diagram */}
-      <div className="relative">
+      {/* Process Flow — Desktop Grid */}
+      <div className="relative hidden md:block">
         {/* Connection Line (Desktop) */}
         <div className="hidden lg:block absolute top-24 left-0 right-0 h-1 bg-gray-200 z-0">
           <motion.div
@@ -450,64 +510,54 @@ function ProcessDiagram({
           />
         </div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <motion.div
-                key={step.title}
-                variants={itemVariants}
-                className="relative"
-              >
-                {/* Step Card */}
-                <div className="bg-white rounded-2xl border-2 border-gray-100 p-5 h-full hover:border-gray-200 hover:shadow-lg transition-all duration-300 group">
-                  {/* Step Number & Icon */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-10 h-10 ${c.iconBg} rounded-xl flex items-center justify-center`}>
-                      <Icon className={`w-5 h-5 ${c.iconColor}`} />
-                    </div>
-                    <div className={`w-8 h-8 bg-gradient-to-br ${c.gradient} rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg`}>
-                      {step.step}
-                    </div>
-                  </div>
-
-                  {/* Title & Description */}
-                  <h4 className="font-bold text-gray-900 mb-1">{step.title}</h4>
-                  <p className="text-sm text-gray-500 mb-4">{step.description}</p>
-
-                  {/* Odoo Solution - Simplified */}
-                  <div className="mb-4">
-                    <ul className="space-y-1.5">
-                      {step.odooSolution.map((solution, i) => (
-                        <li key={i} className="text-xs text-gray-600 flex items-start gap-1.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-green-500 mt-0.5 flex-shrink-0" />
-                          {solution}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Metric */}
-                  <div className={`${c.lightBg} rounded-lg px-3 py-2 mt-auto`}>
-                    <div className="flex items-center gap-1.5">
-                      <TrendingUp className={`w-3.5 h-3.5 ${c.iconColor}`} />
-                      <span className={`text-xs font-semibold ${c.iconColor}`}>{step.metric}</span>
-                    </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+          {steps.map((step, index) => (
+            <motion.div key={step.title} variants={itemVariants} className="relative">
+              {renderStepCard(step, index)}
+              {index < steps.length - 1 && (
+                <div className="hidden md:flex lg:hidden absolute -right-3 top-1/2 -translate-y-1/2 z-20">
+                  <div className={`w-6 h-6 ${c.iconBg} rounded-full flex items-center justify-center`}>
+                    <ArrowRight className={`w-3 h-3 ${c.iconColor}`} />
                   </div>
                 </div>
+              )}
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
-                {/* Arrow (between cards on mobile/tablet) */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:flex lg:hidden absolute -right-3 top-1/2 -translate-y-1/2 z-20">
-                    <div className={`w-6 h-6 ${c.iconBg} rounded-full flex items-center justify-center`}>
-                      <ArrowRight className={`w-3 h-3 ${c.iconColor}`} />
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-            );
-          })}
+      {/* Process Flow — Mobile Carousel */}
+      <div className="md:hidden">
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
+          style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {steps.map((step, index) => (
+            <div
+              key={step.title}
+              className="flex-shrink-0 w-[85vw] max-w-[320px] snap-center"
+            >
+              {renderStepCard(step, index)}
+            </div>
+          ))}
+        </div>
+
+        {/* Dots */}
+        <div className="flex items-center justify-center gap-2 mt-4">
+          {steps.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`rounded-full transition-all duration-300 ${
+                index === activeIndex
+                  ? `w-6 h-2.5 ${c.dot}`
+                  : `w-2.5 h-2.5 ${c.dotInactive}`
+              }`}
+              aria-label={`Go to step ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
 

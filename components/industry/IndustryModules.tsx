@@ -116,6 +116,23 @@ export default function IndustryModules({ industryKey, city }: IndustryModulesPr
           </p>
         </motion.div>
 
+        {/* Section Illustration */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-3xl mx-auto mb-14"
+        >
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="/images/section-modules.png"
+              alt="Odoo ERP connected app modules - CRM, Sales, Inventory, Accounting, Manufacturing"
+              className="w-full h-auto"
+            />
+          </div>
+        </motion.div>
+
         {/* Modules Grid */}
         <motion.div
           variants={containerVariants}

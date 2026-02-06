@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import NextLink from "next/link";
 import { industries, colorMap } from "@/lib/industryData";
+import { getCity, getCityIndustry } from "@/lib/cityIndustryData";
 
 // Icon mapping from string to component
 const iconMap: Record<string, React.ElementType> = {
@@ -83,10 +84,12 @@ const itemVariants = {
 
 interface IndustrySolutionsProps {
   industryKey: keyof typeof industries;
+  city?: string;
 }
 
-export default function IndustrySolutions({ industryKey }: IndustrySolutionsProps) {
-  const industry = industries[industryKey];
+export default function IndustrySolutions({ industryKey, city }: IndustrySolutionsProps) {
+  const industry = city ? getCityIndustry(city, industryKey as string) : industries[industryKey];
+  const cityData = city ? getCity(city) : null;
   const colors = colorMap[industry.color];
 
   return (
@@ -122,8 +125,26 @@ export default function IndustrySolutions({ industryKey }: IndustrySolutionsProp
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Every pain point has a solution. Here&apos;s how Odoo transforms {industry.tagline.toLowerCase()} operations.
+            Every pain point has a solution. Here&apos;s how ICIT implements Odoo to transform{" "}
+            {industry.tagline.toLowerCase()} operations in {cityData?.name || "Texas"}.
           </p>
+        </motion.div>
+
+        {/* Section Illustration */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-3xl mx-auto mb-14"
+        >
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="/images/section-solutions.png"
+              alt="Unified ERP solution connecting sales, inventory, accounting, and CRM"
+              className="w-full h-auto"
+            />
+          </div>
         </motion.div>
 
         {/* Solutions Grid */}
@@ -177,11 +198,11 @@ export default function IndustrySolutions({ industryKey }: IndustrySolutionsProp
         >
           <div className={`bg-gradient-to-r ${colors.gradientDark} rounded-2xl p-8 md:p-12`}>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to End the Chaos?
+              Ready to Fix the Root Operational Bottlenecks?
             </h3>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how these solutions apply to your specific {industry.tagline.toLowerCase()} challenges.
-              Schedule a free consultation with our Houston team.
+              Let&apos;s map these workflows to your business and define a phased go-live plan with ICIT.
+              Schedule a consultation for your {cityData?.name || "Texas"} team.
             </p>
             <NextLink href="/contact">
               <motion.button

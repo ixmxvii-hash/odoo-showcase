@@ -9,7 +9,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
-import { Card, CardHeader, CardContent } from "./ui/Card";
+import Image from "next/image";
 import { AlertTriangle } from "lucide-react";
 
 const painPoints = [
@@ -51,29 +51,6 @@ const painPoints = [
   },
 ] as const;
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.25, 0.1, 0.25, 1] as const,
-    },
-  },
-};
-
 const quoteVariants = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: {
@@ -87,6 +64,27 @@ const quoteVariants = {
   },
 };
 
+/* Desktop positions: 3 left, 3 right — staggered around the image */
+const cardPositions = [
+  // Left column (top, middle, bottom)
+  "lg:absolute lg:left-0 lg:top-[2%] lg:w-[280px] xl:w-[300px]",
+  "lg:absolute lg:left-[-20px] lg:top-[35%] lg:w-[280px] xl:w-[300px]",
+  "lg:absolute lg:left-[10px] lg:bottom-[2%] lg:w-[280px] xl:w-[300px]",
+  // Right column (top, middle, bottom)
+  "lg:absolute lg:right-0 lg:top-[2%] lg:w-[280px] xl:w-[300px]",
+  "lg:absolute lg:right-[-20px] lg:top-[35%] lg:w-[280px] xl:w-[300px]",
+  "lg:absolute lg:right-[10px] lg:bottom-[2%] lg:w-[280px] xl:w-[300px]",
+];
+
+const cardAnimations = [
+  { x: -60, y: -20 },
+  { x: -80, y: 0 },
+  { x: -60, y: 20 },
+  { x: 60, y: -20 },
+  { x: 80, y: 0 },
+  { x: 60, y: 20 },
+];
+
 export default function GeneralPainPoints() {
   return (
     <section className="py-20 bg-white">
@@ -96,51 +94,130 @@ export default function GeneralPainPoints() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
             <AlertTriangle className="w-4 h-4 text-orange-600" />
-            <span className="text-sm font-medium text-orange-700">Common Challenges</span>
+            <span className="text-sm font-medium text-orange-700">
+              Common Challenges
+            </span>
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Is your business facing this?
           </h2>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
+        {/* --- Desktop: image + floating cards --- */}
+        <div className="hidden lg:block relative mb-16" style={{ minHeight: 700 }}>
+          {/* Centered image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[52%] z-0"
+          >
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/pain-points-illustration.png"
+                alt="Business challenges - disconnected tools, manual processes, and data silos versus a unified ERP solution"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+              />
+            </div>
+          </motion.div>
+
+          {/* Floating cards */}
           {painPoints.map((point, index) => {
             const Icon = point.icon;
+            const anim = cardAnimations[index];
             return (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="h-full group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-gray-200">
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center group-hover:bg-orange-100 transition-colors duration-300">
-                          <Icon className="w-6 h-6 text-orange-500" />
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 leading-tight">
-                        {point.title}
-                      </h3>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: anim.x, y: anim.y }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3 + index * 0.1,
+                  ease: [0.25, 0.1, 0.25, 1],
+                }}
+                className={`z-10 ${cardPositions[index]}`}
+              >
+                <div className="bg-white/90 backdrop-blur-md rounded-xl border border-gray-200 shadow-lg p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-default">
+                  <div className="flex items-start gap-3 mb-2">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-orange-500" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 leading-relaxed">
-                      {point.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                    <h3 className="text-base font-semibold text-gray-900 leading-tight pt-1">
+                      {point.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {point.description}
+                  </p>
+                </div>
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
+
+        {/* --- Mobile / Tablet: stacked layout --- */}
+        <div className="lg:hidden mb-16">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-md mx-auto mb-8"
+          >
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/pain-points-illustration.png"
+                alt="Business challenges - disconnected tools, manual processes, and data silos versus a unified ERP solution"
+                width={1200}
+                height={675}
+                className="w-full h-auto"
+              />
+            </div>
+          </motion.div>
+
+          {/* Cards grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {painPoints.map((point, index) => {
+              const Icon = point.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.08,
+                    ease: [0.25, 0.1, 0.25, 1],
+                  }}
+                >
+                  <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 h-full">
+                    <div className="flex items-start gap-3 mb-2">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-orange-500" />
+                      </div>
+                      <h3 className="text-base font-semibold text-gray-900 leading-tight pt-1">
+                        {point.title}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {point.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
 
         <motion.div
           variants={quoteVariants}
@@ -149,16 +226,16 @@ export default function GeneralPainPoints() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <Card className="bg-gradient-to-br from-orange-50 to-white border-orange-200 shadow-lg">
-            <CardContent className="py-8">
-              <blockquote className="text-center">
-                <p className="text-2xl font-medium text-gray-900 mb-4">
-                  &quot;A successful Odoo rollout connects your sales, inventory, and finance workflows into one automated system - with end-to-end support from ICIT.&quot;
-                </p>
-                <div className="w-16 h-1 bg-orange-500 mx-auto" />
-              </blockquote>
-            </CardContent>
-          </Card>
+          <div className="bg-gradient-to-br from-orange-50 to-white rounded-xl border border-orange-200 shadow-lg p-6 sm:p-8">
+            <blockquote className="text-center">
+              <p className="text-xl sm:text-2xl font-medium text-gray-900 mb-4">
+                &quot;A successful Odoo rollout connects your sales, inventory,
+                and finance workflows into one automated system - with
+                end-to-end support from ICIT.&quot;
+              </p>
+              <div className="w-16 h-1 bg-orange-500 mx-auto" />
+            </blockquote>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -641,10 +641,10 @@ export function getIndustryMetrics(industryKey: string, cityKey: string): Indust
 
   return {
     ...metrics,
-    efficiencySource: research?.fileName || metrics.efficiencySource,
-    tableSource: research?.fileName || metrics.tableSource,
-    roiSource: research?.fileName || metrics.roiSource,
-    costSource: research?.fileName || metrics.costSource,
+    efficiencySource: metrics.efficiencySource,
+    tableSource: metrics.tableSource,
+    roiSource: metrics.roiSource,
+    costSource: metrics.costSource,
     researchSources: research?.sources || [],
   };
 }

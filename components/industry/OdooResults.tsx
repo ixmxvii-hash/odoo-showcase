@@ -33,6 +33,7 @@ export default function OdooResults({ industryKey, city }: OdooResultsProps) {
   const keyStatEntries = industry.research?.keyStatistics
     ? Object.entries(industry.research.keyStatistics).slice(0, 5)
     : [];
+  const evidenceEntries = industry.research?.evidence?.slice(0, 6) || [];
 
   return (
     <section className="py-20 bg-white">
@@ -52,10 +53,10 @@ export default function OdooResults({ industryKey, city }: OdooResultsProps) {
             Verified Results
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            Results {cityData?.name || city} {industry.name} Businesses Achieve with Odoo
+            Results {cityData?.name || city} {industry.name} Teams Achieve with ICIT-Led Odoo Implementation
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Real metrics from verified Odoo implementations. All statistics reference the city/industry research files in this project.
+            Benchmarks and local research signals tied to how ICIT deploys Odoo for this city and industry profile.
           </p>
           <button
             onClick={() => setShowSources(true)}
@@ -151,8 +152,8 @@ export default function OdooResults({ industryKey, city }: OdooResultsProps) {
           <div>
             <h4 className="text-sm font-semibold text-slate-700">Data Sources</h4>
             <p className="text-xs text-slate-600">
-              {industry.research?.fileName || "Research file not mapped"}{" "}
-              {industry.research?.researchDate ? `• ${industry.research.researchDate}` : ""}
+              City-industry evidence profile{" "}
+              {industry.research?.researchDate ? `• Updated ${industry.research.researchDate}` : ""}
             </p>
           </div>
           <button
@@ -171,8 +172,7 @@ export default function OdooResults({ industryKey, city }: OdooResultsProps) {
               <div>
                 <h4 className="text-xl font-bold text-slate-900">Data & Methodology</h4>
                 <p className="text-sm text-slate-600 mt-1">
-                  Sourced from repository research JSON and linked references for {cityData?.name || city}{" "}
-                  {industry.name}.
+                  Sourced from city-industry research profiles and linked references for {cityData?.name || city} {industry.name}.
                 </p>
               </div>
               <button
@@ -199,6 +199,27 @@ export default function OdooResults({ industryKey, city }: OdooResultsProps) {
                     <li key={label} className="flex items-start gap-2">
                       <span className="font-semibold text-slate-800">{label}:</span>
                       <span className="text-slate-700">{value}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {evidenceEntries.length > 0 && (
+              <div className="mt-4">
+                <h5 className="text-sm font-semibold text-slate-800 mb-2">Verification Claims</h5>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  {evidenceEntries.map((item, idx) => (
+                    <li key={`${item.source}-${idx}`} className="border border-slate-200 rounded-lg p-3 bg-slate-50">
+                      <p className="text-slate-800">{item.claim}</p>
+                      <a
+                        href={item.source}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-orange-600 hover:text-orange-700 underline break-all"
+                      >
+                        {item.source}
+                      </a>
                     </li>
                   ))}
                 </ul>

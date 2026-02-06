@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useRef, useCallback } from "react";
 import { Check, X, Minus, Scale } from "lucide-react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
@@ -87,6 +88,25 @@ const ComparisonCell = ({ cell, isOdoo = false }: { cell: ComparisonCell; isOdoo
 );
 
 export default function Comparison() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / comparisonData.length;
+    const index = Math.round(el.scrollLeft / cardWidth);
+    setActiveIndex(Math.min(index, comparisonData.length - 1));
+  }, []);
+
+  const scrollTo = useCallback((index: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / comparisonData.length;
+    el.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+    setActiveIndex(index);
+  }, []);
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Grid Pattern */}
@@ -192,57 +212,72 @@ export default function Comparison() {
           ))}
         </motion.div>
 
-        {/* Mobile Card View */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="lg:hidden space-y-8"
-        >
-          {comparisonData.map((row, rowIndex) => (
-            <motion.div
-              key={rowIndex}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 + rowIndex * 0.1 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
-            >
-              <div className="bg-gray-900 text-white p-4">
-                <h3 className="font-bold text-lg">{row.criteria}</h3>
+        {/* Mobile Carousel View */}
+        <div className="lg:hidden">
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6"
+            style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {comparisonData.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center"
+              >
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 h-full">
+                  <div className="bg-gray-900 text-white p-4">
+                    <h3 className="font-bold text-lg">{row.criteria}</h3>
+                  </div>
+                  <div className="divide-y divide-gray-200">
+                    <div className="bg-orange-50 p-4 flex items-center justify-between">
+                      <span className="font-semibold text-gray-900">ICIT</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium">{row.odoo.value}</span>
+                        <StatusIcon status={row.odoo.status} />
+                      </div>
+                    </div>
+                    <div className="p-4 flex items-center justify-between">
+                      <span className="font-semibold text-gray-900">Odoo Direct</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium">{row.netsuite.value}</span>
+                        <StatusIcon status={row.netsuite.status} />
+                      </div>
+                    </div>
+                    <div className="p-4 flex items-center justify-between">
+                      <span className="font-semibold text-gray-900">QuickBooks + Fishbowl</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium">{row.quickbooks.value}</span>
+                        <StatusIcon status={row.quickbooks.status} />
+                      </div>
+                    </div>
+                  </div>
+                  {row.quickbooks.note && (
+                    <div className="bg-yellow-50 p-3 text-center">
+                      <p className="text-xs text-yellow-800 italic">{row.quickbooks.note}</p>
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="divide-y divide-gray-200">
-                <div className="bg-orange-50 p-4 flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">ICIT</span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">{row.odoo.value}</span>
-                    <StatusIcon status={row.odoo.status} />
-                  </div>
-                </div>
-                <div className="p-4 flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">Odoo Direct</span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">{row.netsuite.value}</span>
-                    <StatusIcon status={row.netsuite.status} />
-                  </div>
-                </div>
-                <div className="p-4 flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">QuickBooks + Fishbowl</span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">{row.quickbooks.value}</span>
-                    <StatusIcon status={row.quickbooks.status} />
-                  </div>
-                </div>
-              </div>
-              {row.quickbooks.note && (
-                <div className="bg-yellow-50 p-3 text-center">
-                  <p className="text-xs text-yellow-800 italic">{row.quickbooks.note}</p>
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+
+          {/* Dots */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            {comparisonData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`rounded-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? "w-6 h-2.5 bg-orange-500"
+                    : "w-2.5 h-2.5 bg-orange-200"
+                }`}
+                aria-label={`Go to comparison ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
 
         {/* Bottom CTA */}
         <motion.div

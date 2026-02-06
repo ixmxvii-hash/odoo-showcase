@@ -31,21 +31,21 @@ const searchIndex = [
   { name: "Manufacturing (Austin)", href: "/ATX/manufacturing", keywords: ["manufacturing", "austin", "atx", "tech corridor", "semiconductor", "electronics", "clean room", "round rock", "cedar park"] },
   { name: "Discrete Manufacturing (Austin)", href: "/ATX/discrete-manufacturing", keywords: ["discrete", "austin", "atx", "precision", "aerospace", "defense"] },
   { name: "Process Manufacturing (Austin)", href: "/ATX/process-manufacturing", keywords: ["process", "austin", "atx", "pharmaceutical", "biotech"] },
-  { name: "Distribution (Austin)", href: "/ATX/distribution", keywords: ["distribution", "austin", "atx", "fulfillment", "tech hub"] },
+  { name: "Food & Beverage (Austin)", href: "/ATX/food-beverage", keywords: ["food", "austin", "atx", "craft", "local", "farm to table"] },
   { name: "Energy Services (Austin)", href: "/ATX/energy-services", keywords: ["energy", "austin", "atx", "solar", "renewable", "green energy"] },
+  { name: "Distribution (Austin)", href: "/ATX/distribution", keywords: ["distribution", "austin", "atx", "fulfillment", "tech hub"] },
   { name: "Retail (Austin)", href: "/ATX/retail", keywords: ["retail", "austin", "atx", "south congress", "local brands"] },
   { name: "Professional Services (Austin)", href: "/ATX/professional-services", keywords: ["professional", "austin", "atx", "tech consulting", "startups"] },
-  { name: "Food & Beverage (Austin)", href: "/ATX/food-beverage", keywords: ["food", "austin", "atx", "craft", "local", "farm to table"] },
 
   // Industries - Dallas
   { name: "Manufacturing (Dallas)", href: "/DFW/manufacturing", keywords: ["manufacturing", "dallas", "dfw", "fort worth", "alliance corridor", "logistics hub", "arlington", "irving"] },
   { name: "Discrete Manufacturing (Dallas)", href: "/DFW/discrete-manufacturing", keywords: ["discrete", "dallas", "dfw", "aerospace", "defense", "lockheed"] },
   { name: "Process Manufacturing (Dallas)", href: "/DFW/process-manufacturing", keywords: ["process", "dallas", "dfw", "plastics", "chemicals"] },
-  { name: "Distribution (Dallas)", href: "/DFW/distribution", keywords: ["distribution", "dallas", "dfw", "logistics hub", "intermodal", "central location"] },
+  { name: "Food & Beverage (Dallas)", href: "/DFW/food-beverage", keywords: ["food", "dallas", "dfw", "restaurant", "hospitality", "catering"] },
   { name: "Energy Services (Dallas)", href: "/DFW/energy-services", keywords: ["energy", "dallas", "dfw", "corporate", "headquarters", "midstream"] },
+  { name: "Distribution (Dallas)", href: "/DFW/distribution", keywords: ["distribution", "dallas", "dfw", "logistics hub", "intermodal", "central location"] },
   { name: "Retail (Dallas)", href: "/DFW/retail", keywords: ["retail", "dallas", "dfw", "galleria", "northpark", "luxury"] },
   { name: "Professional Services (Dallas)", href: "/DFW/professional-services", keywords: ["professional", "dallas", "dfw", "corporate", "finance", "banking"] },
-  { name: "Food & Beverage (Dallas)", href: "/DFW/food-beverage", keywords: ["food", "dallas", "dfw", "restaurant", "hospitality", "catering"] },
 
   // Solutions with detailed content
   { name: "CRM - Customer Relationships", href: "/solutions/crm", keywords: ["crm", "leads", "pipeline", "opportunities", "deals", "customers", "relationships", "contact management", "lead scoring", "sales funnel", "follow up", "customer 360", "activity tracking", "email integration", "meeting scheduler"] },

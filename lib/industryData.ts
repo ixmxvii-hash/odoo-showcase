@@ -13,17 +13,20 @@ export const cities: Record<string, CityConfig> = {
   DFW: { abbr: "DFW", name: "Dallas-Fort Worth", state: "Texas" },
 };
 
+// Canonical industry ordering for routing, sitemap, and navigation
+export const orderedIndustryRoutes = [
+  ["manufacturing", "manufacturing"],
+  ["discrete-manufacturing", "discreteManufacturing"],
+  ["process-manufacturing", "processManufacturing"],
+  ["food-beverage", "foodBeverage"],
+  ["energy-services", "energyServices"],
+  ["distribution", "distribution"],
+  ["retail", "retail"],
+  ["professional-services", "professionalServices"],
+] as const;
+
 // Industry slug to key mapping for URL routing
-export const industrySlugMap: Record<string, string> = {
-  "manufacturing": "manufacturing",
-  "discrete-manufacturing": "discreteManufacturing",
-  "process-manufacturing": "processManufacturing",
-  "energy-services": "energyServices",
-  "food-beverage": "foodBeverage",
-  "distribution": "distribution",
-  "retail": "retail",
-  "professional-services": "professionalServices",
-};
+export const industrySlugMap: Record<string, string> = Object.fromEntries(orderedIndustryRoutes);
 
 export interface PainPoint {
   icon: string;
@@ -461,7 +464,7 @@ export const industries: Record<string, IndustryConfig> = {
     targetRevenue: "$2M-$15M",
     targetEmployees: "10-75",
     color: "green",
-    heroImage: "https://odoocdn.com/openerp_website/static/src/img/apps/inventory/barcode_scanning.webp",
+    heroImage: "/images/hero-distribution.png",
     painPoints: [
       {
         icon: "Package",
@@ -645,7 +648,7 @@ export const industries: Record<string, IndustryConfig> = {
     targetRevenue: "$1M-$15M",
     targetEmployees: "10-100",
     color: "cyan",
-    heroImage: "https://odoocdn.com/openerp_website/static/src/img/apps/timesheet/timesheet-hero-image.webp",
+    heroImage: "/images/hero-professional-services.png",
     painPoints: [
       {
         icon: "Clock",

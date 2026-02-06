@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import { Card, CardHeader, CardContent } from "../ui/Card";
 import { industries, colorMap } from "@/lib/industryData";
+import { getCity, getCityIndustry } from "@/lib/cityIndustryData";
 
 // Icon mapping from string to component
 const iconMap: Record<string, React.ElementType> = {
@@ -75,10 +76,12 @@ const itemVariants = {
 
 interface IndustryPainPointsProps {
   industryKey: keyof typeof industries;
+  city?: string;
 }
 
-export default function IndustryPainPoints({ industryKey }: IndustryPainPointsProps) {
-  const industry = industries[industryKey];
+export default function IndustryPainPoints({ industryKey, city }: IndustryPainPointsProps) {
+  const industry = city ? getCityIndustry(city, industryKey as string) : industries[industryKey];
+  const cityData = city ? getCity(city) : null;
   const colors = colorMap[industry.color];
 
   return (
@@ -105,8 +108,26 @@ export default function IndustryPainPoints({ industryKey }: IndustryPainPointsPr
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Sound familiar? These are the pain points we hear from {industry.houstonZones[0]} {industry.tagline.toLowerCase()} businesses every day.
+            Sound familiar? These are the pain points we hear from {cityData?.name || industry.houstonZones[0]}{" "}
+            {industry.tagline.toLowerCase()} teams every day.
           </p>
+        </motion.div>
+
+        {/* Section Illustration */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-3xl mx-auto mb-14"
+        >
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="/images/section-pain-points.png"
+              alt="Business operational challenges - disconnected systems and manual processes"
+              className="w-full h-auto"
+            />
+          </div>
         </motion.div>
 
         {/* Pain Points Grid */}

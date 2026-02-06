@@ -70,12 +70,12 @@ export default function ROICalculator() {
   const [email, setEmail] = useState("");
 
   const researchFiles = [
-    "austin-process-manufacturing-research.json",
-    "austin-distribution-industry-research.json",
-    "austin_energy_services_research.json",
-    "austin-professional-services-research.json",
-    "dfw-process-manufacturing-research.json",
-    "dfw_discrete_manufacturing_research.json",
+    "lib/researchData.ts (24 city-industry implementation profiles)",
+    "BLS metro employment releases (Houston, Austin, DFW)",
+    "Dallas Fed metro indicators and Texas forecast releases",
+    "Port Houston, Houston Airports, AUS, and DFW airport market signals",
+    "FDA FSMA traceability guidance and Census trade datasets",
+    "EIA and Texas RRC energy production data",
   ];
 
   const calculateROI = (): CalculationResults => {
