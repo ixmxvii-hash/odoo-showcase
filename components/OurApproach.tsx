@@ -4,7 +4,15 @@ import { motion } from "framer-motion";
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ClipboardCheck, Search, Layers, GraduationCap, Rocket, ArrowRight, Route } from "lucide-react";
+import {
+  ClipboardCheck,
+  Search,
+  Layers,
+  GraduationCap,
+  Rocket,
+  ArrowRight,
+  Route,
+} from "lucide-react";
 import { Button } from "./ui/Button";
 
 const approachSteps = [
@@ -40,16 +48,45 @@ const approachSteps = [
   },
 ] as const;
 
-function StepCard({ step, index }: { step: typeof approachSteps[number]; index: number }) {
+// Conveyor belt stop positions (% of image width/height)
+const STOPS = [
+  { x: 15, y: 55 },  // Step 1: moved down and to the right
+  { x: 24, y: 25 },  // Step 2: moved down and to the left
+  { x: 49, y: 30 },
+  { x: 65, y: 69 },  // Step 4: moved down further
+  { x: 87, y: 47 },  // Step 5: moved down further
+];
+
+// Where each step card sits on the image (% of image dimensions)
+// Matches the dark empty spaces near each conveyor stop
+const CARD_POSITIONS = [
+  { left: -4, top: 64 },   // 1: bottom-left, extends off left edge (moved down)
+  { left: 8, top: -3 },     // 2: between stops 1 & 2, left area (moved up)
+  { left: 58, top: -5 },   // 3: below boxes, center-left (moved right)
+  { left: 40, top: 72 },   // 4: below grad cap, extends past bottom (moved left)
+  { left: 85, top: 65 },   // 5: right of rocket, extends off right edge (moved down more)
+];
+
+function StepCard({
+  step,
+  index,
+}: {
+  step: (typeof approachSteps)[number];
+  index: number;
+}) {
   const Icon = step.icon;
   return (
     <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6 h-full">
       <div className="w-11 h-11 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
         <Icon className="w-6 h-6" />
       </div>
-      <p className="text-sm font-semibold text-orange-700 mb-2">Step {index + 1}</p>
+      <p className="text-sm font-semibold text-orange-700 mb-2">
+        Step {index + 1}
+      </p>
       <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
-      <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
+      <p className="text-slate-600 text-sm leading-relaxed">
+        {step.description}
+      </p>
     </article>
   );
 }
@@ -75,8 +112,9 @@ export default function OurApproach() {
   }, []);
 
   return (
-    <section id="our-approach" className="py-24 bg-white">
+    <section id="our-approach" className="py-24 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,83 +122,149 @@ export default function OurApproach() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full mb-6">
-            <Route className="w-4 h-4 text-orange-600" />
-            <span className="text-sm font-medium text-orange-700">Our Approach</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 rounded-full mb-6">
+            <Route className="w-4 h-4 text-white" />
+            <span className="text-sm font-medium text-white">
+              Our Approach
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             A Clear Odoo Implementation Plan
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            We guide your team from strategy to adoption with a phased process built for Houston businesses.
+            We guide your team from strategy to adoption with a phased process
+            built for Houston businesses.
           </p>
           <p className="text-sm text-slate-500 mt-4">
-            Each rollout phase includes implementation, team training, and go-live support.
+            Each rollout phase includes implementation, team training, and
+            go-live support.
           </p>
         </motion.div>
 
-        {/* Desktop: Roadmap with overlaid step cards */}
+        {/* ─── Desktop: Image with step cards placed at each stop ─── */}
         <div className="hidden lg:block max-w-6xl mx-auto mb-14">
-          <div className="relative py-28">
-            {/* Image centered */}
+          <div className="relative px-8">
+            {/* Image */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="mx-auto w-[70%]"
+              className="relative overflow-visible"
             >
-              <div className="rounded-2xl overflow-hidden shadow-xl">
+              <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 8px 16px -2px rgba(249,115,22,0.15), 0 20px 40px -8px rgba(249,115,22,0.2), 0 40px 64px -12px rgba(249,115,22,0.1)" }}>
                 <Image
                   src="/images/approach-roadmap.png"
                   alt="5-step Odoo implementation roadmap - Assess, Discover, Implement, Train, and Go Live"
-                  width={1200}
-                  height={675}
+                  width={1400}
+                  height={788}
                   className="w-full h-auto"
                 />
               </div>
-            </motion.div>
 
-            {/* Floating step cards positioned along the roadmap path */}
-            {approachSteps.map((step, index) => {
-              /*
-               * Steps 1,3,5 (even indices 0,2,4) → below the image
-               * Steps 2,4 (odd indices 1,3) → above the image
-               * Spread horizontally to match the 5 stages left→right
-               */
-              const positions = [
-                "left-[0%] bottom-0",           // Step 1: far left, below
-                "left-[12%] top-0",             // Step 2: left-center, above
-                "left-[38%] bottom-0",          // Step 3: center, below
-                "right-[12%] top-0",            // Step 4: right-center, above
-                "right-[0%] bottom-0",          // Step 5: far right, below
-              ];
-              const animY = index % 2 === 0 ? 20 : -20;
+              {/* Numbered dots + connector lines + cards for each stop */}
+              {approachSteps.map((step, i) => {
+                const stop = STOPS[i];
+                const card = CARD_POSITIONS[i];
+                const Icon = step.icon;
+                // For Step 4 (index 3), connect to the middle of the right side
+                const cardCenterX = i === 3 ? card.left + 17 : card.left + 8;
+                const cardTopY = i === 3 ? card.top + 12 : card.top; // Lower on the right side
 
-              return (
-                <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, y: animY }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.12 }}
-                  className={`absolute ${positions[index]} w-[190px] z-10`}
-                >
-                  <div className="bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-lg p-3.5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div className="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-2">
-                      {(() => { const Icon = step.icon; return <Icon className="w-4 h-4" />; })()}
-                    </div>
-                    <p className="text-xs font-semibold text-orange-700 mb-0.5">Step {index + 1}</p>
-                    <h3 className="text-sm font-bold text-slate-900 mb-1 leading-tight">{step.title}</h3>
-                    <p className="text-slate-600 text-[11px] leading-relaxed">{step.description}</p>
+                return (
+                  <div key={step.title}>
+                    {/* Pulsing numbered dot */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.4 + i * 0.15 }}
+                      className="absolute z-30"
+                      style={{
+                        left: `${stop.x}%`,
+                        top: `${stop.y}%`,
+                        transform: "translate(-50%, -50%)",
+                      }}
+                    >
+                      <div className="relative">
+                        <span className="absolute inset-0 rounded-full bg-orange-500 animate-ping opacity-25" />
+                        <div className="relative w-11 h-11 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 text-white font-bold text-sm flex items-center justify-center shadow-xl ring-4 ring-orange-400/30">
+                          {i + 1}
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    {/* Connector line from dot to card */}
+                    <svg
+                      className="absolute inset-0 w-full h-full pointer-events-none z-10"
+                      aria-hidden="true"
+                    >
+                      <line
+                        x1={`${stop.x}%`}
+                        y1={`${stop.y + 3}%`}
+                        x2={`${cardCenterX}%`}
+                        y2={`${cardTopY}%`}
+                        stroke="#f97316"
+                        strokeWidth="2"
+                        opacity="0.7"
+                      />
+                      <circle
+                        cx={`${cardCenterX}%`}
+                        cy={`${cardTopY}%`}
+                        r="4"
+                        fill="#f97316"
+                      />
+                    </svg>
+
+                    {/* Step card */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.5 + i * 0.12,
+                      }}
+                      className="absolute z-20"
+                      style={{
+                        left: `${card.left}%`,
+                        top: `${card.top}%`,
+                        width: "17%",
+                        minWidth: 160,
+                      }}
+                    >
+                      <div
+                        className="bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/80 p-3.5 hover:-translate-y-1 transition-all duration-300"
+                        style={{
+                          boxShadow: "0 4px 8px -1px rgba(249,115,22,0.15), 0 12px 28px -4px rgba(249,115,22,0.2), 0 24px 48px -8px rgba(249,115,22,0.1)",
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.boxShadow = "0 6px 12px -1px rgba(249,115,22,0.2), 0 16px 36px -4px rgba(249,115,22,0.25), 0 32px 56px -8px rgba(249,115,22,0.15)"; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.boxShadow = "0 4px 8px -1px rgba(249,115,22,0.15), 0 12px 28px -4px rgba(249,115,22,0.2), 0 24px 48px -8px rgba(249,115,22,0.1)"; }}
+                      >
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <div className="w-7 h-7 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center flex-shrink-0">
+                            <Icon className="w-3.5 h-3.5" />
+                          </div>
+                          <span className="text-[10px] font-bold text-orange-600 uppercase tracking-wider">
+                            Step {i + 1}
+                          </span>
+                        </div>
+                        <h3 className="text-xs font-bold text-slate-900 mb-0.5 leading-tight">
+                          {step.title}
+                        </h3>
+                        <p className="text-[10px] text-slate-600 leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
+                    </motion.div>
                   </div>
-                </motion.div>
-              );
-            })}
+                );
+              })}
+            </motion.div>
           </div>
         </div>
 
-        {/* Tablet Grid */}
+        {/* ─── Tablet: Image + Grid ─── */}
         <div className="hidden md:grid lg:hidden md:grid-cols-2 gap-5 mb-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,13 +296,27 @@ export default function OurApproach() {
           ))}
         </div>
 
-        {/* Mobile Carousel */}
+        {/* ─── Mobile: Carousel ─── */}
         <div className="md:hidden">
+          <div className="rounded-2xl overflow-hidden shadow-xl mb-6">
+            <Image
+              src="/images/approach-roadmap.png"
+              alt="5-step Odoo implementation roadmap"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
+            />
+          </div>
+
           <div
             ref={scrollRef}
             onScroll={handleScroll}
             className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
-            style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={{
+              WebkitOverflowScrolling: "touch",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
           >
             {approachSteps.map((step, index) => (
               <div
@@ -227,6 +345,7 @@ export default function OurApproach() {
           </div>
         </div>
 
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

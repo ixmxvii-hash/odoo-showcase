@@ -67,13 +67,13 @@ const quoteVariants = {
 /* Desktop positions: 3 left, 3 right — staggered around the image */
 const cardPositions = [
   // Left column (top, middle, bottom)
-  "lg:absolute lg:left-0 lg:top-[2%] lg:w-[280px] xl:w-[300px]",
-  "lg:absolute lg:left-[-20px] lg:top-[35%] lg:w-[280px] xl:w-[300px]",
-  "lg:absolute lg:left-[10px] lg:bottom-[2%] lg:w-[280px] xl:w-[300px]",
+  "lg:absolute lg:left-[220px] lg:top-[-10px] lg:w-[240px] xl:w-[260px]",
+  "lg:absolute lg:left-[-20px] lg:top-[35%] lg:w-[240px] xl:w-[260px]",
+  "lg:absolute lg:left-[280px] lg:bottom-[2%] lg:w-[240px] xl:w-[260px]",
   // Right column (top, middle, bottom)
-  "lg:absolute lg:right-0 lg:top-[2%] lg:w-[280px] xl:w-[300px]",
-  "lg:absolute lg:right-[-20px] lg:top-[35%] lg:w-[280px] xl:w-[300px]",
-  "lg:absolute lg:right-[10px] lg:bottom-[2%] lg:w-[280px] xl:w-[300px]",
+  "lg:absolute lg:right-[310px] lg:top-[2%] lg:-mt-[10px] lg:w-[240px] xl:w-[260px]",
+  "lg:absolute lg:right-[-20px] lg:top-[35%] lg:w-[240px] xl:w-[260px]",
+  "lg:absolute lg:right-[150px] lg:bottom-[2%] lg:w-[240px] xl:w-[260px]",
 ];
 
 const cardAnimations = [
@@ -115,9 +115,10 @@ export default function GeneralPainPoints() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[52%] z-0"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] z-0"
           >
-            <div className="rounded-2xl overflow-hidden shadow-xl">
+            <div className="rounded-2xl overflow-hidden shadow-xl relative z-10">
+
               <Image
                 src="/images/pain-points-illustration.png"
                 alt="Business challenges - disconnected tools, manual processes, and data silos versus a unified ERP solution"
